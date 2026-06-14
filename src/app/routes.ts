@@ -12,8 +12,12 @@ import { MeditationPage } from "./pages/MeditationPage.tsx";
 import { MoodTrackerPage } from "./pages/MoodTrackerPage.tsx";
 import { FemaleHealthPage } from "./pages/FemaleHealthPage.tsx";
 
+const isLocalMode = import.meta.env.VITE_LOCAL_MODE === 'true';
+const DefaultPage = isLocalMode ? Dashboard : Login;
+
 export const router = createBrowserRouter([
-  { path: "/",          Component: Login },
+  { path: "/",          Component: DefaultPage },
+  { path: "/login",     Component: Login },
   { path: "/signup",    Component: SignUp },
   { path: "/dashboard", Component: Dashboard },
   { path: "/heart",     Component: HeartPage },
@@ -24,6 +28,6 @@ export const router = createBrowserRouter([
   { path: "/journal",   Component: JournalPage },
   { path: "/meditation",Component: MeditationPage },
   { path: "/mood",      Component: MoodTrackerPage },
-   { path: "/female-health", Component: FemaleHealthPage }, 
-  { path: "*",          Component: Login },
-]);
+  { path: "/female-health", Component: FemaleHealthPage },
+  { path: "*",          Component: DefaultPage },
+]);

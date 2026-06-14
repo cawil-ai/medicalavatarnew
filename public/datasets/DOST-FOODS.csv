@@ -1,0 +1,1538 @@
+id,name,altName,caloriesPer100g,proteinPer100g,carbsPer100g,fatPer100g,source
+dost-0,"Corn grits, white","Mais, durog, puti",357,8.3,77.5,1.5,DOST PH
+dost-1,"Corn grits, yellow","Mais, durog, dilaw",350,7.7,78.1,0.8,DOST PH
+dost-2,"Corn on cob, white","Mais sa busal, puti",148,4.4,30.9,0.8,DOST PH
+dost-3,"Corn on cob, yellow","Mais sa busal, dilaw",173,4.4,35.4,1.5,DOST PH
+dost-4,"Corn on cob, yellow, boiled","Mais sa busal, dilaw, nilaga",167,3.3,35.7,1.2,DOST PH
+dost-5,"Cornmeal, white","Mais, giniling, puti",353,7.6,79.2,0.6,DOST PH
+dost-6,"Cornmeal, yellow","Mais, giniling, dilaw",371,8.5,77,3.2,DOST PH
+dost-7,Job&#39;s tears grain,Adlay/Tigbe butil,368,13.1,73.3,2.5,DOST PH
+dost-8,"Millet, glutinous",N/A,353,10.3,72.3,2.5,DOST PH
+dost-9,Rice bran,Darak,316,7.8,59.9,5,DOST PH
+dost-10,"Rice, glutinous, parboiled, flattened",Pinipig,340,4.3,78.5,1,DOST PH
+dost-11,"Rice, milled, glutinous","Bigas, malagkit",355,6.9,80.1,0.8,DOST PH
+dost-12,"Rice, milled, glutinous, milled w/ water","Bigas, malagkit, galapong",210,4.4,47.9,0.1,DOST PH
+dost-13,"Rice, undermilled",Brown rice/Pinawa,363,8.1,76.3,2.8,DOST PH
+dost-14,"Rice, undermilled, glutinous, purple","Bigas, malagkit, pirurutong",358,8.7,76.3,2,DOST PH
+dost-15,"Rice, undermilled, glutinous, purple, boiled","Bigas, malagkit, pirurutong, sinaing",124,2.4,27.8,0.4,DOST PH
+dost-16,"Rice, undermilled, red","Bigas, mapula",358,7.5,80,0.9,DOST PH
+dost-17,"Rice, well-milled","Bigas, maputi",356,7.4,80.4,0.5,DOST PH
+dost-18,"Rice, well-milled, boiled","Bigas, maputi, sinaing",129,2.1,29.7,0.2,DOST PH
+dost-19,"Rice, well-milled, fried","Bigas, maputi, sinangag",187,2.6,35.2,4,DOST PH
+dost-20,Rice-corn mixture (1:1),Bigas-mais pinaghalo (1:1),366,7.5,81.8,1,DOST PH
+dost-21,"Rice-corn mixture (1:1), boiled","Bigas-mais pinaghalo (1:1), sinaing",96,2.2,21,0.3,DOST PH
+dost-22,Sorghum,"Batad/Batag, butil",382,9.5,77.1,3.9,DOST PH
+dost-23,"Sorghum, boiled","Batad/Batag, butil, nilaga",150,3.5,31.7,1,DOST PH
+dost-24,"Ampaw, pinipig",N/A,392,3.1,91.3,1.6,DOST PH
+dost-25,"Ampaw, rice",N/A,385,4.5,87.1,2.1,DOST PH
+dost-26,Bicho-bicho,Bitsu-bitso,376,7.4,55.2,14,DOST PH
+dost-27,"Biscuit, cocohoney",N/A,453,7,73.2,14.7,DOST PH
+dost-28,"Bread, w/ margarine & sugar filling",Spanish bread,371,9.3,55.5,12.4,DOST PH
+dost-29,"Bread, brown",N/A,313,12.1,64.1,0.9,DOST PH
+dost-30,"Bread, cheese roll",N/A,342,10.1,45.1,13.5,DOST PH
+dost-31,"Bread, cinnamon roll",N/A,387,9.1,58.1,13.1,DOST PH
+dost-32,"Bread, hotdog roll",N/A,320,10.2,61.3,3.8,DOST PH
+dost-33,"Bread, toasted, w/ margarine-sugar topping",Biscocho,412,9.3,77.1,7.4,DOST PH
+dost-34,"Bread, mung bean loaf",Munggo bread,352,13.5,55.8,8.3,DOST PH
+dost-35,"Bread, pan de bonete",N/A,329,12.3,60,4.4,DOST PH
+dost-36,"Bread, pan de coco",N/A,349,9.2,60.9,7.6,DOST PH
+dost-37,"Bread, pan de leche",N/A,323,10.5,63.5,3,DOST PH
+dost-38,"Bread, pan de limon",N/A,321,10.6,60.9,3.9,DOST PH
+dost-39,"Bread, pan de monay",N/A,318,10.6,61.3,3.4,DOST PH
+dost-40,"Bread, pan de sal",N/A,330,10.1,62.9,4.2,DOST PH
+dost-41,"Bread, raisin",N/A,295,9.4,53.9,4.6,DOST PH
+dost-42,"Bread, rye",N/A,304,12.1,56,3.5,DOST PH
+dost-43,"Bread, sweet roll",Ensaymada,326,8.6,61.6,5,DOST PH
+dost-44,"Bread, sweet roll w/ mung bean filling","Ensaymada, may munggo",307,9.6,62.5,2.1,DOST PH
+dost-45,"Bread, toasted","Toast/Tinapay, tostado",349,11.2,64.2,5.3,DOST PH
+dost-46,"Bread, white, loaf",American loaf/Pan Amerikano,329,9.7,61.1,5.1,DOST PH
+dost-47,Bunuelos,N/A,497,9.5,36.4,34.8,DOST PH
+dost-48,"Cake, angel food",N/A,262,7.2,57.7,0.3,DOST PH
+dost-49,"Cake, banana",N/A,331,5.4,47.2,13.4,DOST PH
+dost-50,"Cake, butter",N/A,399,2.8,51,20.4,DOST PH
+dost-51,"Cake, cheese cupcake",N/A,410,5.6,60,16.4,DOST PH
+dost-52,"Cake, chiffon",N/A,332,7.2,49.8,11.6,DOST PH
+dost-53,"Cake, chocolate",N/A,373,5.6,59.3,12.6,DOST PH
+dost-54,"Cake, cream-filled roll",N/A,366,9.2,45.6,16.3,DOST PH
+dost-55,"Cake, fruit",N/A,365,5,53.4,14.6,DOST PH
+dost-56,"Cake, jelly roll",Pianono,326,5.3,69.9,2.8,DOST PH
+dost-57,"Cake, kababayan",N/A,361,6.3,61.6,9.9,DOST PH
+dost-58,"Cake, mamon",N/A,368,5.4,62.6,10.7,DOST PH
+dost-59,"Cake, mamon, toasted",N/A,416,10.4,78.5,6.7,DOST PH
+dost-60,"Cake, marshmallow roll",N/A,338,6.5,66.4,5.1,DOST PH
+dost-61,"Cake, mocha roll",N/A,353,6.7,61.2,9,DOST PH
+dost-62,"Cake, pineapple roll",N/A,255,3.5,54.5,2.5,DOST PH
+dost-63,"Cake, sponge",N/A,306,8.2,56.3,5.3,DOST PH
+dost-64,"Chips, cheese flvr",N/A,489,7.2,60.7,24.1,DOST PH
+dost-65,"Chips, corn, bbq flvr",N/A,535,6.5,58.1,30.7,DOST PH
+dost-66,"Chips, corn, nacho cheese flvr",N/A,528,7.5,57.1,30,DOST PH
+dost-67,"Chips, corn, natural flvr",N/A,527,5.9,60.3,29.1,DOST PH
+dost-68,"Chips, corn-potato based, cheese flvr",N/A,540,3.1,56.8,33.4,DOST PH
+dost-69,"Chips, corn, taco & bbq flvr",N/A,527,4.2,62.4,29,DOST PH
+dost-70,"Chips, corn, taco flvr",N/A,515,6.8,60.2,27.4,DOST PH
+dost-71,"Chips, fish crackers",N/A,456,5,71.7,16.6,DOST PH
+dost-72,"Chips, fish kroepeck",N/A,502,4,60.8,27,DOST PH
+dost-73,"Chips, prawn crackers",N/A,442,6.8,74.2,13.1,DOST PH
+dost-74,"Chips, prawn crackers, flvrd",N/A,543,3.9,57.7,33,DOST PH
+dost-75,"Chips, shrimp crackers",N/A,462,6,68.1,18.4,DOST PH
+dost-76,"Chips, shrimp kroepeck",N/A,493,7.3,61.1,24.4,DOST PH
+dost-77,"Chips, squid crackers",N/A,434,7.4,73.1,12.4,DOST PH
+dost-78,"Chips, sticks, onion flvr",N/A,514,5.4,62,27.2,DOST PH
+dost-79,"Chips, tortilla, bbq flvr",N/A,489,7.2,62.7,23.3,DOST PH
+dost-80,"Chips, tortilla, nacho cheese flvr",N/A,496,7.4,64.4,23.2,DOST PH
+dost-81,"Cookies, apas",N/A,388,5.4,90.4,0.5,DOST PH
+dost-82,"Cookies, arrowroot",Uraro/Araro cookies,417,1.1,83.9,8.5,DOST PH
+dost-83,"Cookies, assorted",N/A,442,6.2,78.9,11.3,DOST PH
+dost-84,"Cookies, brownies",N/A,417,7.4,59.1,16.8,DOST PH
+dost-85,"Cookies, butter",N/A,508,8.3,64.5,24.1,DOST PH
+dost-86,"Cookies, camachili",N/A,443,7.8,75.6,12.2,DOST PH
+dost-87,"Cookies, gem",Iced gem cookies,426,11,73.6,9.7,DOST PH
+dost-88,"Cookies, jacobina special",N/A,449,7,75.4,13.3,DOST PH
+dost-89,"Cookies, lady finger",Brohas,388,8.6,73.7,6.5,DOST PH
+dost-90,"Cookies, marie",N/A,421,8.1,77.1,8.9,DOST PH
+dost-91,"Cookies, ogoy-ogoy",N/A,441,8.3,75.3,11.8,DOST PH
+dost-92,"Cookies, otap",N/A,462,10.1,73.3,14.3,DOST PH
+dost-93,"Cookies, pasencia",Pacencia/Paciencia,397,6.9,84.9,3.3,DOST PH
+dost-94,"Cookies, pili nut",N/A,532,6.6,62.6,28.3,DOST PH
+dost-95,"Cookies, pilipit",N/A,470,6.7,72.6,17,DOST PH
+dost-96,"Cookies, polvoron",N/A,478,5.2,71,19.2,DOST PH
+dost-97,"Cookies, sandwich type, choc-filled","Biskwit, may palaman na tsokolate",515,5.7,67.1,24.9,DOST PH
+dost-98,"Cookies, sandwich type, cream-filled",N/A,472,5.9,71.7,18,DOST PH
+dost-99,"Cookies, vanilla wafer, choc-coated",N/A,510,5.4,67.7,24.2,DOST PH
+dost-100,"Cookies, wafer",N/A,505,4.6,70,22.9,DOST PH
+dost-101,"Corn flakes, enr",N/A,387,8.2,87.2,0.6,DOST PH
+dost-102,Corn pudding,Maja blanca,149,1.3,33.4,1.1,DOST PH
+dost-103,"Corn pudding, w/ grtd coconut topping","Maja blanca, may niyog",187,1,42.6,1.4,DOST PH
+dost-104,"Corn pudding, maja, yellow","Maja, mais",127,1.1,27.6,1.3,DOST PH
+dost-105,"Corn pudding, maja, yellow w/ grtd coconut topping","Maja, mais, may niyog",151,1.8,32.9,1.3,DOST PH
+dost-106,"Corn, fried, seasoned",Kornik,483,8.5,63.2,21.8,DOST PH
+dost-107,"Corn, whole kernel, cnd","Mais butil, de lata",70,1.3,15.4,0.4,DOST PH
+dost-108,Cornstarch,N/A,370,0.3,91.5,0.3,DOST PH
+dost-109,"Cracker, egg",Galyetas de patatas,422,15,72.3,8.1,DOST PH
+dost-110,"Cracker, graham, honey-flvr",N/A,423,8,79.5,8.1,DOST PH
+dost-111,"Cracker, plain",N/A,482,7.5,68.7,19.7,DOST PH
+dost-112,"Cracker, salted",N/A,480,9.6,65.5,19.9,DOST PH
+dost-113,"Cracker, salted, round",N/A,505,7.2,63.4,24.7,DOST PH
+dost-114,Cream puff,N/A,293,5.4,50.9,7.5,DOST PH
+dost-115,"Curls, bbq flvr",N/A,455,7.8,71.1,15.5,DOST PH
+dost-116,"Curls, cheese flvr",N/A,447,7.6,69.5,15.4,DOST PH
+dost-117,"Curls, prawn flvr",N/A,483,7.2,68,20.2,DOST PH
+dost-118,"Curls, shrimp flvr",N/A,419,6.6,77.9,9,DOST PH
+dost-119,"Doughnut, fried, w/ sugar","Donut, prito, may asukal",431,7.5,49.2,22.7,DOST PH
+dost-120,Gurgurya,N/A,515,6.7,62.4,26.5,DOST PH
+dost-121,Hominy,Binatog,126,3,25.4,1.4,DOST PH
+dost-122,Hopyang baboy,N/A,414,5,69.1,13.1,DOST PH
+dost-123,Hopyang Hapon,N/A,352,8.7,66.4,5.7,DOST PH
+dost-124,Hopyang munggo,N/A,383,6.5,62.3,12,DOST PH
+dost-125,Karyoka,Carioca,359,4.2,58.2,12.1,DOST PH
+dost-126,"Lohuwa, peanut",N/A,500,16.9,50.6,25.6,DOST PH
+dost-127,"Lohuwa, rice",N/A,415,3.4,81.4,8.4,DOST PH
+dost-128,"Lohuwa, sesame seed",N/A,473,10.7,64.5,19.1,DOST PH
+dost-129,"Noodles, mung bean starch",Sotanghon,345,0.2,85.5,0.2,DOST PH
+dost-130,"Noodles, mung bean starch, boiled","Sotanghon, nilaga",78,0,19.3,0.1,DOST PH
+dost-131,"Noodles, rice, fideos",Fideos,357,9.6,78.7,0.4,DOST PH
+dost-132,"Noodles, rice",Bihon,353,2.7,84.5,0.5,DOST PH
+dost-133,"Noodles, rice, boiled","Bihon, nilaga",115,0.5,26.9,0.6,DOST PH
+dost-134,"Noodles, wheat, canton, dry",Canton,487,12.8,56.8,23.2,DOST PH
+dost-135,"Noodles, wheat, mami, fresh","Mami, sariwa",73,6.8,10.9,0.2,DOST PH
+dost-136,"Noodles, wheat, inst, w/ flvr","Mami, inst, may pampalasa",433,10.4,57.1,18.1,DOST PH
+dost-137,"Noodles, wheat, inst, w/ flvr, fortified","Mami, inst, may pampalasa,fortified",465,9.2,56.8,22.3,DOST PH
+dost-138,"Noodles, wheat, thin",Misua/Miswa,344,12.2,73,0.3,DOST PH
+dost-139,"Noodles, wheat, thin, boiled","Misua/Miswa, nilaga",100,0.9,23.8,0.1,DOST PH
+dost-140,"Noodles, wheat, miki, dry","Miki, tuyo",472,12.4,55.3,22.4,DOST PH
+dost-141,"Noodles, wheat, miki, dry, boiled","Miki, tuyo, nilaga",110,1.7,19.2,2.9,DOST PH
+dost-142,"Oatmeal, instant",N/A,394,10,77.9,4.7,DOST PH
+dost-143,"Oats, quick-cooking",N/A,423,11.4,73.8,9.1,DOST PH
+dost-144,"Oats, quick-cooking, ckd",N/A,60,1.6,11,1.1,DOST PH
+dost-145,Pancake,Hotcake,269,8.4,41.8,7.6,DOST PH
+dost-146,"Pasta, macaroni",N/A,353,14.3,73.5,0.2,DOST PH
+dost-147,"Pasta, spaghetti",N/A,361,12.4,75.4,1.1,DOST PH
+dost-148,"Pasta, spaghetti, boiled",N/A,156,5.5,33.3,0.1,DOST PH
+dost-149,"Popcorn and peanuts, sweetn",N/A,447,5.1,77.8,12.8,DOST PH
+dost-150,"Popcorn, salted",N/A,471,6.7,69.2,18.6,DOST PH
+dost-151,"Popcorn, sweetn",N/A,443,4,81.9,11,DOST PH
+dost-152,"Pretzel, choc-coated",N/A,475,8.1,68.8,18.6,DOST PH
+dost-153,"Pretzel, sweetn",N/A,442,8.5,76.9,11.1,DOST PH
+dost-154,"Pudding, pineapple",N/A,268,4.7,58.5,1.7,DOST PH
+dost-155,"Pudding, raisin",N/A,221,8.1,40.5,2.9,DOST PH
+dost-156,"Pudding, vanilla",N/A,286,6.2,61.8,1.5,DOST PH
+dost-157,"Puffs, bbq flvr",N/A,445,7.5,70.9,14.6,DOST PH
+dost-158,"Puffs, cheese flvr",N/A,503,6,60,26.5,DOST PH
+dost-159,"Puffs, chicken flvr",N/A,449,6.8,75.2,13.4,DOST PH
+dost-160,"Puffs, spiced",N/A,418,7.4,77,8.9,DOST PH
+dost-161,"Rice cake (glutinous), bibingka","Bibingka, malagkit",256,2.8,59,1,DOST PH
+dost-162,"Rice cake (glutinous), biko",Biko/Sinukmani,252,2.2,58.7,0.9,DOST PH
+dost-163,"Rice cake (glutinous), biko, w/ grtd coconut topping","Biko/Sinukmani, may niyog",246,3.3,54.7,1.6,DOST PH
+dost-164,"Rice cake (glutinous), biko, w/ purple rice","Biko, may pirurutong",227,2.6,53.2,0.4,DOST PH
+dost-165,"Rice cake (glutinous), Chinese, tikoy",Tikoy,250,2.5,59.4,0.3,DOST PH
+dost-166,"Rice cake (glutinous), Chinese, tikoy, w/ peanut","Tikoy, may mani",247,6.4,51.4,1.8,DOST PH
+dost-167,"Rice cake, bibingka",Bibingkang galapong,234,3.6,52.9,0.9,DOST PH
+dost-168,"Rice cake, bibingka, w/ cheese & coconut topping","Bibingkang galapong, may keso at  niyog",223,2.8,47.2,2.6,DOST PH
+dost-169,"Rice cake, puto bumbong, purple",Puto bumbong,252,3.5,56.5,1.3,DOST PH
+dost-170,"Rice cake, puto, brown","Puto, brown",206,2,49.3,0.1,DOST PH
+dost-171,"Rice cake, puto, white",Puto puti,214,2.8,49.9,0.3,DOST PH
+dost-172,"Rice cake, puto, white, w/ grtd coconut topping","Puto puti, may niyog",209,2.7,47.1,1.1,DOST PH
+dost-173,"Rice cake, cuchinta",Cuchinta/Kutsinta,166,1.4,38.4,0.8,DOST PH
+dost-174,"Rice cake, cuchinta, w/ grtd coconut topping","Cuchinta/Kutsinta, may niyog",165,1.6,32.4,3.2,DOST PH
+dost-175,Rice flour,"Arina, bigas",358,7.6,81.3,0.3,DOST PH
+dost-176,"Rice flour prep, tamales",Tamales,101,1.3,21.8,0.9,DOST PH
+dost-177,"Rice gruel, thin","Lugaw, malabnaw",71,1.4,13.9,1.1,DOST PH
+dost-178,"Rice prep (glutinous), butse, w/ mung bean filling","Butse/Buchi, munggo",329,6.4,48.9,12,DOST PH
+dost-179,"Rice prep (glutinous), butse, w/ sweet potato filling","Butse/Buchi, kamote",310,5.6,53.5,8.2,DOST PH
+dost-180,"Rice prep (glutinous), kalamay, w/ coconut curd topping","Kalamay, may latik",208,2.7,48.5,0.4,DOST PH
+dost-181,"Rice prep (glutinous), kalamay, w/ yam","Kalamay, ube",178,2.2,41.7,0.3,DOST PH
+dost-182,"Rice prep (glutinous), palitaw",Palitaw,206,2.6,42.5,2.8,DOST PH
+dost-183,"Rice prep (glutinous), palitaw, w/ grtd  coconut & sugar","Palitaw, may niyog at asukal",213,2.6,40.5,4.5,DOST PH
+dost-184,"Rice prep (glutinous), sapin-sapin",Sapin-sapin,129,1.1,30.3,0.4,DOST PH
+dost-185,"Rice prep (glutinous), suman sa ibos",Suman sa ibos,171,3.1,38,0.7,DOST PH
+dost-186,"Rice prep (glutinous), suman, lye-treated",Suman sa lihiya,191,3.2,43.6,0.4,DOST PH
+dost-187,"Rice prep (glutinous), suman, w/ grtd coconut topping","Suman maruwekos, may niyog",211,2.6,44.8,2.4,DOST PH
+dost-188,"Rice prep (glutinous), tupig",Tupig,300,3.6,65.6,2.6,DOST PH
+dost-189,"Rice prep, espasol",Espasol,312,4,65.8,3.6,DOST PH
+dost-190,"Rice water, ckd, thin","Am, malabnaw",17,0.1,3.8,0.2,DOST PH
+dost-191,"Rice, crispies",N/A,373,3,88.8,0.6,DOST PH
+dost-192,"Rice-bread prep, toasted, puto seko",Puto seko,388,6,87,1.8,DOST PH
+dost-193,"Rice-bread prep, toasted, puto seko, w/ grtd coconut","Puto seko, may niyog",402,4.4,83.8,5.5,DOST PH
+dost-194,"Spring roll wrapper, plain",Balat ng lumpia/Lumpia wrapper,316,10.6,67.2,0.5,DOST PH
+dost-195,"Wheat flour, all-purpose","Arina, trigo, all-purpose",352,12.6,73.7,0.8,DOST PH
+dost-196,"Wheat flour, all-purpose, enr, bleached","Arina trigo, all-purpose, enr, pinaputi",377,11,75.2,3.6,DOST PH
+dost-197,"Wheat flour, cake flour, enr, bleached","Arina trigo, cake, enr, pinaputi",370,8.9,79.7,1.7,DOST PH
+dost-198,"Instant noodles, chicken flvr, raw",-,429,10.5,57.3,17.5,DOST PH
+dost-199,"Instant noodles, chicken flvr, ckd",-,48,1.3,6,2.1,DOST PH
+dost-200,Cassava,Kamoteng kahoy/Balinghoy,145,0.6,35.3,0.2,DOST PH
+dost-201,"Cassava, boiled","Kamoteng kahoy/Balinghoy, nilaga",111,0.4,27.1,0.1,DOST PH
+dost-202,"Cassava, yellow","Kamoteng kahoy/Balinghoy, dilaw",155,0.7,37.7,0.2,DOST PH
+dost-203,East Indian arrowroot,Yabyaban,144,3.1,32.6,0.1,DOST PH
+dost-204,"East Indian arrowroot, boiled","Yabyaban, nilaga",88,3.1,18.5,0.2,DOST PH
+dost-205,Palauan,Galiang/Swamp taro,153,0.5,37.3,0.2,DOST PH
+dost-206,Potato,Patatas,78,2.4,16.8,0.1,DOST PH
+dost-207,"Potato, boiled","Patatas, nilaga",63,1.7,13.7,0.1,DOST PH
+dost-208,"Sweet potato, purple","Kamote, murado",125,0.6,29.8,0.4,DOST PH
+dost-209,"Sweet potato, purple, boiled","Kamote, murado, nilaga",122,0.6,29.5,0.2,DOST PH
+dost-210,"Sweet potato, white","Kamote, puti",105,0.7,24.3,0.5,DOST PH
+dost-211,"Sweet potato, white, boiled","Kamote, puti, nilaga",126,0.4,29.3,0.8,DOST PH
+dost-212,"Sweet potato, yellow","Kamote, dilaw",135,1.1,31.8,0.4,DOST PH
+dost-213,"Sweet potato, yellow, boiled","Kamote, dilaw, nilaga",128,0.5,30.7,0.3,DOST PH
+dost-214,Taro,Gabi,141,2.3,32.6,0.2,DOST PH
+dost-215,"Taro, boiled","Gabi, nilaga",105,1.5,24.4,0.1,DOST PH
+dost-216,White spot arum,Pongapong,61,3.1,11.7,0.2,DOST PH
+dost-217,"Yam, Luzon",Pakit/Kamangeg,99,2.5,22.1,0.1,DOST PH
+dost-218,"Yam, nami",Nami/Asiatic bitter yam,105,2.3,23.3,0.3,DOST PH
+dost-219,"Yam, purple",Ubi/Ube,97,1.7,22.2,0.2,DOST PH
+dost-220,"Yam, purple, boiled","Ubi/Ube, nilaga",77,0.7,18.2,0.1,DOST PH
+dost-221,"Yam, spiny",Tugi/Lesser yam,141,1,28.2,2.7,DOST PH
+dost-222,"Yam, spiny, boiled","Tugi/Lesser yam, nilaga",69,0.4,14.1,1.2,DOST PH
+dost-223,Yautia,Gabing Cebu,122,0.8,29.4,0.1,DOST PH
+dost-224,Arrowroot starch,Uraro starch,351,0.1,86.4,0.5,DOST PH
+dost-225,"Cassava cake, bibingka","Kamoteng kahoy, bibingka",181,0.4,44.1,0.3,DOST PH
+dost-226,Cassava flour,"Kamoteng kahoy, arina",362,1.1,87.8,0.7,DOST PH
+dost-227,Cassava fritter,"Kamoteng kahoy, maruya",360,0.7,66.7,10,DOST PH
+dost-228,Cassava pudding,"Kamoteng kahoy, budin",203,1.2,48.4,0.5,DOST PH
+dost-229,"Cassava, mashed, w/ sugar & marg","Kamoteng kahoy, linupak",183,0.4,42.4,1.3,DOST PH
+dost-230,"Cassava, suman","Kamoteng kahoy, suman",210,0.5,48.9,1.4,DOST PH
+dost-231,East Indian arrowroot starch,Yabyaban starch,348,0.1,85.8,0.5,DOST PH
+dost-232,"Potato chips, cheese flvr",N/A,556,6.2,51.8,36,DOST PH
+dost-233,"Potato, French-fried",French fries,328,3.7,40.5,16.8,DOST PH
+dost-234,Tapioca starch ball,Sago/Tapioca pearl,341,0.4,82.4,1.1,DOST PH
+dost-235,"Tapioca starch ball, boiled","Sago, nilaga/Tapioca pearl, boiled",83,0,20.3,0.2,DOST PH
+dost-236,"Sweet potato, w/ sugar, fried",Kamote cue,239,1.1,43.1,6.9,DOST PH
+dost-237,"Yam, nami, brined","Nami, inasnan",66,1,15,0.2,DOST PH
+dost-238,"Yam, nami, dried","Nami, tuyo",351,6.6,80.3,0.4,DOST PH
+dost-239,"Yam, purple, pudding","Ubi, maja",187,1.2,43.8,0.8,DOST PH
+dost-240,"Yam, purple, pudding,w/ grtd coconut topping","Ubi, maja, may niyog",191,1.7,43.4,1.2,DOST PH
+dost-241,"Yacon tuber, raw",Peruvian ground apple,35,0.4,8.1,0.1,DOST PH
+dost-242,"Sweet potato, orange",-,121,1.1,28.4,0.3,DOST PH
+dost-243,"Cashew nut, roasted","Kasuy, binusa",603,19.2,24.8,47.4,DOST PH
+dost-244,"Chestnut, roasted","Kastanyas, binusa",256,5,56.4,1.2,DOST PH
+dost-245,"Chickpea, dried","Garbansos/Garbanzo, tuyo",377,19.2,61.2,6.2,DOST PH
+dost-246,"Chickpea, dried, boiled","Garbansos/Garbanzo, tuyo, nilaga",198,5.7,39.2,2,DOST PH
+dost-247,"Coconut meat, mature","Niyog, magulang",319,3.9,17.2,26.1,DOST PH
+dost-248,"Coconut meat, very young","Buko, malauhog",42,0.8,6.8,1.3,DOST PH
+dost-249,"Coconut meat, young","Buko, malakanin",102,1.4,12.1,5.3,DOST PH
+dost-250,Coconut sport,Makapuno,226,2.4,14.5,17.6,DOST PH
+dost-251,"Cowpea seed, dried","Paayap buto, tuyo",358,20.4,65.8,1.5,DOST PH
+dost-252,"Davao wonder bean seed, dried","Mecan pea buto, tuyo",351,23.4,58.3,2.7,DOST PH
+dost-253,"Coastal jack-bean seed, dried","Pataning-dagat buto, tuyo",364,24.1,60.7,2.8,DOST PH
+dost-254,"Coastal jack-bean seed, dried, boiled","Pataning-dagat buto, tuyo, nilaga",170,9.6,30.3,1.1,DOST PH
+dost-255,"Java olive seed, dried","Kalumpang buto, tuyo",603,15.4,34.1,45,DOST PH
+dost-256,"Kaatoan bangkal  seed, dried",N/A,339,14.4,69.5,0.4,DOST PH
+dost-257,"Kidney bean seed, black, dried","Abitsuwelas buto, itim, tuyo",374,20.2,69.1,1.9,DOST PH
+dost-258,"Kidney bean seed, black, dried, boiled","Abitsuwelas buto, itim, tuyo, nilaga",117,3.9,24.1,0.6,DOST PH
+dost-259,"Kidney bean seed, red, dried","Abitsuwelas buto, pula, tuyo",348,19.3,64.2,1.5,DOST PH
+dost-260,"Kidney bean seed, red, dried, boiled","Abitsuwelas buto, pula, tuyo, nilaga",138,7.9,24.6,0.9,DOST PH
+dost-261,"Kidney bean seed, white, dried","Abitsuwelas buto, puti, tuyo",354,18.8,67.1,1.1,DOST PH
+dost-262,"Kidney bean seed, white, dried, boiled","Abitsuwelas buto, puti, tuyo, nilaga",142,6.5,27.3,0.7,DOST PH
+dost-263,"Lima bean seed, dried","Patani buto, tuyo",348,19.8,64.9,1,DOST PH
+dost-264,"Marang seed, dried","Johey oak, seed",305,7.4,40.7,12.5,DOST PH
+dost-265,"Marang seed, dried, boiled","Johey oak, seed, boiled",238,5.7,36.6,7.6,DOST PH
+dost-266,"Mung bean seed, green, dried","Munggo buto, berde, tuyo",348,23.2,60.1,1.6,DOST PH
+dost-267,"Mung bean seed, green, dried, boiled","Munggo buto, berde, tuyo, nilaga",155,11,27.1,0.3,DOST PH
+dost-268,"Mung bean seed, red, dried","Munggo buto, pula, tuyo",347,22.2,62.2,1,DOST PH
+dost-269,"Mung bean seed, red, dried, boiled","Munggo buto, pula, tuyo, nilaga",150,6.9,28.9,0.7,DOST PH
+dost-270,"Mung bean seed, yellow, dried","Munggo buto, dilaw, tuyo",365,23.5,64.5,1.4,DOST PH
+dost-271,"Mung bean seed, yellow, dried, boiled","Munggo buto, dilaw, tuyo, nilaga",116,7.2,21.1,0.3,DOST PH
+dost-272,"Negro coffee seed, dried","Balatong aso buto, tuyo/Coffee senna seed, dried",373,17.5,69.8,2.6,DOST PH
+dost-273,Peanut w/ shell,"Mani, may balat",401,17.4,22.9,26.6,DOST PH
+dost-274,"Peanut w/ shell, boiled","Mani, may balat, nilaga",315,13,15.3,22.4,DOST PH
+dost-275,"Peanut w/ skin, roasted","Mani, may balok, binusa",621,32.1,9.1,50.7,DOST PH
+dost-276,Peanut w/o skin,"Mani, walang balok",617,25.8,17.1,49.5,DOST PH
+dost-277,"Peanut w/o skin, roasted","Mani, walang balok, binusa",629,33.2,7.6,51.8,DOST PH
+dost-278,"Pigeon pea seed, dried","Kadyos buto, tuyo",348,21.2,63.2,1.2,DOST PH
+dost-279,"Pigeon pea seed, dried, boiled","Kadyos buto, tuyo, nilaga",125,5.7,24.3,0.6,DOST PH
+dost-280,Pili nut,Pili bunga,699,14.2,6.4,68.5,DOST PH
+dost-281,"Rice bean seed, dried","Tapilan buto, tuyo",356,18.4,63.7,3.1,DOST PH
+dost-282,"Sesame seed, dried","Linga, tuyo",642,25.1,15.1,53.5,DOST PH
+dost-283,"Soybean seed, dried","Utaw buto, tuyo",442,35.8,35.9,17.2,DOST PH
+dost-284,"Soybean seed, black, dried","Utaw buto, itim, tuyo",451,36.6,31.6,19.8,DOST PH
+dost-285,"Soybean seed, black, dried, boiled","Utaw buto, itim, tuyo, nilaga",241,15.3,31.2,6.1,DOST PH
+dost-286,"Soybean seed, yellow, dried","Utaw buto, dilaw, tuyo",456,35.8,34.2,19.5,DOST PH
+dost-287,"Soybean seed, yellow, dried, boiled","Utaw buto, dilaw, tuyo, nilaga",267,12.4,38.9,6.9,DOST PH
+dost-288,"String/Yard long bean seed, dried","Sitaw buto, tuyo",371,30.7,56.8,2.3,DOST PH
+dost-289,"Velvet bean seed, dried",N/A,378,28.2,55.8,4.7,DOST PH
+dost-290,"Chickpea, cnd","Garbansos, de lata",132,7.4,20.1,2.4,DOST PH
+dost-291,"Coconut chip, toasted, sweetn",N/A,580,4.2,56.5,37.5,DOST PH
+dost-292,"Coconut, cream curd",Latik,620,13.2,24.8,52,DOST PH
+dost-293,"Green pea, dried, fried & seasoned","Gisantes, tuyo, prito, tinimpla",468,19,52.4,20.3,DOST PH
+dost-294,"Green pea, in brine, cnd","Gisantes, de lata",118,6.9,20.1,1.1,DOST PH
+dost-295,"Green pea-corn-peanut mixture, fried",N/A,511,19.8,48.4,26.5,DOST PH
+dost-296,"Lima bean, fried & seasoned","Patani, prito, may timpla",500,24.4,42.2,26,DOST PH
+dost-297,Peanut butter,N/A,616,25.4,26.4,45.4,DOST PH
+dost-298,"Peanut butter, choc flvr",N/A,631,17.2,32,48.2,DOST PH
+dost-299,Peanut cracker,N/A,541,23,42.1,31.2,DOST PH
+dost-300,"Soybean cheese, salted",Tahure,117,11.4,4,6.2,DOST PH
+dost-301,"Soybean seed, black, fermented",Tausi,143,12,7.6,7.2,DOST PH
+dost-302,"Soybean cheese, soft curd",Tofu,89,8.1,2,5.4,DOST PH
+dost-303,"Soybean cheese, hard curd",Tokwa,123,12.9,2,7,DOST PH
+dost-304,Soybean pudding/ Geerlig&#39;s cheese,Taho/Tahu,34,2.9,2.4,1.4,DOST PH
+dost-305,Soybean pudding/Geerlig&#39;s cheese w/ syrup & tapioca starch ball,"Taho/Tahu, may arnibal at sago",62,2.2,13.1,0.1,DOST PH
+dost-306,"Soybean paste, miso",Miso,144,13,15.2,3.5,DOST PH
+dost-307,"Soybean seed, yellow, cnd, drnd","Utaw, dilaw, de lata",138,11.8,9.4,5.9,DOST PH
+dost-308,"Watermelon seed, dried, salted",Butong pakwan,562,40.2,3.1,43.2,DOST PH
+dost-309,American black nightshade lvs,Amti dahon,56,4.9,7.9,0.6,DOST PH
+dost-310,Apat-apat fern lvs,Four leaves clover/Kaya-kayapuan,131,7.6,24.2,0.4,DOST PH
+dost-311,Aragan lvs,Ricefield waternymph,29,1.2,5.4,0.3,DOST PH
+dost-312,Asystasia lvs & stems,Asistasia/Philippine violet,61,3.6,9.6,0.9,DOST PH
+dost-313,Aurora lvs & stems,Three-lobed morning glory,108,2.8,19.9,1.9,DOST PH
+dost-314,Bago lvs,Spanish joint-fir lvs,91,6.6,12.8,1.5,DOST PH
+dost-315,"Bago lvs, boiled","Spanish joint-fir lvs, boiled",42,3,6.5,0.4,DOST PH
+dost-316,"Bago bagin fruit, boiled","Spanish joint-fir, fruit, boiled",159,5.8,33.1,0.4,DOST PH
+dost-317,Bamboo shoot,Labong,28,1.9,4.1,0.4,DOST PH
+dost-318,"Bamboo shoot, boiled","Labong, nilaga",26,1.2,4.5,0.3,DOST PH
+dost-319,Banana stem,Ubod ng saging/Banana pith,16,0.8,3,0.1,DOST PH
+dost-320,"Banana heart, butuan","Puso, saging, butuan",39,1.6,7.2,0.4,DOST PH
+dost-321,"Banana heart, butuan, boiled","Puso, saging, butuan, nilaga",18,0.9,3.2,0.2,DOST PH
+dost-322,Bayuno fruit,Binjai,74,3,13.9,0.7,DOST PH
+dost-323,Beet,Remolacha,41,1.7,8,0.2,DOST PH
+dost-324,"Beet, boiled","Remolacha, nilaga",45,1.9,9.1,0.1,DOST PH
+dost-325,Bitter melon/gourd fruit,Ampalaya bunga,23,1,4.2,0.2,DOST PH
+dost-326,"Bitter melon/gourd fruit, boiled","Ampalaya bunga, nilaga",19,0.4,3.8,0.2,DOST PH
+dost-327,Bitter melon/gourd lvs,Ampalaya dahon,34,4.2,3,0.6,DOST PH
+dost-328,"Bitter melon/gourd lvs, boiled","Ampalaya dahon, nilaga",50,2.2,9,0.6,DOST PH
+dost-329,Blue pea pod,Pukinggan bunga/Asian pigeonwings pod,68,3.8,12.2,0.4,DOST PH
+dost-330,Borreria lvs & stems,Siksik parang dahon at tangkay/Slender false buttonweed,68,1.7,14.8,0.2,DOST PH
+dost-331,Bottle gourd fruit,Upo bunga,20,0.4,4.3,0.1,DOST PH
+dost-332,"Bottle gourd fruit, boiled","Upo bunga, nilaga",16,0.2,3.8,0,DOST PH
+dost-333,Bottle gourd lvs,Upo dahon,43,3.3,6.2,0.6,DOST PH
+dost-334,"Bottle gourd lvs, boiled","Upo dahon, nilaga",22,1.7,3.2,0.3,DOST PH
+dost-335,Breadfruit fruit,Rimas bunga,65,2.4,12.8,0.5,DOST PH
+dost-336,Breadnut fruit,Kamansi bunga,55,2.5,8.7,1.1,DOST PH
+dost-337,Breadnut seed,Kamansi buto,72,3.4,11.9,1.2,DOST PH
+dost-338,Bulak-bulakan pod,N/A,68,1.6,13.4,0.9,DOST PH
+dost-339,Busi-busi lvs,N/A,54,3.1,6,2,DOST PH
+dost-340,"Cabbage, green","Repolyo, berde",31,1.6,5.9,0.1,DOST PH
+dost-341,"Cabbage, green, boiled","Repolyo, berde, nilaga",23,0.6,5,0.1,DOST PH
+dost-342,"Cabbage, red","Repolyo, pula",32,1.6,6,0.2,DOST PH
+dost-343,"Cabbage, red, boiled","Repolyo, pula, nilaga",28,0.9,5.6,0.2,DOST PH
+dost-344,Carrot,Karot,42,1.1,8.6,0.3,DOST PH
+dost-345,"Carrot, boiled","Karot, nilaga",42,1.1,8.6,0.4,DOST PH
+dost-346,"Cashew, young lvs",Kasuy talbos,113,4.9,22,0.6,DOST PH
+dost-347,"Cashew, young lvs, boiled","Kasuy talbos, nilaga",57,2.4,10.9,0.4,DOST PH
+dost-348,Cassava lvs,Kamoteng kahoy/Balinghoy dahon,83,7.1,10.5,1.4,DOST PH
+dost-349,"Cassava lvs, boiled","Kamoteng kahoy/Balinghoy dahon, nilaga",43,3.4,5.7,0.7,DOST PH
+dost-350,Cauliflower,N/A,32,2.1,5.2,0.3,DOST PH
+dost-351,"Cauliflower, boiled",N/A,27,1.5,4.8,0.2,DOST PH
+dost-352,Celery lvs & petioles,Baguio celery dahon at tangkay,25,1.2,5.1,0,DOST PH
+dost-353,"Celery, Chinese, lvs & petioles",Kinchay dahon at tangkay/Leaf celery,37,2.4,5.4,0.6,DOST PH
+dost-354,"Celery, Chinese, lvs & petioles, boiled","Kinchay dahon at tangkay, nilaga/Leaf celery, boiled",27,1.4,5,0.1,DOST PH
+dost-355,Chayote fruit,Sayote bunga/Vegetable pear fruit,23,0.5,5.1,0.1,DOST PH
+dost-356,"Chayote fruit, boiled","Sayote bunga, nilaga/Vegetable pear fruit, boiled",16,0.3,3.5,0.1,DOST PH
+dost-357,Chayote lvs,Sayote dahon/Vegetable pear lvs,44,4.6,5.7,0.3,DOST PH
+dost-358,"Chayote lvs, boiled","Sayote dahon, nilaga/Vegetable pear lvs, boiled",21,2.5,2.3,0.2,DOST PH
+dost-359,Chinese cabbage,Pechay Baguio/Napa cabbage,21,1.7,2.9,0.3,DOST PH
+dost-360,"Chinese cabbage, boiled","Pechay Baguio, nilaga/Napa cabbage, boiled",15,1,2.4,0.1,DOST PH
+dost-361,Coconut cotyledon,Niyog tumbong,67,1.7,11.1,1.8,DOST PH
+dost-362,"Coconut, heart of palm",Niyog ubod,47,4.3,5.7,0.8,DOST PH
+dost-363,Fragrant manjack lvs,Anonang dahon,61,4.6,9.9,0.3,DOST PH
+dost-364,Coriander lvs,Cilantro/Wansoy dahon,37,3,4.8,0.6,DOST PH
+dost-365,Cowpea lvs,Paayap dahon,49,4.9,4.3,1.4,DOST PH
+dost-366,"Cowpea lvs, boiled","Paayap dahon, nilaga",30,1.9,4.6,0.4,DOST PH
+dost-367,Cowpea pod,Paayap bunga,51,3.4,8.5,0.4,DOST PH
+dost-368,"Cowpea pod, boiled","Paayap bunga, nilaga",52,2.8,9.4,0.4,DOST PH
+dost-369,"Cowpea seed, fresh","Paayap buto, sariwa",86,5.1,16.1,0.1,DOST PH
+dost-370,Crown daisy lvs,Tangó dahon/Garland chrysanthemum lvs,23,2.3,2.6,0.4,DOST PH
+dost-371,"Kutcharitas lvs, green","Calico plant lvs, green",54,2.6,9.2,0.8,DOST PH
+dost-372,"Kutcharitas lvs, red","Calico plant lvs, red",84,2.3,17.4,0.6,DOST PH
+dost-373,Cucumber,Pipino,16,0.5,3.2,0.1,DOST PH
+dost-374,East Indian lotus fruit,Baino bunga,80,4.1,13.5,1.1,DOST PH
+dost-375,East Indian lotus lvs,Baino dahon,46,4.7,5,0.8,DOST PH
+dost-376,"East Indian lotus lvs, boiled","Baino dahon, nilaga",28,2.9,3.1,0.4,DOST PH
+dost-377,Eggplant,Talong/Aubergine,29,1.2,5.5,0.2,DOST PH
+dost-378,"Eggplant, boiled","Talong, nilaga/Aubergine, boiled",25,1,4.9,0.1,DOST PH
+dost-379,Endive lvs,Eskarola dahon,29,1.6,5.3,0.2,DOST PH
+dost-380,"Flowering fern, lvs",Tukod langit dahon/Kamraj lvs,68,3,12.6,0.6,DOST PH
+dost-381,Foetid cassia lvs,Katanda dahon,88,4.4,15.3,1,DOST PH
+dost-382,Fragrant premna lvs,Alagaw dahon,100,5.4,17,1.1,DOST PH
+dost-383,"Fragrant premna lvs, boiled","Alagaw dahon, nilaga",53,1.1,11.4,0.3,DOST PH
+dost-384,"Galo fruit, whole",N/A,165,3.9,33.4,1.8,DOST PH
+dost-385,"Galo pulp, boiled",N/A,80,3,16.2,0.4,DOST PH
+dost-386,"Galo seed, boiled",N/A,215,5.1,40.3,3.7,DOST PH
+dost-387,Garlic bulb,Bawang ulo,129,7,24.6,0.3,DOST PH
+dost-388,Garlic lvs,Bawang dahon,50,2,9.2,0.6,DOST PH
+dost-389,"Garlic lvs, boiled","Bawang dahon, nilaga",45,1.1,8.8,0.6,DOST PH
+dost-390,Garlic lvs & bulb,Bawang dahon at ulo,79,2.6,15.8,0.6,DOST PH
+dost-391,Glynus lvs,Sarsalida/Papait dahon,39,3.7,4.2,0.8,DOST PH
+dost-392,Guava lvs,Bayabas dahon,131,4.5,22.9,2.4,DOST PH
+dost-393,Himbaba-o flower,Alokon bulaklak,68,6.3,8.1,1.1,DOST PH
+dost-394,"Himbaba-o flower, boiled","Alokon bulaklak, nilaga",52,2.9,8.1,0.9,DOST PH
+dost-395,Himbaba-o lvs,Alokon dahon,86,5.8,12.6,1.4,DOST PH
+dost-396,"Himbaba-o lvs, boiled","Alokon dahon, nilaga",49,1.6,9.6,0.5,DOST PH
+dost-397,Horseradish tree lvs,Malunggay dahon/Drumstick tree lvs,108,9.7,12.7,2,DOST PH
+dost-398,"Horseradish tree lvs, boiled","Malunggay dahon, nilaga/ Drumstick tree lvs, boiled",63,3.1,10.6,0.9,DOST PH
+dost-399,"Horseradish tree lvs, dwarf","Malunggay dahon, unano",89,9,6.2,3.1,DOST PH
+dost-400,"Horseradish tree lvs, dwarf, boiled","Malunggay dahon, unano, nilaga",48,3,6.8,1,DOST PH
+dost-401,"Horseradish tree lvs, Japanese","Malunggay dahon, Hapon",60,6.2,5.2,1.6,DOST PH
+dost-402,"Horseradish tree lvs, Japanese, boiled","Malunggay dahon, Hapon, nilaga",42,2.4,5.5,1.1,DOST PH
+dost-403,Horseradish tree pod,Malunggay bunga,93,2.5,19.9,0.4,DOST PH
+dost-404,"Horseradish tree pod, boiled","Malunggay bunga, nilaga",25,1.1,4.6,0.2,DOST PH
+dost-405,Hyacinth bean pod,Bataw bunga,45,2.5,7.8,0.4,DOST PH
+dost-406,"Hyacinth bean pod, boiled","Bataw bunga, nilaga",34,1.3,6.9,0.1,DOST PH
+dost-407,"Jackfruit fruit, unripe","Langka bunga, hilaw",58,2,11.1,0.6,DOST PH
+dost-408,Jackfruit seed,Langka buto,164,5.5,34.4,0.5,DOST PH
+dost-409,"Jackfruit seed, boiled","Langka buto, nilaga",156,4.5,33.7,0.3,DOST PH
+dost-410,Jute lvs,Saluyot/Pasaw dahon,71,6.1,9.1,1.1,DOST PH
+dost-411,"Jute lvs, boiled","Saluyot/Pasaw dahon, nilaga",44,2.9,6.8,0.6,DOST PH
+dost-412,Lagikway lvs,Sunset muskmallow lvs,54,4,6.8,1.2,DOST PH
+dost-413,"Lagikway lvs, boiled","Sunset muskmallow lvs, boiled",30,1.3,5.3,0.4,DOST PH
+dost-414,Chinese leek lvs,Kutsay dahon/Chinese chives lvs,34,2.4,4.6,0.7,DOST PH
+dost-415,"Chinese leek lvs, boiled","Kutsay dahon, nilaga/Chinese chives lvs, boiled",19,1.3,2.6,0.4,DOST PH
+dost-416,Lettuce lvs & petioles,Letsugas dahon at tangkay,22,1.3,3.4,0.4,DOST PH
+dost-417,"Lettuce tree, young lvs",Koles maluko talbos,43,3.6,5,1,DOST PH
+dost-418,"Lettuce tree, young lvs, boiled","Koles maluko talbos, nilaga",26,0.7,3.1,1.2,DOST PH
+dost-419,Lima bean pod,Patani bunga,126,8.3,21.7,0.7,DOST PH
+dost-420,"Lima bean pod, boiled","Patani bunga, nilaga",100,7,17.2,0.3,DOST PH
+dost-421,"Limang sugat, young lvs",N/A,56,3.4,10.1,0.2,DOST PH
+dost-422,Malabar nightshade lvs,Alugbati dahon/Spinach vine lvs,33,2.4,5,0.4,DOST PH
+dost-423,"Malabar nightshade lvs, boiled","Alugbati dahon, nilaga",21,0.6,4.3,0.2,DOST PH
+dost-424,Malibaddu,Lubeg,50,1.2,10.8,0.2,DOST PH
+dost-425,"Mango, young lvs",Mangga talbos,90,3,17.8,0.7,DOST PH
+dost-426,"Mango, young lvs, boiled","Mangga talbos, nilaga",50,1.6,9.9,0.4,DOST PH
+dost-427,Marrow-stem kale lvs and stems,Kales dahon at tangkay,34,3.1,4.3,0.5,DOST PH
+dost-428,Mexican lilac flower,Kakawati bulaklak,58,2.8,10.1,0.7,DOST PH
+dost-429,"Mexican lilac flowers, boiled","Kakawati bulaklak, nilaga",31,1.4,5.8,0.2,DOST PH
+dost-430,Morning glory lvs,Malakamote dahon,57,4,9.3,0.4,DOST PH
+dost-431,"Mung bean seed, fresh","Munggo buto, sariwa",119,7.7,21.6,0.2,DOST PH
+dost-432,Mung bean sprout,Toge,64,5.7,10,0.1,DOST PH
+dost-433,"Mung bean sprout, boiled","Toge, nilaga",54,4.8,7,0.7,DOST PH
+dost-434,"Mushroom, fresh","Kabuti, sariwa",48,3.8,6.9,0.6,DOST PH
+dost-435,Mustard lvs,Mustasa dahon,24,2.3,2.7,0.4,DOST PH
+dost-436,"Mustard lvs, boiled","Mustasa dahon, nilaga",21,1.3,2.7,0.6,DOST PH
+dost-437,New Zealand spinach lvs,Ispinaka dahon,33,3.3,3.7,0.5,DOST PH
+dost-438,"New Zealand spinach lvs, boiled","Ispinaka dahon, nilaga",28,1.4,4.9,0.3,DOST PH
+dost-439,Okra,Ladyfinger,34,1.8,5.9,0.3,DOST PH
+dost-440,"Okra, boiled","Ladyfinger, boiled",30,1,6.1,0.2,DOST PH
+dost-441,"Onion, Bombay bulb","Sibuyas, Bombay ulo",52,1.7,10.5,0.3,DOST PH
+dost-442,"Onion, Bombay bulb, boiled","Sibuyas, Bombay ulo, nilaga",47,1.2,9.7,0.4,DOST PH
+dost-443,"Onion, garden shallot bulb","Sibuyas, Tagalog ulo",68,1.7,14.1,0.5,DOST PH
+dost-444,"Onion, garden shallot bulb, boiled","Sibuyas, Tagalog ulo, nilaga",62,1.1,13.3,0.5,DOST PH
+dost-445,"Onion, garden shallot lvs","Sibuyas, Tagalog, dahon",37,1.7,5.4,1,DOST PH
+dost-446,"Onion, garden shallot lvs, boiled","Sibuyas, Tagalog, dahon, nilaga",27,1.3,4.1,0.6,DOST PH
+dost-447,"Onion, spring","Sibuyas, mura",41,1.8,7.2,0.5,DOST PH
+dost-448,"Onion, spring, boiled","Sibuyas, mura, nilaga",36,1.3,6.9,0.4,DOST PH
+dost-449,Pako fern lvs,Fiddlehead fern lvs/Vegetable fern lvs,31,3.2,3.7,0.4,DOST PH
+dost-450,"Pako fern lvs, boiled","Fiddlehead fern lvs, boiled",33,1.9,5.5,0.4,DOST PH
+dost-451,"Palm-like fig, young lvs","Philippine fig, young lvs/Lubi-lubi talbos",50,3.9,6.9,0.7,DOST PH
+dost-452,"Palm-like fig, young lvs, boiled","Philippine fig, young lvs, boiled/Lubi-lubi talbos, nilaga",19,1.2,3.2,0.2,DOST PH
+dost-453,Pansit-pansitan,Olasiman-bato,15,0.9,2.5,0.2,DOST PH
+dost-454,"Papaya fruit, unripe",N/A,27,1,5.5,0.1,DOST PH
+dost-455,"Papaya, young lvs",N/A,106,6.1,16.7,1.6,DOST PH
+dost-456,"Papaya, young lvs, boiled",N/A,67,4.6,9.5,1.2,DOST PH
+dost-457,Papaya petioles,N/A,27,0.6,5.8,0.2,DOST PH
+dost-458,"Papaya petioles, boiled",N/A,24,0.7,4.9,0.2,DOST PH
+dost-459,Parsley lvs,N/A,58,4,8.4,0.9,DOST PH
+dost-460,Pechay lvs,Petsay dahon,22,2.1,2.6,0.4,DOST PH
+dost-461,"Pechay lvs, boiled","Petsay dahon, nilaga",21,1.7,2.4,0.5,DOST PH
+dost-462,Pechay petioles,Petsay tangkay,14,0.6,2.1,0.3,DOST PH
+dost-463,"Pechay petioles, boiled","Petsay tangkay, nilaga",11,0.4,1.9,0.2,DOST PH
+dost-464,"Pepper, chili fruit","Sili, labuyo, bunga",75,4.8,9,2.2,DOST PH
+dost-465,"Pepper, chili lvs","Sili, labuyo, dahon",60,5.8,6.4,1.2,DOST PH
+dost-466,"Pepper, chili lvs, boiled","Sili, labuyo, dahon, nilaga",52,1.8,10.5,0.3,DOST PH
+dost-467,"Pepper, sweet/bell long, green","Sili, sweet/bell, mahaba, berde",44,1.8,8.1,0.5,DOST PH
+dost-468,"Pepper, sweet/bell, long, green, boiled","Sili, sweet/bell, mahaba, berde, nilaga",32,0.9,6.4,0.3,DOST PH
+dost-469,"Pepper, sweet/bell, long, red","Sili, sweet/bell, mahaba, pula",75,2.4,14.4,0.9,DOST PH
+dost-470,"Pepper, sweet/bell, round, green","Sili, sweet/bell, bilog, berde",28,0.9,5.6,0.2,DOST PH
+dost-471,"Pepper, sweet/bell, round, green, boiled","Sili, sweet/bell, bilog, berde, nilaga",17,0.5,3.2,0.2,DOST PH
+dost-472,"Pepper, sweet/bell, round, red","Sili, sweet/bell, bilog, pula",36,0.5,7.8,0.3,DOST PH
+dost-473,Philippine spinach lvs,Talinum dahon/Ceylon spinach lvs,29,2.7,3.5,0.5,DOST PH
+dost-474,"Philippine spinach lvs, boiled","Talinum dahon, nilaga/Ceylon spinach lvs, boiled",23,0.8,4.6,0.2,DOST PH
+dost-475,Pigeon pea pod,Kadyos bunga,149,8.2,27.4,0.7,DOST PH
+dost-476,"Pigeon pea pod, boiled","Kadyos bunga, nilaga",84,5.6,14.7,0.3,DOST PH
+dost-477,"Pigeon pea seed, fresh","Kadyos buto, sariwa",143,8.2,26,0.7,DOST PH
+dost-478,Malabar bauhinia lvs,Alibangbang/Alambangbang dahon,60,2.5,8.9,1.6,DOST PH
+dost-479,"Prickly chaff-flower, lvs",Lupo-lupo/Hangod,59,6.4,6.2,1,DOST PH
+dost-480,Purslane lvs,Olasiman dahon,31,2.3,4.5,0.4,DOST PH
+dost-481,"Purslane lvs, boiled","Olasiman dahon, nilaga",26,1.3,4.6,0.3,DOST PH
+dost-482,Racaba lvs,Bunga-bunga dahon/Dwarf copperleaf lvs,58,3.3,8.9,1,DOST PH
+dost-483,Radish,"Labanos/Rabanos, lamang ugat",20,0.6,4.1,0.1,DOST PH
+dost-484,"Radish, boiled","Labanos/Rabanos, lamang ugat, nilaga",15,0.2,3.2,0.1,DOST PH
+dost-485,"Radish, pod","Labanos/Rabanos, bunga",33,1.7,6.2,0.1,DOST PH
+dost-486,"Rhubarb, young petioles",Garden rhubarb,27,0.6,5.1,0.5,DOST PH
+dost-487,Roselle lvs,N/A,63,2.8,11.6,0.6,DOST PH
+dost-488,"Sabitan, lvs",N/A,70,6.2,9.6,0.7,DOST PH
+dost-489,"Seaweed, gut weed, dried","Bitukang manok, tuyo/Hollow green nori, dried",108,1.4,24.8,0.4,DOST PH
+dost-490,Sea purslane lvs,Dampalit dahon,25,1.8,3.6,0.4,DOST PH
+dost-491,"Sea purslane lvs, boiled","Dampalit dahon, nilaga",36,1,7.5,0.2,DOST PH
+dost-492,"Seaweed, balbalulang",Balbalulang/Balbalolang,23,0.4,4.6,0.3,DOST PH
+dost-493,"Seaweed, gamet, dried","Gamet, tuyo",252,23.7,36.7,1.2,DOST PH
+dost-494,"Seaweed, kawkawayan",Kawkawayan/Gulaman dagat/Ceylon moss seaweed,67,2.2,11.2,1.5,DOST PH
+dost-495,"Seaweed, kulot",Kulot,24,0.6,4.6,0.4,DOST PH
+dost-496,"Seaweed, lato",Lato,10,0.1,2.1,0.1,DOST PH
+dost-497,"Seaweed, pokpoklo",Pokpoklo,14,1.2,1.8,0.2,DOST PH
+dost-498,Sesbania flower,Katuray bulaklak,31,1,6.1,0.3,DOST PH
+dost-499,"Sesbania flower, boiled","Katuray bulaklak, nilaga",28,1,5.4,0.3,DOST PH
+dost-500,Sesbania lvs,Katuray dahon,76,6.6,9.2,1.4,DOST PH
+dost-501,"Sesbania lvs, boiled","Katuray dahon, nilaga",51,6,4.9,0.8,DOST PH
+dost-502,Slender/Spineless amaranth lvs,Kulitis dahon,59,4.5,7.8,1.1,DOST PH
+dost-503,"Slender/Spineless amaranth lvs, boiled","Kulitis dahon, nilaga",34,3.3,4.4,0.4,DOST PH
+dost-504,Snake gourd fruit,Pakupis bunga,18,0.6,4,0,DOST PH
+dost-505,"Snap bean pod, green","Abitsuwelas/Baguio beans bunga, berde",36,2,6.8,0.1,DOST PH
+dost-506,"Snap bean pod, green, boiled","Abitsuwelas/Baguio beans bunga, berde, nilaga",27,0.8,5.6,0.1,DOST PH
+dost-507,"Snap bean pod, white","Abitsuwelas/Baguio beans bunga, puti",31,1.9,5.3,0.2,DOST PH
+dost-508,"Snap bean pod, white, boiled","Abitsuwelas/Baguio beans bunga, puti, nilaga",14,1,2.3,0.1,DOST PH
+dost-509,"Snap bean seed, black & brown, fresh","Abitsuwelas/Baguio beans buto, kulay kape, sariwa",185,11.3,33.5,0.6,DOST PH
+dost-510,Snow/Sugar pea pod,Sitsaro,67,3,12.8,0.4,DOST PH
+dost-511,"Snow/Sugar pea pod, boiled","Sitsaro, nilaga",40,1.5,7.6,0.4,DOST PH
+dost-512,"Soybean seed, fresh","Utaw buto, sariwa",151,13.1,10.9,6.1,DOST PH
+dost-513,"Soybean seed, fresh, boiled","Utaw buto, sariwa, nilaga",144,12.4,9.3,6.4,DOST PH
+dost-514,"Spanish plum, young lvs",Siniguelas talbos,66,4.5,9.3,1.2,DOST PH
+dost-515,"Spanish plum, young lvs, boiled","Siniguelas talbos, nilaga",39,1.9,6.4,0.6,DOST PH
+dost-516,Spiny pigweed/Thorny amaranth lvs,Uray dahon,63,5.5,8.2,0.9,DOST PH
+dost-517,"Spiny pigweed/Thorny amaranth lvs, boiled","Uray dahon, nilaga",37,1.6,6.9,0.3,DOST PH
+dost-518,Sponge gourd fruit,Patola bunga,21,0.7,4.3,0.1,DOST PH
+dost-519,"Sponge gourd fruit, boiled","Patola bunga, nilaga",16,0.4,2.7,0.4,DOST PH
+dost-520,Sponge gourd lvs,Patola dahon,37,4,3.9,0.6,DOST PH
+dost-521,"Sponge gourd lvs, boiled","Patola dahon, nilaga",14,1.4,1.8,0.1,DOST PH
+dost-522,Squash flower,Kalabasa bulaklak,33,1.9,5.2,0.5,DOST PH
+dost-523,"Squash flower, boiled","Kalabasa bulaklak, nilaga",19,0.4,4.1,0.1,DOST PH
+dost-524,Squash fruit,Kalabasa bunga,68,1.2,15.3,0.2,DOST PH
+dost-525,"Squash fruit, boiled","Kalabasa bunga, nilaga",47,0.4,10.8,0.2,DOST PH
+dost-526,Squash lvs,Kalabasa dahon,38,3.4,4.8,0.6,DOST PH
+dost-527,"Squash lvs, boiled","Kalabasa dahon, nilaga",27,1.6,4.2,0.4,DOST PH
+dost-528,"Squash, summer fruit","Kalabasa bunga, puti",21,0.6,4.3,0.2,DOST PH
+dost-529,String/Yard long bean lvs,Sitaw talbos,44,4.2,6,0.4,DOST PH
+dost-530,"String/Yard long bean lvs, boiled","Sitaw talbos, nilaga",27,2.1,4.3,0.2,DOST PH
+dost-531,"String/Yard long bean pod, green","Sitaw bunga, berde",38,2.7,6.2,0.3,DOST PH
+dost-532,"String/Yard long bean pod, green, boiled","Sitaw bunga, berde, nilaga",52,4,7.9,0.5,DOST PH
+dost-533,"String/Yard long bean pod, red","Sitaw bunga, pula",44,2.8,7.8,0.2,DOST PH
+dost-534,"String/Yard long bean pod, red, boiled","Sitaw bunga, pula, nilaga",35,1.5,6.7,0.2,DOST PH
+dost-535,"String/Yard long bean pod, white","Sitaw bunga, puti",47,2.2,8.8,0.3,DOST PH
+dost-536,"String/Yard long bean pod, white, boiled","Sitaw bunga, puti, nilaga",23,1.4,4.1,0.1,DOST PH
+dost-537,"String/Yard long bean seed, green, fresh","Sitaw buto, berde, sariwa",119,9.2,18.8,0.8,DOST PH
+dost-538,"String/Yard long bean seed, green, fresh, boiled","Sitaw buto, berde, sariwa, nilaga",119,12.7,16.1,0.4,DOST PH
+dost-539,"Sugar palm, heart of palm",Kaong ubod,38,1.3,7,0.5,DOST PH
+dost-540,Swamp amaranth lvs,Lupo dahon,52,5.1,7.5,0.2,DOST PH
+dost-541,Swamp cabbage lvs,Kangkong dahon/Water spinach lvs,39,3.3,5.5,0.4,DOST PH
+dost-542,"Swamp cabbage lvs, boiled","Kangkong dahon, nilaga/Water spinach lvs, boiled",28,1.5,4.7,0.4,DOST PH
+dost-543,Sweet potato lvs,Kamote dahon,49,3.9,7.2,0.5,DOST PH
+dost-544,"Sweet potato lvs, boiled","Kamote dahon, nilaga",29,1.1,4.6,0.7,DOST PH
+dost-545,"Sweet potato lvs, purple","Kamote dahon, murado",69,4.7,11.3,0.6,DOST PH
+dost-546,"Sweet potato lvs, purple, boiled","Kamote dahon, murado, nilaga",24,1.8,3.5,0.3,DOST PH
+dost-547,Tamarind flower,Sampalok bulaklak,86,2.5,15,1.8,DOST PH
+dost-548,Tamarind lvs,Sampalok dahon,80,3.9,13.9,1,DOST PH
+dost-549,"Tamarind lvs, boiled","Sampalok dahon, nilaga",54,2.4,9.9,0.5,DOST PH
+dost-550,Ivy gourd lvs,Tamling dahon,49,4.9,3.9,1.5,DOST PH
+dost-551,"Ivy gourd lvs, boiled","Tamling dahon, nilaga",49,3.5,7,0.8,DOST PH
+dost-552,Taro lvs,Gabi dahon,73,4.3,10,1.8,DOST PH
+dost-553,"Taro lvs, boiled","Gabi dahon, nilaga",48,1.4,9.7,0.4,DOST PH
+dost-554,Taro petioles,Gabi tangkay,21,0.3,4.6,0.2,DOST PH
+dost-555,"Taro petioles, boiled","Gabi tangkay, nilaga",15,0.2,3.2,0.1,DOST PH
+dost-556,Tomato,Kamatis,25,0.8,5.2,0.1,DOST PH
+dost-557,"Tomato, boiled","Kamatis, nilaga",25,0.4,5.6,0.1,DOST PH
+dost-558,"Tomato, Spanish, ripe","Kamatis, Kastila, hinog",64,2.3,12.9,0.4,DOST PH
+dost-559,Yam bean,Singkamas lamang-ugat/Jicama,45,1.1,9.8,0.2,DOST PH
+dost-560,"Yam bean, pod",Singkamas bunga,52,2.6,9.6,0.3,DOST PH
+dost-561,"Water caltrop, boiled","Sungay kalabaw, nilaga/Bullnut, boiled",226,9.4,46.8,0.1,DOST PH
+dost-562,Water chestnut,Apulid lamang-ugat,176,2.3,40.3,0.7,DOST PH
+dost-563,"Water chestnut, boiled","Apulid lamang-ugat, nilaga",246,2.7,58.6,0.1,DOST PH
+dost-564,Watercress,Tonghoy,26,1,4.8,0.3,DOST PH
+dost-565,Wax gourd fruit,Kundol bunga,20,0.4,3.8,0.3,DOST PH
+dost-566,"Wax gourd fruit, boiled","Kundol bunga, nilaga",13,0.1,3,0.1,DOST PH
+dost-567,Wild ginger,Tumbong aso/Bitter ginger,32,2.1,5,0.4,DOST PH
+dost-568,Winged bean pod,"Sigarilyas/Kalamismis, bunga",31,2,5.1,0.3,DOST PH
+dost-569,"Winged bean pod, boiled","Sigarilyas/Kalamismis bunga, nilaga",35,1.6,6.4,0.3,DOST PH
+dost-570,"Asparagus, cnd",N/A,30,1.6,5.1,0.4,DOST PH
+dost-571,"Bamboo shoot, cnd","Labong, de lata",18,1.1,2.6,0.4,DOST PH
+dost-572,"Bamboo shoot, dried","Labong, tuyo",357,17.1,69,1.4,DOST PH
+dost-573,"Black wood ear mushroom, dried","Tengang daga, tuyo",325,8.4,71.6,0.5,DOST PH
+dost-574,"Cucumber, salted, cnd","Pipino, inasnan, de lata",37,2.9,5.8,0.2,DOST PH
+dost-575,"Mushroom, cnd","Kabuti, de lata",23,2.3,2.5,0.4,DOST PH
+dost-576,"Mushroom, dried","Kabuti, tuyo",331,16,64.6,0.9,DOST PH
+dost-577,"Mustard lvs, pickled","Mustasa dahon, buro",16,1.4,2.3,0.1,DOST PH
+dost-578,"Mustard lvs, salted","Mustasa dahon, inasnan",28,1.9,2.9,1,DOST PH
+dost-579,"Olive, green, in brine","Aseytuna, berde",132,1.3,3.4,12.6,DOST PH
+dost-580,"Olive, ripe, in brine","Aseytuna, hinog",158,1,2.6,16,DOST PH
+dost-581,"Papaya fruit, unripe, dried","Papaya bunga, hilaw,  tuyo",335,6.7,75.7,0.6,DOST PH
+dost-582,Pickle relish,N/A,145,0.3,33.9,0.9,DOST PH
+dost-583,"Pickles, mixed",N/A,163,0.2,33.5,3.1,DOST PH
+dost-584,"Pickles, papaya","Atsara, papaya",203,0.8,30.3,8.7,DOST PH
+dost-585,"Pickles, whole, gherkins",N/A,132,0.4,28.7,1.7,DOST PH
+dost-586,"Pimiento, cnd",N/A,20,0.6,3.3,0.5,DOST PH
+dost-587,"Radish, salted, cnd","Labanos, inasnan, de lata",46,2.7,7.8,0.4,DOST PH
+dost-588,"Taro lvs, dried","Gabi dahon, tuyo",388,23.1,53.1,9.2,DOST PH
+dost-589,"Bagbagkong flower, raw",Sabidukong/Latok,49,4.1,6.9,0.6,DOST PH
+dost-590,"Batwan, immature fruit, raw",Binucao/Binukaw,53,0.6,12.4,0.1,DOST PH
+dost-591,"Bitter melon/gourd, wild, fruit, raw",Ampalayang ligaw,29,1.2,5.4,0.3,DOST PH
+dost-592,"Malunggay leaves powder, dry",-,382,28.8,47,8.7,DOST PH
+dost-593,"Mangrove apple, raw",Bakawan bunga,72,1.6,15.2,0.5,DOST PH
+dost-594,"Ivy gourd, immature fruit, raw",Tamling bunga,28,1.2,5.2,0.3,DOST PH
+dost-595,"Basil, sweet, fresh",-,46,3.3,6.9,0.6,DOST PH
+dost-596,"Libas, mature lvs","Common hog plum lvs, mature",90,3.8,15.7,1.3,DOST PH
+dost-597,"Libas, young lvs","Common hog plum lvs, young",84,2.8,16.5,0.7,DOST PH
+dost-598,"Thyme, fresh",N/A,118,5.3,20,1.9,DOST PH
+dost-599,"Apple, green","Mansanas, berde",63,0.5,14.9,0.1,DOST PH
+dost-600,"Apple, red","Mansanas, pula",67,0.7,15.8,0.1,DOST PH
+dost-601,Atemoya,N/A,63,0.5,14.5,0.3,DOST PH
+dost-602,"Avocado, green","Abokado, berde",101,0.9,10.5,6.2,DOST PH
+dost-603,"Avocado, red","Abokado, murado",100,0.9,7,7.6,DOST PH
+dost-604,"Banana, bungulan","Saging, bungulan",106,1,24.5,0.4,DOST PH
+dost-605,"Banana, butuan","Saging, butuan",101,1.3,23.2,0.3,DOST PH
+dost-606,"Banana, cavendish, ripe","Saging, cavendish, hinog",104,0.9,23.1,0.9,DOST PH
+dost-607,"Banana, cavendish, unripe","Saging, cavendish, hilaw",112,1.1,25.4,0.7,DOST PH
+dost-608,"Banana, gloria","Saging, gloria",132,1.1,31.7,0.1,DOST PH
+dost-609,"Banana, lacatan","Saging, lakatan",126,1.4,29.6,0.2,DOST PH
+dost-610,"Banana, latundan","Saging, latundan",105,1.2,24.4,0.3,DOST PH
+dost-611,"Banana, murado","Saging, murado",107,1.2,24.5,0.5,DOST PH
+dost-612,"Banana, saba","Saging, saba",110,1.1,25.5,0.4,DOST PH
+dost-613,"Banana, saba, boiled","Saging, saba, nilaga",159,1.2,38.6,0,DOST PH
+dost-614,"Banana, ternate","Saging, ternate",134,0.9,31.6,0.4,DOST PH
+dost-615,"Banana, tuldok","Saging, tuldok/tindok/tandok",99,1.1,23.3,0.2,DOST PH
+dost-616,Bignay,Bugnay/Salamander tree fruit,35,0.7,6.3,0.8,DOST PH
+dost-617,Bilimbi,Kamyas/Kamias/Kalamyas,23,0.7,4.5,0.2,DOST PH
+dost-618,Black/Java plum,Duhat/Jambolan,71,0.8,16,0.4,DOST PH
+dost-619,Barbados gooseberry,N/A,36,1,6.3,0.7,DOST PH
+dost-620,Buri palm,Buli,75,0.7,17.8,0.1,DOST PH
+dost-621,Calamansi/Philippine lemon,Kalamansi/Calamondin,44,0.4,8.3,1,DOST PH
+dost-622,Canistel,Tiesa/Eggfruit,172,2.5,39.1,0.6,DOST PH
+dost-623,Cashew fruit,Kasuy bunga,63,0.7,13.8,0.6,DOST PH
+dost-624,Java apple,Makopa/Wax jambu/Wax apple,34,0.4,7.8,0.1,DOST PH
+dost-625,Custard apple,Anonas/Bullock&#39;s heart,131,1.4,31,0.2,DOST PH
+dost-626,Durian,N/A,163,2,36.1,1.2,DOST PH
+dost-627,Velvet apple,Mabolo,88,0.6,20.8,0.3,DOST PH
+dost-628,Grape,Ubas,83,0.4,19.7,0.3,DOST PH
+dost-629,"Guava, red","Bayabas, pula",102,0.9,23.8,0.4,DOST PH
+dost-630,"Guava, white","Bayabas, puti",70,0.8,16,0.3,DOST PH
+dost-631,Jackfruit,Langka/Nangka,111,1.4,25.4,0.4,DOST PH
+dost-632,Johey oak,Marang,128,1,30,0.4,DOST PH
+dost-633,Jamaica cherry,Datiles/Aratiles,100,2,21.6,0.6,DOST PH
+dost-634,Jujube Indian/Chinese date,Mansanitas,73,1,16.4,0.4,DOST PH
+dost-635,Kaffir lime,Kabuyaw,42,0.6,7,1.3,DOST PH
+dost-636,Kalumpit,Batangas cherry,77,1.3,17,0.4,DOST PH
+dost-637,Lanzon,Lansones/Langsat,64,1,14.2,0.3,DOST PH
+dost-638,Lemon,Limon,42,0.5,6.3,1.6,DOST PH
+dost-639,Lemon peel,"Limon, balat",82,1.1,18.6,0.3,DOST PH
+dost-640,Lime,Dayap/Key lime,50,0.8,6.3,2.4,DOST PH
+dost-641,Lime peel,"Dayap, balat",121,3.4,26.5,0.2,DOST PH
+dost-642,Lipoti,Lipote/Igot,77,0.7,12.9,2.5,DOST PH
+dost-643,Lychee/Litchi,Lechiyas/Litsiyas,87,1.5,20.1,0.1,DOST PH
+dost-644,Madras thorn,Camachile/Kamatsile/Manila tamarind,93,3.2,19.1,0.4,DOST PH
+dost-645,Malay apple,Yambo,44,0.5,10,0.2,DOST PH
+dost-646,Malay gooseberry,Iba/Karmay/Bangkiling/Tahitian gooseberry,40,0.8,7.7,0.7,DOST PH
+dost-647,"Mango, Indian, unripe","Mangga, Indiyan, hilaw",53,0.3,12.5,0.2,DOST PH
+dost-648,"Mango, Manila super, medium ripe","Mangga, kalabaw, manibalang",66,0.4,15.2,0.4,DOST PH
+dost-649,"Mango, Manila super, ripe","Mangga, kalabaw, hinog",70,0.6,16.4,0.2,DOST PH
+dost-650,"Mango, Manila super, unripe","Mangga, kalabaw, hilaw",63,0.5,14.9,0.2,DOST PH
+dost-651,"Mango, paho, unripe","Mangga, paho/pahutan, hilaw",74,0.7,16.4,0.6,DOST PH
+dost-652,"Mango, piko, medium ripe","Mangga, piko, manibalang",83,0.3,18.4,0.9,DOST PH
+dost-653,"Mango, piko, ripe","Mangga, piko, hinog",80,0.7,18.9,0.2,DOST PH
+dost-654,"Mango, piko, unripe","Mangga, piko, hilaw",69,0.5,15.8,0.4,DOST PH
+dost-655,"Mango, supsupin, ripe","Mangga, supsupin, hinog",91,1.2,20.5,0.5,DOST PH
+dost-656,Mangosteen,N/A,84,0.7,18.6,0.8,DOST PH
+dost-657,Many-spiked flacourtia,Seryale/Bitangol/Governor&#39;s Plum,118,0.6,27.6,0.6,DOST PH
+dost-658,Marmalade plum,Chico-mamey,113,1.2,26.4,0.3,DOST PH
+dost-659,Melon,Milon,23,0.5,4.8,0.3,DOST PH
+dost-660,"Melon, honey dew",N/A,42,0.3,9.5,0.3,DOST PH
+dost-661,"Melon, watermelon",Pakwan,31,0.1,7.2,0.2,DOST PH
+dost-662,"Orange, Ladu","Dalandan, Ladu",35,0.4,7.8,0.2,DOST PH
+dost-663,"Orange, Szinkom","Dalandan, Szinkom",31,0.3,6.9,0.2,DOST PH
+dost-664,"Papaya fruit, medium ripe",N/A,53,0.7,12,0.2,DOST PH
+dost-665,"Papaya fruit, ripe",N/A,53,0.5,12.1,0.3,DOST PH
+dost-666,Pear,Peras,57,0.4,12.6,0.6,DOST PH
+dost-667,"Persimmon, kaki",Asian persimmon,86,0.4,19.7,0.6,DOST PH
+dost-668,Philippine dillenia,Katmon,33,0.3,7.4,0.2,DOST PH
+dost-669,Pineapple,Pinya,55,0.4,13,0.2,DOST PH
+dost-670,Pomegranate,Granada,64,0.7,14.5,0.4,DOST PH
+dost-671,Pomelo,Suha/Lukban,51,0.7,10.6,0.6,DOST PH
+dost-672,Rambutan,N/A,87,1.2,18.6,0.9,DOST PH
+dost-673,Rattan fruit,Alimuran,88,0.6,18.6,1.2,DOST PH
+dost-674,Santol,Cotton fruit,67,0.7,13.8,1,DOST PH
+dost-675,Sapodilla,Chico,108,0.5,24.5,0.9,DOST PH
+dost-676,Sapote,Ebony persimmon,93,0.8,21.2,0.5,DOST PH
+dost-677,Stinking passion flower fruit,Pasionaryang mabaho,62,0.6,13.7,0.5,DOST PH
+dost-678,Stinking passion flower juice,"Pasionaryang mabaho, katas",56,0.8,11.8,0.6,DOST PH
+dost-679,Soursop,Guyabano,70,1.1,16.2,0.1,DOST PH
+dost-680,Spanish plum,Siniguwelas,88,0.9,20.6,0.2,DOST PH
+dost-681,"Star apple, green","Kaymito, berde",74,0.7,15.3,1.1,DOST PH
+dost-682,"Star apple, purple","Kaymito, murado",80,1.3,17.4,0.6,DOST PH
+dost-683,Starfruit,Balimbing,39,0.5,7.7,0.7,DOST PH
+dost-684,Strawberry,N/A,34,0.8,7.2,0.2,DOST PH
+dost-685,Sugar apple/Sweetsop,Atis,104,1.3,23.7,0.4,DOST PH
+dost-686,Sugar palm,Kaong,19,0.1,4.3,0.2,DOST PH
+dost-687,"Sugar palm, boiled","Kaong, nilaga",13,0.1,2.8,0.2,DOST PH
+dost-688,Susong-kalabaw,Carabao&#39;s teats,39,0.7,8.1,0.4,DOST PH
+dost-689,"Tamarind, ripe","Sampalok, hinog",258,2,61.1,0.6,DOST PH
+dost-690,"Tamarind, unripe","Sampalok, hilaw",77,0.9,17.7,0.3,DOST PH
+dost-691,"Tamarind, unripe, boiled","Sampalok, hilaw, nilaga",30,0.7,6.6,0.1,DOST PH
+dost-692,"Banana chips, salted",N/A,585,1.8,51.8,41.2,DOST PH
+dost-693,"Banana chips, sweetn",N/A,568,1.5,61.6,35.1,DOST PH
+dost-694,"Banana cracker, sweetn",N/A,509,2.1,62.8,27.7,DOST PH
+dost-695,Banana fritter,"Maruya, saging",240,3,48.1,3.9,DOST PH
+dost-696,"Banana, saba, mashed, w/ sugar & marg","Linupak, saging saba",204,1.4,41.4,3.6,DOST PH
+dost-697,"Banana, saba, w/ sugar, fried",Banana cue,183,2,37.8,2.6,DOST PH
+dost-698,"Banana, saba, w/ sugar, wrapped, fried","Turon, saging saba",259,2.4,48,6.4,DOST PH
+dost-699,"Bilimbi, pickled","Kamias, buro",22,0.5,4.7,0.1,DOST PH
+dost-700,"Cherry, in syrup, drnd",N/A,106,0.2,25.1,0.5,DOST PH
+dost-701,"Date, dried",N/A,346,1.7,78.6,2.8,DOST PH
+dost-702,Dikyam,N/A,246,1.9,56.1,1.6,DOST PH
+dost-703,"Fruit cocktail, tropical, in syrup, cnd",N/A,103,0.2,25,0.2,DOST PH
+dost-704,"Jujube Indian/Chinese date, dried","Mansanitas, tuyo",333,1.1,80.9,0.5,DOST PH
+dost-705,"Mango chips, dried",N/A,365,1.6,87.3,1,DOST PH
+dost-706,"Peach, in heavy syrup, cnd","Milokoton, hiniwa, may arnibal, nakalata",73,0.4,15.8,0.9,DOST PH
+dost-707,"Pineapple, crushed, cnd",N/A,87,0.5,20.9,0.2,DOST PH
+dost-708,"Pineapple, slice, cnd",N/A,119,0.4,27.5,0.8,DOST PH
+dost-709,Prune,N/A,278,2.5,65.5,0.7,DOST PH
+dost-710,Raisin,Pasas,340,3.5,78.9,1.1,DOST PH
+dost-711,Dragon fruit,Pitaya,66,1,13.2,1,DOST PH
+dost-712,"Kandis, flesh",N/A,65,0.3,14.9,0.5,DOST PH
+dost-713,"Kandis, pulp",N/A,60,0.3,14.3,0.2,DOST PH
+dost-714,"Libas fruit, ripe","Common hog plum fruit, ripe",51,0.8,11.7,0.1,DOST PH
+dost-715,"Libas fruit, unripe","Common hog plum fruit, unripe",40,0.8,8.9,0.1,DOST PH
+dost-716,Maraitum,N/A,92,0.5,22,0.2,DOST PH
+dost-717,Palau-biyok,N/A,115,0.6,27.5,0.3,DOST PH
+dost-718,Sapinit,Wild raspberry,76,1.2,15.2,1.1,DOST PH
+dost-719,Tabo,N/A,110,0.4,26.7,0.2,DOST PH
+dost-720,Beef blood,Baka dugo,90,20.6,0.5,0.6,DOST PH
+dost-721,"Beef blood, bbq","Baka dugo, bbq/&#34;rambo&#34;",93,19.7,1.1,1.1,DOST PH
+dost-722,Beef brain,Baka utak,127,10.3,0.3,9.4,DOST PH
+dost-723,"Beef brain, boiled","Baka utak, nilaga",155,12.2,1.2,11.3,DOST PH
+dost-724,Beef brisket,Baka punta y pecho,211,18.2,0,15.4,DOST PH
+dost-725,Beef chuck,Baka paypay,171,19,0,10.5,DOST PH
+dost-726,"Beef chuck, lean, boiled","Baka paypay, laman, nilaga",109,11.4,10.4,2.4,DOST PH
+dost-727,Beef club steak,"Baka tagiliran, unahan",104,23.1,0,1.3,DOST PH
+dost-728,Beef flank,Baka camto,231,19.4,0,17,DOST PH
+dost-729,Beef head,Baka ulo,139,25,0.4,4.2,DOST PH
+dost-730,Beef heart,Baka puso,139,18.8,1.9,6.2,DOST PH
+dost-731,"Beef intestine, large",Baka bitukang malaki,103,5,2.6,8.1,DOST PH
+dost-732,"Beef intestine, small",Baka bitukang maliit,109,16.4,1.4,4.2,DOST PH
+dost-733,Beef kidney,Baka bato,89,16.2,1.1,2.2,DOST PH
+dost-734,Beef lean meat,Baka laman,134,23.1,0,4.6,DOST PH
+dost-735,"Beef lean meat, boiled","Baka laman, nilaga",146,25.3,0,5,DOST PH
+dost-736,"Beef lean meat, broiled","Baka laman, inihaw",149,30.4,0,3,DOST PH
+dost-737,"Beef lean meat, fried","Baka laman, prito",183,30.2,0,6.9,DOST PH
+dost-738,Beef liver,Baka atay,144,20.6,8.3,3.2,DOST PH
+dost-739,"Beef liver, boiled","Baka atay, nilaga",154,25.5,4,4,DOST PH
+dost-740,Beef lung,Baka baga,98,17.2,3.2,1.8,DOST PH
+dost-741,Beef mammary,Baka sinuso,550,6.6,6.2,55.4,DOST PH
+dost-742,Beef omasum,Baka librilyo,95,15.1,0,3.8,DOST PH
+dost-743,"Beef omasum, boiled","Baka librilyo, nilaga",93,14.8,0,3.7,DOST PH
+dost-744,Beef plate,Baka tadyang,203,18.2,0,14.5,DOST PH
+dost-745,Beef porterhouse steak,"Baka tagiliran, gitna",105,23.4,0,1.3,DOST PH
+dost-746,Beef reticulum,Baka mansanilya,170,13.9,1.4,12.1,DOST PH
+dost-747,"Beef reticulum, boiled","Baka mansanilya, nilaga",167,11.5,0,13.4,DOST PH
+dost-748,Beef rib roast,Baka kadera,314,15.1,0,28.2,DOST PH
+dost-749,Beef round,Baka pierna corta at pierna larga,139,20.7,0,6.2,DOST PH
+dost-750,"Beef round, boiled","Baka pierna corta at pierna larga, nilaga",106,19.2,0,3.2,DOST PH
+dost-751,"Beef round, broiled","Baka pierna corta at pierna larga, inihaw",132,21.4,0,5.1,DOST PH
+dost-752,"Beef round, fried","Baka pierna corta at pierna larga, prito",140,21.1,0,6.2,DOST PH
+dost-753,Beef rump,Baka tapadera,104,20.7,0,2.4,DOST PH
+dost-754,Beef shank,Baka kenchi,115,21.5,0,3.2,DOST PH
+dost-755,"Beef shank, boiled","Baka kenchi, nilaga",92,19.5,0,1.5,DOST PH
+dost-756,Beef short rib,Baka tadyang,248,20.2,0,18.6,DOST PH
+dost-757,Beef sirloin,"Baka tagiliran, hulihan",132,20.5,0,5.6,DOST PH
+dost-758,"Beef sirloin, boiled","Baka tagiliran, hulihan, nilaga",106,18.3,0,3.6,DOST PH
+dost-759,"Beef sirloin, broiled","Baka tagiliran, hulihan, inihaw",138,22.2,0,5.5,DOST PH
+dost-760,"Beef sirloin, fried","Baka tagiliran, hulihan, prito",152,23.5,0,6.4,DOST PH
+dost-761,Beef spleen,Baka lapay,95,18.2,1,2,DOST PH
+dost-762,"Beef spleen, boiled","Baka lapay, nilaga",85,16.4,0,2.2,DOST PH
+dost-763,Beef stomach,Baka sikmura,119,17.6,0.2,5.3,DOST PH
+dost-764,Beef tail,Baka buntot,360,15.8,0,33,DOST PH
+dost-765,Beef tenderloin,Baka solomilyo,128,22.8,0,4.1,DOST PH
+dost-766,Beef tongue,Baka dila,214,14.8,4.4,15.2,DOST PH
+dost-767,"Beef tongue, boiled","Baka dila, nilaga",227,11.4,18.3,12,DOST PH
+dost-768,Beef tripe,Baka goto,102,11,1.4,5.8,DOST PH
+dost-769,"Beef tripe, boiled","Baka goto, nilaga",94,10.3,1.5,5.2,DOST PH
+dost-770,Beef uterus,Baka bahay guya,88,15.8,3.5,1.2,DOST PH
+dost-771,Carabeef blood,Kalabaw dugo,75,18.6,0.2,0,DOST PH
+dost-772,Carabeef brain,Kalabaw utak,136,9.4,1.9,10.1,DOST PH
+dost-773,Carabeef chuck,Kalabaw paypay,100,18.6,0,2.8,DOST PH
+dost-774,Carabeef heart,Kalabaw puso,114,17.4,0.7,4.6,DOST PH
+dost-775,"Carabeef intestine, large",Kalabaw bitukang malaki,165,9.3,5.2,11.9,DOST PH
+dost-776,"Carabeef intestine, small",Kalabaw bitukang maliit,148,10.4,4.7,9.7,DOST PH
+dost-777,Carabeef kidney,Kalabaw bato,77,14,1.1,1.8,DOST PH
+dost-778,Carabeef lean meat,Kalabaw laman,90,20.6,0,0.8,DOST PH
+dost-779,"Carabeef lean meat, boiled","Kalabaw laman, nilaga",100,22.4,0,1.2,DOST PH
+dost-780,Carabeef liver,Kalabaw atay,108,15.5,7.6,1.7,DOST PH
+dost-781,Carabeef lung,Kalabaw baga,87,18.6,0,1.4,DOST PH
+dost-782,Carabeef omasum,Kalabaw librilyo,37,8.7,0.1,0.2,DOST PH
+dost-783,Carabeef reticulum,Kalabaw mansanilya,119,11.2,2.9,6.9,DOST PH
+dost-784,Carabeef round,Kalabaw hita,94,20.4,0,1.4,DOST PH
+dost-785,Carabeef round steak,Kalabaw pierna corta at pierna larga,100,21.4,0,1.6,DOST PH
+dost-786,Carabeef rump,Kalabaw tapadera,85,19.3,0,0.9,DOST PH
+dost-787,Carabeef shank,Kalabaw kenchi,102,20.2,0,2.4,DOST PH
+dost-788,Carabeef spleen,Kalabaw lapay,98,21.2,0,1.5,DOST PH
+dost-789,Carabeef stomach,Kalabaw sikmura,81,18.7,0,0.7,DOST PH
+dost-790,Carabeef w/ fat,"Kalabaw laman, may taba",119,21.8,0,3.6,DOST PH
+dost-791,"Carabeef w/ fat, boiled","Kalabaw laman, may taba, nilaga",147,26.9,0,4.4,DOST PH
+dost-792,Chevon back,Kambing likod,96,20.4,0,1.6,DOST PH
+dost-793,Chevon breast,Kambing dibdib,82,17.7,0,1.2,DOST PH
+dost-794,Chevon flank,Kambing tiyan,149,16.6,0,9.2,DOST PH
+dost-795,Chevon heart,Kambing puso,125,17.1,0.8,5.9,DOST PH
+dost-796,"Chevon intestine, small",Kambing bitukang maliit,71,10.2,0,3.4,DOST PH
+dost-797,Chevon kidney,Kambing bato,97,15.9,0.4,3.5,DOST PH
+dost-798,Chevon leg,Kambing hita at binti,72,17,0,0.4,DOST PH
+dost-799,Chevon liver,Kambing atay,129,22.1,2.6,3.4,DOST PH
+dost-800,Chevon loin,Kambing lomo,95,22.3,0,0.6,DOST PH
+dost-801,Chevon lung,Kambing baga,93,17,1.6,2.1,DOST PH
+dost-802,Chevon neck,Kambing leeg,121,23.3,0,3.1,DOST PH
+dost-803,Chevon rib,Kambing tadyang,90,19.9,0,1.2,DOST PH
+dost-804,Chevon shank,Kambing biyas,89,19.8,0,1.1,DOST PH
+dost-805,Chevon shoulder,Kambing balikat,90,17.4,0,2.3,DOST PH
+dost-806,Chevon stomach,Kambing sikmura,57,9.8,1.9,1.1,DOST PH
+dost-807,"Chick, one-day old, fried",N/A,237,25.3,1.2,14.6,DOST PH
+dost-808,Chicken back,Manok likod,207,17.4,0,15.3,DOST PH
+dost-809,Chicken blood,Manok dugo,59,13.9,0.5,0.1,DOST PH
+dost-810,Chicken breast,Manok pitso,131,21.6,0,5,DOST PH
+dost-811,Chicken feet,Manok paa,187,24.7,0,9.8,DOST PH
+dost-812,"Chicken feet, bbq","Manok paa, bbq/&#34;adidas&#34;",229,26.9,3.6,11.9,DOST PH
+dost-813,Chicken gizzard,Manok balun-balunan,106,21.8,2.5,1,DOST PH
+dost-814,Chicken head,Manok ulo,129,13.1,0.8,8.2,DOST PH
+dost-815,"Chicken head, bbq","Manok ulo, bbq/&#34;helmet&#34;",220,20.5,1.3,14.7,DOST PH
+dost-816,Chicken heart,Manok puso,197,11.6,1.9,15.9,DOST PH
+dost-817,Chicken intestine,Manok bituka,155,13,0,11.4,DOST PH
+dost-818,"Chicken intestine, bbq","Manok bituka, bbq/""IUD""/Isaw manok",210,28.2,3,9.6,DOST PH
+dost-819,Chicken leg/drumstick,Manok binti,204,17.1,0,15.1,DOST PH
+dost-820,Chicken liver,Manok atay,124,18.1,4,3.9,DOST PH
+dost-821,Chicken neck,Manok leeg,314,14.1,0,28.6,DOST PH
+dost-822,"Chicken pullet, breast","Manok dumalaga, pitso",103,19.6,0,2.7,DOST PH
+dost-823,"Chicken pullet, thigh","Manok dumalaga, hita",103,19.6,0,2.7,DOST PH
+dost-824,Chicken thigh,Manok hita,149,19.8,0,7.7,DOST PH
+dost-825,Chicken thigh & leg,Manok hita at binti,187,17.6,0,13,DOST PH
+dost-826,Chicken wing,Manok pakpak,194,18.9,0,13.2,DOST PH
+dost-827,Chicken white meat,Manok laman,110,20.6,0,3.1,DOST PH
+dost-828,"Chicken, white meat, boiled","Manok laman, nilaga",173,32.9,0,4.6,DOST PH
+dost-829,"Chicken, white meat, fried","Manok laman, prito",226,40.3,0,7.2,DOST PH
+dost-830,"Chicken, whole",Manok buo,215,17.4,0,16.2,DOST PH
+dost-831,Duck back,Pato likod,191,22.6,0,11.2,DOST PH
+dost-832,Duck blood,Pato dugo,62,10.7,4.5,0.1,DOST PH
+dost-833,Duck breast,Pato pitso,157,22.8,0,7.3,DOST PH
+dost-834,Duck gizzard,Pato balun-balunan,108,22.1,0,2.2,DOST PH
+dost-835,Duck liver,Pato atay,116,15.6,4.9,3.8,DOST PH
+dost-836,Duck thigh,Pato hita,171,20.5,0,9.9,DOST PH
+dost-837,Duck wing,Pato pakpak,144,24.4,0,5.2,DOST PH
+dost-838,"Duck, wild, breast",Baliwis pitso,85,19.9,0,0.6,DOST PH
+dost-839,"Duck, wild, thigh",Baliwis hita,85,19.5,0,0.8,DOST PH
+dost-840,Frog meat,Palaka laman,89,20.9,0,0.6,DOST PH
+dost-841,Goose breast,Gansa dibdib,122,23.4,0,3.2,DOST PH
+dost-842,Goose thigh,Gansa hita,127,23,0,3.9,DOST PH
+dost-843,Lamb flank,Tupa tiyan,149,16.6,0,9.2,DOST PH
+dost-844,Lamb foreshank,"Tupa biyas, harapan",135,19.9,0,6.1,DOST PH
+dost-845,Lamb hind shank,"Tupa biyas, likod",124,20.6,0,4.6,DOST PH
+dost-846,Lamb liver,Tupa atay,136,21.8,3.1,4,DOST PH
+dost-847,Lamb loin,Tupa lomo,123,20.2,0,4.7,DOST PH
+dost-848,Lamb lung,Tupa baga,95,17.3,2.5,1.7,DOST PH
+dost-849,Lamb neck,Tupa leeg,141,18.9,0,7.3,DOST PH
+dost-850,Lamb riblet,Tupa tadyang,157,16.9,0,9.9,DOST PH
+dost-851,Lamb roast/back,Tupa likod,129,19.2,0,5.8,DOST PH
+dost-852,Lamb shoulder,Tupa balikat,134,16.1,0,7.7,DOST PH
+dost-853,Moor hen breast,Ulok pitso,147,21.4,0,6.8,DOST PH
+dost-854,Moor hen gizzard,Ulok balun-balunan,113,22.5,2.2,1.6,DOST PH
+dost-855,Moor hen liver,Ulok atay,130,18,6.5,3.5,DOST PH
+dost-856,Moor hen thigh,Ulok hita,134,20.1,0,5.9,DOST PH
+dost-857,Pigeon breast,Kalapati pitso,207,17.1,0,15.4,DOST PH
+dost-858,Pigeon thigh,Kalapati hita,239,14.6,0,20.1,DOST PH
+dost-859,"Pigeon, squab/young meat",Kalapati pitson,154,17,0,9.5,DOST PH
+dost-860,Pork back fat,Baboy taba sa likod,513,11.6,0,51.8,DOST PH
+dost-861,Pork belly,Baboy liempo,393,14.5,0,37.2,DOST PH
+dost-862,"Pork belly, broiled","Baboy liempo, inihaw",213,14,0,17.4,DOST PH
+dost-863,"Pork belly, fried","Baboy liempo, prito",245,12.3,0,21.8,DOST PH
+dost-864,"Pork belly, boiled","Baboy liempo, nilaga",444,13,0,43.6,DOST PH
+dost-865,Pork blood,Baboy dugo,55,11.6,2.1,0,DOST PH
+dost-866,Pork Boston butt,Baboy paypay,329,14.3,0,30.2,DOST PH
+dost-867,"Pork Boston butt, boiled","Baboy paypay, nilaga",346,10.1,0,33.9,DOST PH
+dost-868,"Pork Boston butt, broiled","Baboy paypay, inihaw",203,13.9,0,16.4,DOST PH
+dost-869,"Pork Boston butt, fried","Baboy paypay, prito",239,14.2,0,20.2,DOST PH
+dost-870,"Pork Boston butt, lean","Baboy paypay, laman",278,17.3,0,23.2,DOST PH
+dost-871,"Pork Boston butt, lean, boiled","Baboy paypay, laman, nilaga",212,15.6,0,16.6,DOST PH
+dost-872,"Pork Boston butt, lean, broiled","Baboy paypay, laman, inihaw",154,22.3,0,7.2,DOST PH
+dost-873,"Pork Boston butt, lean, fried","Baboy paypay, laman, prito",136,20.5,0,6,DOST PH
+dost-874,Pork center loin,"Baboy tagiliran, laman",519,12.5,0,52.1,DOST PH
+dost-875,Pork chop,Baboy kostillas,390,14.5,0,36.9,DOST PH
+dost-876,Pork ear,Baboy tenga,385,11.8,1.3,36.9,DOST PH
+dost-877,"Pork ear, bbq","Baboy tenga, bbq/",350,23.8,5.4,25.9,DOST PH
+dost-878,Pork ham,Baboy pigi/pigue,298,16.3,0.1,25.8,DOST PH
+dost-879,Pork head,Baboy ulo,326,14.4,2.3,28.8,DOST PH
+dost-880,Pork heart,Baboy puso,116,16.4,0.6,5.3,DOST PH
+dost-881,"Pork intestine, large",Baboy bitukang malaki,81,9.6,5.6,2.2,DOST PH
+dost-882,"Pork intestine, small",Baboy bitukang maliit,71,12.6,0,2.3,DOST PH
+dost-883,"Pork intestine, small, bbq","Baboy bitukang maliit, bbq/Isaw baboy",318,20.6,3,24.8,DOST PH
+dost-884,Pork kidney,Baboy bato,105,14.4,3.1,3.9,DOST PH
+dost-885,"Pork kidney, boiled","Baboy bato, nilaga",106,13.9,5.3,3.2,DOST PH
+dost-886,Pork leg,Baboy pata,203,20.2,0,13.6,DOST PH
+dost-887,Pork liver,Baboy atay,119,18,5.5,2.8,DOST PH
+dost-888,"Pork liver, boiled","Baboy atay, nilaga",170,17.8,16.9,3.5,DOST PH
+dost-889,"Pork liver, broiled","Baboy atay, inihaw",180,19.8,15.4,4.4,DOST PH
+dost-890,"Pork liver, fried","Baboy atay, prito",197,19.9,17.1,5.4,DOST PH
+dost-891,Pork lung,Baboy baga,73,12.2,2,1.8,DOST PH
+dost-892,Pork picnic,Baboy kasim,387,13.4,0,37,DOST PH
+dost-893,"Pork picnic, boiled","Baboy kasim, nilaga",368,14.8,0,34.3,DOST PH
+dost-894,Pork skin,Baboy balat,319,19.8,0,26.6,DOST PH
+dost-895,Pork spare rib,Baboy tadyang,293,14.6,0,26.1,DOST PH
+dost-896,Pork spleen,Baboy lapay,87,16.1,0,2.5,DOST PH
+dost-897,"Pork spleen, boiled","Baboy lapay, nilaga",94,15.2,0,3.7,DOST PH
+dost-898,Pork stomach,Baboy sikmura,121,13.1,2.6,6.5,DOST PH
+dost-899,Pork tail,Baboy buntot,477,15.4,0,46.1,DOST PH
+dost-900,Pork tenderloin,Baboy lomo,237,16.7,0,18.9,DOST PH
+dost-901,Pork tongue,Baboy dila,241,14.8,0.1,20.2,DOST PH
+dost-902,Pork uterus,Baboy bahay-guya,77,15.4,0,1.7,DOST PH
+dost-903,"Pork, suckling, belly","Baboy litsunin, liempo",174,18.3,0,11.2,DOST PH
+dost-904,"Pork, suckling, blood","Baboy litsunin, dugo",56,11.5,2.6,0,DOST PH
+dost-905,"Pork, suckling, brain","Baboy litsunin, utak",129,10.2,0.2,9.7,DOST PH
+dost-906,"Pork, suckling, heart","Baboy litsunin, puso",125,16.3,0,6.6,DOST PH
+dost-907,"Pork, suckling, intestine, large","Baboy litsunin, bitukang malaki",87,9.1,6.9,2.5,DOST PH
+dost-908,"Pork, suckling, intestine, small","Baboy litsunin, bitukang maliit",61,12.5,0.6,0.9,DOST PH
+dost-909,"Pork, suckling, kidney","Baboy litsunin, bato",95,15.9,0.3,3.4,DOST PH
+dost-910,"Pork, suckling, leg","Baboy litsunin, pata",128,19.9,0,5.4,DOST PH
+dost-911,"Pork, suckling, liver","Baboy litsunin, atay",116,16,6.6,2.8,DOST PH
+dost-912,"Pork, suckling, lung","Baboy litsunin, baga",87,15.8,0.6,2.4,DOST PH
+dost-913,"Pork, suckling, spare rib","Baboy litsunin, tadyang",168,17,0,11.1,DOST PH
+dost-914,"Pork, suckling, spleen","Baboy litsunin, lapay",105,15.6,1.3,4.2,DOST PH
+dost-915,"Pork, suckling, stomach","Baboy litsunin, sikmura",95,14.3,0,4.2,DOST PH
+dost-916,Quail meat,Pugo laman,154,21.1,0,7.7,DOST PH
+dost-917,Rabbit liver,Kuneho atay,111,15.4,6.6,2.5,DOST PH
+dost-918,Rabbit thigh,Kuneho hita,94,18.6,0,2.2,DOST PH
+dost-919,Rabbit white meat,Kuneho laman,94,18.2,0,2.4,DOST PH
+dost-920,Snipe lean meat,Agatsona laman,113,21,0,3.2,DOST PH
+dost-921,Turkey breast,Pabo pitso,100,24.1,0,0.4,DOST PH
+dost-922,Turkey liver,Pabo atay,124,19.2,2.9,3.9,DOST PH
+dost-923,Turkey thigh,Pabo hita,100,20.3,0,2.1,DOST PH
+dost-924,Venison rib,Usa tadyang,89,21.9,0,0.1,DOST PH
+dost-925,Venison thigh,Usa hita,89,21.9,0,0.2,DOST PH
+dost-926,Bacon,-,603,11.1,8.4,58.3,DOST PH
+dost-927,"Beef chunk, cnd",N/A,252,14.7,7,18.3,DOST PH
+dost-928,Beef jerky,"Tapa, baka",102,13.8,3.7,3.6,DOST PH
+dost-929,Beef spread,N/A,227,14.6,9.6,14.5,DOST PH
+dost-930,"Beef, sweet cured","Tocino, baka",80,18.1,0,0.8,DOST PH
+dost-931,Carabeef jerky,"Tapa, kalabaw",220,51.7,0,1.5,DOST PH
+dost-932,Chicken liver spread,N/A,211,8.4,9.8,15.4,DOST PH
+dost-933,Chicken meat ball,N/A,147,9.8,16.1,4.8,DOST PH
+dost-934,Chicken nugget,N/A,220,15.5,14.3,11.2,DOST PH
+dost-935,"Sausage, chicken","Longanisa, manok",185,10.7,11.3,10.8,DOST PH
+dost-936,Chicken spread,N/A,211,10.4,9.6,14.5,DOST PH
+dost-937,Corned beef loaf,N/A,227,13.3,3.1,17.9,DOST PH
+dost-938,"Corned beef, cnd",Karne norte,168,17.9,0,10.7,DOST PH
+dost-939,Embotido,-,164,10.1,11.7,8.5,DOST PH
+dost-940,Ham,Hamon,421,16.4,0,39.5,DOST PH
+dost-941,"Ham, chopped, cnd",N/A,220,14.1,4.6,16.1,DOST PH
+dost-942,"Ham, deviled spread",N/A,254,13.8,7.2,18.9,DOST PH
+dost-943,"Ham, pork, sweet, chopped",-,117,10.7,8.7,4.4,DOST PH
+dost-944,Hamburger patty,-,319,10.8,23.8,20.1,DOST PH
+dost-945,"Liver pate, cnd",N/A,232,14.5,4,17.5,DOST PH
+dost-946,Liver spread,N/A,185,9.3,14.9,9.8,DOST PH
+dost-947,"Luncheon meat, cnd",-,307,13.7,3.7,26.4,DOST PH
+dost-948,"Luncheon meat, deviled spread",N/A,308,12.1,1,28.4,DOST PH
+dost-949,"Luncheon meat, pork & ham",N/A,321,13.6,2.3,28.6,DOST PH
+dost-950,"Luncheon meat, pork, Chinese style",N/A,296,10.7,7.1,25,DOST PH
+dost-951,Meat loaf,-,161,9.7,13.1,7.7,DOST PH
+dost-952,"Pork crackling, internal organ","Chicharon/Sitsaron baboy, lamang loob",373,37.8,0,24.6,DOST PH
+dost-953,"Pork crackling, skin","Chicharon/Sitsaron baboy, balat",591,65.6,0,36.5,DOST PH
+dost-954,Pork jerky,"Tapa, baboy",277,15.8,10.2,19.2,DOST PH
+dost-955,"Pork, sweet cured","Tocino, baboy",206,11.2,25.9,6.4,DOST PH
+dost-956,"Pork, sweet cured, Pampanga","Tocino, baboy, Pampanga",223,10.1,14.7,13.8,DOST PH
+dost-957,"Potted meat spread, w/ cereal, cnd",-,186,7.7,16.6,9.9,DOST PH
+dost-958,"Sausage, bologna",N/A,165,10.1,4.9,11.7,DOST PH
+dost-959,"Sausage, chorizo","Longanisa, chorizo",440,29.6,5.8,33.2,DOST PH
+dost-960,"Sausage, chorizo, Bilbao style","Longanisa, chorizo de Bilbao",436,18,0.2,40.3,DOST PH
+dost-961,"Sausage, frankfurter",N/A,208,13.3,4.8,15.1,DOST PH
+dost-962,"Sausage, ham",-,160,14.1,2.8,10.3,DOST PH
+dost-963,"Sausage, hotdog",-,226,13.4,4.8,17,DOST PH
+dost-964,"Sausage, hotdog, smoked",N/A,160,12.9,2.7,10.8,DOST PH
+dost-965,"Sausage, hotdog, w/ cheese",Cheese dog,245,11.7,8.8,18.1,DOST PH
+dost-966,"Sausage, mortadella",N/A,260,8.6,6.7,22.1,DOST PH
+dost-967,"Sausage, pork","Longanisa, baboy",315,11.8,15.8,22.7,DOST PH
+dost-968,"Sausage, pork & beef","Longanisa, baboy at baka",432,13.5,7.8,38.5,DOST PH
+dost-969,"Sausage, pork, Chinese","Longanisa, baboy, Chinese/Chorizo de Macau",498,15.6,13,42.6,DOST PH
+dost-970,"Sausage, salami",N/A,244,16.2,2.7,18.7,DOST PH
+dost-971,"Sausage, Vienna",N/A,163,8.8,8.4,10.5,DOST PH
+dost-972,"Sausage, Vienna, tidbits",N/A,127,8.3,8.5,6.6,DOST PH
+dost-973,Venison jerky,"Tapa, usa",323,62.8,0,8,DOST PH
+dost-974,"Chicken blood, bbq",Betamax,91,16,2.8,1.7,DOST PH
+dost-975,"Chicken, whole, seasoned, roasted",Lechon manok,226,24.8,4.7,12,DOST PH
+dost-976,"Chicken, whole, seasoned, roasted, skin and visible fat removed","Lechon manok, walang balat",162,26.2,2.2,5.4,DOST PH
+dost-977,"Pork, bbq",Barbekyung baboy,408,21.5,13.5,29.8,DOST PH
+dost-978,"Pork back, seasoned, roasted, skin and visible fat removed","Baboy likod, laman, litson",177,31.2,2,4.9,DOST PH
+dost-979,"Pork belly, seasoned, roasted","Baboy liempo, litson",385,21,4.1,31.6,DOST PH
+dost-980,"Pork belly, seasoned, roasted, skin and visible fat removed","Baboy liempo, litson, walang balat at taba",299,24,0,22.6,DOST PH
+dost-981,"Pork skin, seasoned, roasted","Baboy balat, litson",559,33,0,47.4,DOST PH
+dost-982,"Beef franks, raw",-,205,13.9,1,16.1,DOST PH
+dost-983,"Sausage, pepperoni, raw",-,237,12.8,4.6,18.6,DOST PH
+dost-984,Abalone,Lapas/Kapinan,120,20.5,7.4,0.9,DOST PH
+dost-985,Abalone juice,Lapas/Kapinan katas,74,10.6,7.1,0.4,DOST PH
+dost-986,Amber fish,Tonto,81,18.1,0,0.9,DOST PH
+dost-987,Sinarapan,Tabios,64,13.3,0,1.2,DOST PH
+dost-988,"Anchovy, Indian (adult)",Tuakang,85,20.9,0.1,0.1,DOST PH
+dost-989,"Anchovy, long-jawed, w/o head","Dilis, walang ulo",129,19.9,0,5.5,DOST PH
+dost-990,"Anchovy, long-jawed, whole","Dilis, buo",69,14.1,0,1.4,DOST PH
+dost-991,"Barracuda, striped",Turcillo,90,19.7,0,1.2,DOST PH
+dost-992,"Butterfly fish, threadfin",Paru-paro,85,19.8,0,0.6,DOST PH
+dost-993,"Fusilier, goldband",Dalagang bukid,128,21.5,0,4.7,DOST PH
+dost-994,Cardinal fish,Dangat,73,17.4,0,0.4,DOST PH
+dost-995,Carp,Karpa,185,17.8,0,12.6,DOST PH
+dost-996,"Catfish, freshwater",Hito,80,18.7,0,0.6,DOST PH
+dost-997,"Catfish, saltwater",Kanduli,86,18.2,0,1.5,DOST PH
+dost-998,"Cavalla, banded",Talakitok/Maliputo,108,20.1,0,3.1,DOST PH
+dost-999,"Cavalla, banded, fried","Talakitok, prito",160,20.2,0,8.8,DOST PH
+dost-1000,"Cavalla, banded, steamed","Talakitok, pinasingawan",67,11.2,0,2.5,DOST PH
+dost-1001,"Clam, bilakong",Bilakong,82,10.2,5.8,2,DOST PH
+dost-1002,"Clam, freshwater, tulya",Tulya,95,7.6,11.8,1.9,DOST PH
+dost-1003,"Clam, freshwater, tulya, boiled","Tulya, nilaga",105,8.9,13,1.9,DOST PH
+dost-1004,"Clam, halaan",Halaan,47,6.7,3.5,0.7,DOST PH
+dost-1005,"Clam, halaan, boiled","Halaan, nilaga",74,10.5,5.4,1.1,DOST PH
+dost-1006,"Clam, imbao",Imbao,64,6.8,7.3,0.8,DOST PH
+dost-1007,"Clam, imbao, boiled","Imbao, nilaga",47,6.4,4.1,0.6,DOST PH
+dost-1008,"Clam, kabibi",Kabibi,62,9,3,1.6,DOST PH
+dost-1009,"Clam, kanturi",Kanturi,59,12.2,0.3,1,DOST PH
+dost-1010,"Clam, lukan",Lukan,43,5.1,4,0.7,DOST PH
+dost-1011,"Clam, rayed shell",Paros,48,8.7,1.4,0.8,DOST PH
+dost-1012,"Clam, razor shell",Tikhan,41,8,1.4,0.4,DOST PH
+dost-1013,"Clam, tongue",Balay,98,12.4,4.4,3.4,DOST PH
+dost-1014,"Clam, tongue, head, blanched","Balay, ulo, binanlian",79,5.9,9.4,2,DOST PH
+dost-1015,"Clam, tongue, tail","Balay, buntot",51,9.4,2.5,0.4,DOST PH
+dost-1016,"Clam, venus",Bigatan,138,12.8,17.3,2,DOST PH
+dost-1017,"Clam, wedge shell/bean",Alamis,71,8.8,5.1,1.7,DOST PH
+dost-1018,"Climbing perch, common",Martiniko,71,17.4,0,0.2,DOST PH
+dost-1019,"Crab, blue swimming, fat",Alimasag alige,86,11.5,0,4.4,DOST PH
+dost-1020,"Crab, blue swimming, w/o fat",Alimasag laman,93,19.9,2.2,0.5,DOST PH
+dost-1021,"Crab, blue swimming, w/o fat, boiled","Alimasag laman, nilaga",98,19.4,3.1,0.9,DOST PH
+dost-1022,"Crab, mud/mangrove, fat",Alimango alige,188,26,8.5,5.6,DOST PH
+dost-1023,"Crab, mud/mangrove, w/o fat",Alimango laman,103,18.5,0,3.2,DOST PH
+dost-1024,"Crab, mud/mangrove, w/o fat, boiled","Alimango laman, nilaga",88,17.6,0,1.9,DOST PH
+dost-1025,"Crab, shore",Talangka,122,13.8,8.1,3.8,DOST PH
+dost-1026,"Crevalle, deep-bellied",Salay-salay aso,87,19.4,0,1,DOST PH
+dost-1027,"Crevalle, even-bellied",Salay-salay,85,17.7,0,1.6,DOST PH
+dost-1028,"Croaker, tigertooth",Abo,89,19.1,0,1.4,DOST PH
+dost-1029,"Croaker, plain","Alakaak/Croaker, truncate-tail",80,19.1,0,0.4,DOST PH
+dost-1030,"Croaker, smooth-scaled whiskered",N/A,84,18.6,0,1.1,DOST PH
+dost-1031,"Drepane, speckled",Mayang,80,16.8,0,1.4,DOST PH
+dost-1032,"Eel, silver pike",Pindanga,72,17.5,0,0.2,DOST PH
+dost-1033,"Eel, swamp",Palos,139,19.2,0,6.9,DOST PH
+dost-1034,Fish roe,"Isda, itlog",123,17.3,0.9,5.6,DOST PH
+dost-1035,"Flatfish/Brill, rough-scaled",Dapa,84,20.5,0,0.2,DOST PH
+dost-1036,"Flatfish/Brill, smooth-scaled",Dapang bilog,81,19.7,0,0.2,DOST PH
+dost-1037,"Flatfish/Turbot, Indian",Kalangkaw,94,23,0,0.2,DOST PH
+dost-1038,"Flathead, Indian",Sunog,90,22.1,0,0.2,DOST PH
+dost-1039,Flying fish,Bulador/Borador,86,21,0,0.2,DOST PH
+dost-1040,"Garfish, common",Kambabalo/Hound needlefish,115,26.6,0,0.9,DOST PH
+dost-1041,"Gizzard shad, short-finned",Kabasi/Chacunda gizzard shad,78,18.6,0,0.4,DOST PH
+dost-1042,"Goatfish, ochrebanded",Saramulyete,87,18.7,0,1.3,DOST PH
+dost-1043,"Goby, flat-headed",Biyang puti/Tank goby,81,19.7,0,0.2,DOST PH
+dost-1044,"Goby, long-tailed",Talimusak,89,16.8,0,2.4,DOST PH
+dost-1045,Gouramy,Gurami/Goramy,91,16.9,0,2.6,DOST PH
+dost-1046,"Grouper, whitespotted",Lapu-lapu,63,14.9,0,0.4,DOST PH
+dost-1047,"Hair tail, largehead",Balila,80,19.1,0,0.4,DOST PH
+dost-1048,"Halfbeak, long billed",Buguing,88,19.2,0,1.2,DOST PH
+dost-1049,Hard-tail,Oriles,96,21.4,0,1.2,DOST PH
+dost-1050,"Herring, big-eyed",Tuabak/Dilat,96,22.2,0,0.8,DOST PH
+dost-1051,"Herring, deep-bodied",Lapad/White sardinella,91,19.7,0,1.3,DOST PH
+dost-1052,"Lizard fish, common",Kalaso,75,18.2,0,0.2,DOST PH
+dost-1053,"Mackerel, short-bodied",Hasa-hasa,108,21.6,0,2.4,DOST PH
+dost-1054,"Mackerel, short-bodied, fried","Hasa-hasa, prito",221,21.6,0,14.9,DOST PH
+dost-1055,"Mackerel, Spanish",Tangigi,80,17.6,0,1.1,DOST PH
+dost-1056,"Mackerel, Indian",Alumahan,118,21.8,0,3.4,DOST PH
+dost-1057,Milkfish,Bangus,137,19.8,0,6.4,DOST PH
+dost-1058,"Milkfish, broiled","Bangus, inihaw",137,23.4,0,4.8,DOST PH
+dost-1059,"Milkfish, fried","Bangus, prito",188,23.6,0,10.4,DOST PH
+dost-1060,"Mojarra, longfin",Hubad,77,18.9,0,0.2,DOST PH
+dost-1061,"Mojarra, whipfin",Malakapas,87,20.4,0,0.6,DOST PH
+dost-1062,"Moonfish, spotted",Chabita/Hiwas,116,24.4,0,2,DOST PH
+dost-1063,Moray,Malabanos,116,20.1,0,4,DOST PH
+dost-1064,"Mudfish/Murrel, striated",Dalag,99,21.2,0,1.6,DOST PH
+dost-1065,"Mudfish/Murrel, striated, boiled","Dalag, nilaga",95,22.8,0,0.4,DOST PH
+dost-1066,"Mullet, black-finned",Talilong/Otomebora mullet,113,19.3,0,4,DOST PH
+dost-1067,"Mullet, large-scaled",Banak,89,20,0,1,DOST PH
+dost-1068,"Mussel, green",Tahong,166,13.6,11.1,7.5,DOST PH
+dost-1069,"Mussel, green, boiled","Tahong, nilaga",33,3.1,4.3,0.4,DOST PH
+dost-1070,"Bream, doublewhip threadfin",Bisugo,90,19,0,1.5,DOST PH
+dost-1071,Octopus,Pugita,59,13.3,0,0.6,DOST PH
+dost-1072,Oyster,Talaba,60,5.9,5.2,1.7,DOST PH
+dost-1073,"Oyster, window pane, meat","Kapis, laman",119,23.3,3.3,1.4,DOST PH
+dost-1074,"Parrot fish, daisy",Isdang loro,84,20,0,0.4,DOST PH
+dost-1075,"Threadfish, Indian",Damis/Diamond trevally,89,20.5,0,0.8,DOST PH
+dost-1076,"Silvergrunt, bluecheek",Bangok-ngok,83,19.2,0,0.7,DOST PH
+dost-1077,"Pomfret, black",Pampano,93,18.8,0,2,DOST PH
+dost-1078,"Bream, humpnose big-eye",Malaking mata,80,18.9,0,0.5,DOST PH
+dost-1079,"Emperor, pink ear",Bitilla,89,21.1,0,0.5,DOST PH
+dost-1080,"Seabream, goldsilk",Bakokong moro,77,19,0,0.1,DOST PH
+dost-1081,Red snapper/Malabar,Maya-maya,64,15.6,0,0.2,DOST PH
+dost-1082,"Runner, rainbow",Salmon,85,19.6,0,0.7,DOST PH
+dost-1083,"Sardine, bombon",Tawilis/Freshwater sardinella,114,19.3,0,4.1,DOST PH
+dost-1084,"Sardine, fimbriated",Tabagak,106,20.5,0,2.7,DOST PH
+dost-1085,"Sardine, fimbriated, fry",Silinyasi,101,20.6,0,2.1,DOST PH
+dost-1086,"Sardine, Indian","Tamban/Sardine, Indian oil",120,19.5,0,4.7,DOST PH
+dost-1087,"Scad, big-eye",Matang baka,105,20.8,0,2.4,DOST PH
+dost-1088,"Scad, round",Galunggong,100,20.4,0,2.1,DOST PH
+dost-1089,Sea bass,Apahap,75,17.8,0,0.4,DOST PH
+dost-1090,"Sea catfish, smooth-headed",Bunguan/Bongoan,89,21.3,0,0.4,DOST PH
+dost-1091,Sea cucumber,Balatan/Trepang,23,5.1,0.3,0.1,DOST PH
+dost-1092,"Shrimp, banana prawn","Hipon, puti",91,19,2,0.8,DOST PH
+dost-1093,"Shrimp, banana prawn, boiled","Hipon, puti, nilaga",104,11.2,14,0.4,DOST PH
+dost-1094,"Shrimp, freshwater",Ulang,93,19.4,0,1.7,DOST PH
+dost-1095,"Shrimp, freshwater (small)","Hipon, tagunton",98,20.2,0,1.9,DOST PH
+dost-1096,"Shrimp, giant tiger prawn",Sugpo,93,20,1.2,0.9,DOST PH
+dost-1097,"Shrimp, giant tiger prawn, head","Sugpo, ulo",74,11.9,1.6,2.2,DOST PH
+dost-1098,"Shrimp, greasy back","Hipon, suwahe",78,17.7,0.4,0.6,DOST PH
+dost-1099,"Shrimp, greasy back, boiled","Hipon, suwahe, nilaga",84,18.2,1.9,0.4,DOST PH
+dost-1100,"Shrimp, sergestid",Alamang,78,16.6,0,1.3,DOST PH
+dost-1101,"Siganid, javan",Samaral/Streaked spinefoot,89,19.8,0,1.1,DOST PH
+dost-1102,Silver-bar fish,Parang-parang/Dorab wolf-herring,87,21.1,0,0.3,DOST PH
+dost-1103,"Slipmouth, black-finned",Dalangat,88,18.7,0,1.5,DOST PH
+dost-1104,"Slipmouth, common",Sapsap,91,18.2,0,2,DOST PH
+dost-1105,"Snail, black","Kuhol, itim",79,12.2,6.6,0.4,DOST PH
+dost-1106,"Snail, freshwater",Susong pilipit,94,9.4,12.2,0.8,DOST PH
+dost-1107,"Snail, golden","Kuhol, kulay ginto",74,12.8,4.3,0.6,DOST PH
+dost-1108,Spadefish,Kitang/Spotted scat,99,20.3,0,2,DOST PH
+dost-1109,Squid,Pusit,71,15.6,0,1,DOST PH
+dost-1110,"Squid, boiled","Pusit, nilaga",80,17.4,0,1.2,DOST PH
+dost-1111,"Sting ray, blue-spotted",Dahonan/Dahunan,74,18.3,0,0.1,DOST PH
+dost-1112,"Sting ray, honeycomb","Paging, bulik",59,14.3,0,0.2,DOST PH
+dost-1113,"Surgeonfish, blue-lined",Labahita,78,17.8,0,0.7,DOST PH
+dost-1114,Swordfish,Malasugi,113,19.2,0,4,DOST PH
+dost-1115,Tarpon,Buwan-buwan,88,20.8,0,0.5,DOST PH
+dost-1116,"Ten-pounder, Hawaiian",Bidbid/Hawaiian ladyfish,77,18.8,0,0.2,DOST PH
+dost-1117,"Therapon, convex-lined",Bagaong,79,18.3,0,0.6,DOST PH
+dost-1118,"Theraponid, silvery",Ayungin/Silver perch,75,18.4,0,0.2,DOST PH
+dost-1119,"Terapon, largescaled",Babansi,89,20.8,0,0.6,DOST PH
+dost-1120,Threadfin fish,Mamale,81,18.4,0,0.8,DOST PH
+dost-1121,"Threadfin, fourfinger",Mamale,73,17.9,0,0.1,DOST PH
+dost-1122,"Threadfin, small-mouth",Mamaleng-bato,81,19.7,0,0.2,DOST PH
+dost-1123,Tilapia,N/A,107,18.1,0,3.8,DOST PH
+dost-1124,"Tuna, frigate",Tulingan,119,24,0,2.6,DOST PH
+dost-1125,"Tuna, yellow-fin",Tambakol,107,23.6,0,1.4,DOST PH
+dost-1126,"Whiting, common",Asohos,89,21.1,0,0.5,DOST PH
+dost-1127,"Amber fish, dried","Tonto, daing",275,57.2,0,5.1,DOST PH
+dost-1128,"Anchovy, long-jawed, dried","Dilis, tuyo",318,69,0,4.7,DOST PH
+dost-1129,"Anchovy, long-jawed, dried, ground","Dilis, giniling",351,82,0,2.6,DOST PH
+dost-1130,"Fusilier, goldband, dried","Dalagang bukid, daing",214,42.6,0,4.9,DOST PH
+dost-1131,"Catfish, freshwater, dried","Hito, daing",275,45.6,0,10.3,DOST PH
+dost-1132,"Catfish, saltwater, dried","Kanduli, daing",201,43.9,0,2.8,DOST PH
+dost-1133,"Cavalla, banded, dried","Talakitok/Maliputo, daing",218,44.2,0,4.6,DOST PH
+dost-1134,"Cod, dried","Bakalaw, daing",218,51.8,0,1.2,DOST PH
+dost-1135,"Crab, mud/mangrove, meat, cnd","Alimango laman, de lata",102,23.5,0.3,0.8,DOST PH
+dost-1136,"Crevalle, deep-bellied, dried","Salay-salay aso, daing",288,43.6,0,12.6,DOST PH
+dost-1137,"Croaker, plain, dried","Alakaak, daing",201,41.9,0,3.7,DOST PH
+dost-1138,"Eel, swamp, dried","Palos, daing",238,47.4,0,5.4,DOST PH
+dost-1139,Fish ball,N/A,121,8.6,20.6,0.5,DOST PH
+dost-1140,"Fish ball, fried",N/A,266,10.3,33.3,10.2,DOST PH
+dost-1141,"Fish preparation, quekiam",Kikyam,129,4.2,23.4,2.1,DOST PH
+dost-1142,"Flatfish/Brill, rough-scaled, dried","Dapa, tuyo",266,54.7,8.7,1.4,DOST PH
+dost-1143,"Gizzard shad, short-finned, dried","Kabasi, daing",149,26,0,5,DOST PH
+dost-1144,"Gizzard shad, short-finned, smoked","Kabasi, tinapa",130,26.6,0,2.6,DOST PH
+dost-1145,"Goby, flat-headed, dried","Biyang puti, daing",187,44.8,0,0.9,DOST PH
+dost-1146,"Sinarapan, dried","Tabyos, tuyo",291,55.5,0,7.7,DOST PH
+dost-1147,"Grouper, whitespotted, dried","Lapu-lapu, daing",158,35.8,0,1.6,DOST PH
+dost-1148,"Hard-tail, dried","Oriles, daing",219,48.7,0,2.7,DOST PH
+dost-1149,"Jellyfish, dried","Dikya, tuyo",69,7.2,8.8,0.5,DOST PH
+dost-1150,"Lizard fish, common, dried","Kalaso, daing",178,41.5,0,1.3,DOST PH
+dost-1151,"Mackerel scad, in tomato sce, cnd","Bakutut, sa tomato sce, de lata",147,13.4,2.2,9.4,DOST PH
+dost-1152,"Mackerel, short-bodied, dried","Hasa-hasa, tuyo",202,41.2,0,4.1,DOST PH
+dost-1153,"Mackerel, short-bodied, smoked","Hasa-hasa, tinapa",139,29.8,0,2.2,DOST PH
+dost-1154,"Mackerel, Spanish, dried","Tangigi, daing",184,41,0,2.2,DOST PH
+dost-1155,"Mackerel, Indian, dried","Alumahan, daing",193,41,0,3.2,DOST PH
+dost-1156,"Mackerel, Indian, in tomato sce","Alumahan, sa tomato sce",105,16.5,0,4.1,DOST PH
+dost-1157,"Milkfish, dried","Bangus, daing",415,51.2,0,23.3,DOST PH
+dost-1158,"Milkfish, in natural oil, cnd","Bangus, salmon style, de lata",108,16.6,0.3,4.5,DOST PH
+dost-1159,"Milkfish, in spiced oil, cnd","Bangus, Spanish style, de lata",295,15.8,0.9,25.4,DOST PH
+dost-1160,"Milkfish, smoked","Bangus, tinapa",212,27.2,0,11.5,DOST PH
+dost-1161,"Mudfish/Murrel, striated, dried","Dalag, daing",215,45.7,0,3.6,DOST PH
+dost-1162,"Mullet, black-finned, dried","Talilong, daing",189,31.3,0,7.1,DOST PH
+dost-1163,"Mullet, large-scaled, dried","Banak, daing",199,45.4,0,1.9,DOST PH
+dost-1164,"Bream, doublewhip threadfin, dried","Bisugo, daing",162,35.4,0,2.3,DOST PH
+dost-1165,"Oyster, dried","Talaba, tuyo",355,46,24.9,7.9,DOST PH
+dost-1166,"Parrot fish, daisy, dried","Isdang loro, daing",242,59.2,0,0.6,DOST PH
+dost-1167,"Emperor, pink ear, dried","Bitilla, tuyo",181,43.3,0,0.9,DOST PH
+dost-1168,"Seabream, goldsilk, dried","Bakokong moro, daing",193,40.1,0,3.6,DOST PH
+dost-1169,"Red snapper/Malabar, dried","Maya-maya, daing",204,45,0,2.7,DOST PH
+dost-1170,"Runner, rainbow, in oil, cnd","Salmon, sa mantika, de lata",192,20.4,9,8.2,DOST PH
+dost-1171,"Sardine, bombon, dried","Tawilis, tuyo",157,26.2,0,5.8,DOST PH
+dost-1172,"Sardine, bombon, smoked","Tawilis, tinapa",155,31,0,3.4,DOST PH
+dost-1173,"Sardine, fimbriated, fry, dried","Silinyasi, tuyo",183,40.9,0,2.1,DOST PH
+dost-1174,"Sardine, fimbriated, smoked","Tabagak, tinapa",168,31.2,1.9,4,DOST PH
+dost-1175,"Sardine, Indian, dried","Tamban, daing",160,37.4,0,1.1,DOST PH
+dost-1176,"Sardine, Indian, smoked","Tamban, tinapa",160,30,0,4.4,DOST PH
+dost-1177,"Sardines, in spiced oil, cnd","Sardinas, Spanish style, de lata",438,19.8,0,39.9,DOST PH
+dost-1178,"Sardines, in tomato sce, cnd","Sardinas, sa tomato sce, de lata",88,9.7,2.7,4.3,DOST PH
+dost-1179,"Sardines, smoked, cnd","Sardinas, tinapa, de lata",157,29,0.8,4.2,DOST PH
+dost-1180,"Scad, big-eye, dried","Matang baka, daing",175,39.8,0,1.7,DOST PH
+dost-1181,"Scad, big-eye, smoked","Matang baka, tinapa",134,25.5,0,3.6,DOST PH
+dost-1182,"Scad, round, dried","Galunggong, daing",199,41.1,0,3.8,DOST PH
+dost-1183,"Scad, round, smoked","Galunggong, tinapa",158,31.6,0,3.5,DOST PH
+dost-1184,"Sea bass, dried","Apahap, daing",244,44,0,7.6,DOST PH
+dost-1185,"Shrimp, freshwater (small), dried","Tagunton, tuyo",246,23.1,33.2,2.3,DOST PH
+dost-1186,"Shrimp, sergestid, dried","Alamang, tuyo",283,52.4,10.2,3.6,DOST PH
+dost-1187,"Shrimp, small marine, dried",Hibe,263,57.4,3.4,2.2,DOST PH
+dost-1188,"Siganid, javan, dried","Samaral, daing",184,42.5,0,1.6,DOST PH
+dost-1189,"Slipmouth, common, dried","Sapsap, daing",185,36,0,4.5,DOST PH
+dost-1190,"Squid, dried","Pusit, tuyo",289,62.3,0,4.4,DOST PH
+dost-1191,"Sting ray, honeycomb, dried","Paging, bulik, daing",209,49,1.3,0.9,DOST PH
+dost-1192,"Surgeonfish, blue-lined, dried","Labahita, daing",186,34.7,0,5.2,DOST PH
+dost-1193,"Swordfish, dried","Malasugi, daing",250,53.5,0,4,DOST PH
+dost-1194,"Theraponid, silvery, dried","Ayungin, tuyo",340,54.6,0,13.5,DOST PH
+dost-1195,"Tilapia, dried",N/A,313,60.6,0,7.8,DOST PH
+dost-1196,"Tuna adobo, cnd",N/A,140,14,4,7.6,DOST PH
+dost-1197,"Tuna fillet, in soya oil, cnd",N/A,309,28.6,0,21.6,DOST PH
+dost-1198,"Tuna fillet, in veg oil, cnd",N/A,258,28,0.6,15.9,DOST PH
+dost-1199,"Tuna flakes, in brine, cnd",N/A,95,17.9,0.1,2.6,DOST PH
+dost-1200,"Tuna flakes, in veg oil, cnd",N/A,309,15.4,1.7,26.7,DOST PH
+dost-1201,"Tuna mechado, cnd",N/A,121,11.1,6.3,5.7,DOST PH
+dost-1202,"Tuna sardines, in oil, cnd",N/A,183,16.4,1.3,12.5,DOST PH
+dost-1203,"Tuna spread, cnd",N/A,331,25.2,0,25.6,DOST PH
+dost-1204,"Tuna, frigate, dried","Tulingan, daing",251,52.7,4.7,2.4,DOST PH
+dost-1205,"Tuna, yellow-fin, dried","Tambakol, daing",230,54.5,0,1.3,DOST PH
+dost-1206,"Egg, ant","Itlog, langgam",124,17.4,5,3.8,DOST PH
+dost-1207,"Egg, chicken, white","Itlog, manok, puti",61,12.7,2,0.2,DOST PH
+dost-1208,"Egg, chicken, whole","Itlog, manok, buo",139,12.3,1.4,9.4,DOST PH
+dost-1209,"Egg, chicken, whole, boiled","Itlog, manok, buo, nilaga",166,14,0.6,12,DOST PH
+dost-1210,"Egg, chicken, yolk","Itlog, manok, pula",316,14.3,3.9,27,DOST PH
+dost-1211,"Egg, duck, white","Itlog, pato, puti",56,13.8,0,0.1,DOST PH
+dost-1212,"Egg, duck, whole","Itlog, pato, buo",177,11.7,4.1,12.6,DOST PH
+dost-1213,"Egg, duck, yolk","Itlog, pato, pula",357,16.4,3.1,31,DOST PH
+dost-1214,"Egg, quail","Itlog, pugo",153,11.8,2.7,10.6,DOST PH
+dost-1215,"Egg, quail, boiled","Itlog, pugo, nilaga",150,11.8,2.2,10.4,DOST PH
+dost-1216,"Egg, duck, century",Century egg/Pidan,215,12.5,15.1,11.6,DOST PH
+dost-1217,"Egg, duck, fertilized, boiled","Balut, nilaga",172,12.8,2.2,12.4,DOST PH
+dost-1218,"Egg, duck, fertilized, embryo","Balut, sisiw",55,9.6,2.6,0.7,DOST PH
+dost-1219,"Egg, duck, fertilized, white","Balut, bato",137,25.4,7.6,0.6,DOST PH
+dost-1220,"Egg, duck, fertilized, yolk","Balut, pula",352,14.8,2.9,31.2,DOST PH
+dost-1221,"Egg, duck, infertile, boiled","Penoy, nilaga",198,13.6,3.5,14.4,DOST PH
+dost-1222,"Egg, duck, whole, salted","Itlog, pato, maalat",192,13.6,4.4,13.3,DOST PH
+dost-1223,"Egg, quail, pickled","Itlog, pugo, pickled",102,8.1,1.8,6.9,DOST PH
+dost-1224,"Cheese, cheddar, pasteurized, processed",N/A,322,21.7,7.8,22.7,DOST PH
+dost-1225,"Cheese, cottage",N/A,94,13.2,3.6,3,DOST PH
+dost-1226,"Cheese, filled",N/A,297,16.2,5.5,23.4,DOST PH
+dost-1227,"Cheese, native",Kesong puti,299,13.2,5.3,25,DOST PH
+dost-1228,"Cheese, pimiento",N/A,354,19.9,5.8,27.9,DOST PH
+dost-1229,"Cheese, spread",N/A,210,14,13.7,11,DOST PH
+dost-1230,Cream,Krema,241,2.3,4.2,23.9,DOST PH
+dost-1231,Ice cream,Sorbetes/Street ice cream,157,4.2,13.7,9.5,DOST PH
+dost-1232,"Ice cream, strawberry flvr","Sorbetes, lasang strawberry",183,3.4,17.7,10.9,DOST PH
+dost-1233,"Milk drink, cultured",N/A,71,1.2,16,0.2,DOST PH
+dost-1234,"Milk drink, recon, strawberry, UHT",N/A,66,2.9,10.8,1.2,DOST PH
+dost-1235,"Milk, buttermilk","Gatas, buttermilk",43,3.5,6.2,0.5,DOST PH
+dost-1236,"Milk, carabao","Gatas, kalabaw",124,5.4,4.3,9.5,DOST PH
+dost-1237,"Milk, cow","Gatas, baka",65,3.3,4.8,3.6,DOST PH
+dost-1238,"Milk, evaporated","Gatas, evaporada",148,7.7,11.7,7.8,DOST PH
+dost-1239,"Milk, evaporated, filled","Gatas, evaporada, filled",120,7.6,11.6,4.8,DOST PH
+dost-1240,"Milk, goat","Gatas, kambing",73,3.6,5.3,4.1,DOST PH
+dost-1241,"Milk, human",Gatas ng ina/Breast milk,68,1.4,7.6,3.5,DOST PH
+dost-1242,"Milk, pwdr, filled, inst","Gatas, pulbos, filled, inst",508,26.2,37.8,28,DOST PH
+dost-1243,"Milk, pwdr, full cream","Gatas, pulbos, full cream",480,24.1,45.2,22.5,DOST PH
+dost-1244,"Milk, pwdr, infant formula","Gatas, pulbos, infant  formula",389,18.3,72.2,3,DOST PH
+dost-1245,"Milk, pwdr, non-fat, inst","Gatas, pulbos, non-fat, inst",361,34.9,53.1,1,DOST PH
+dost-1246,"Milk, pwdr, skim","Gatas, pulbos, skim",362,40.8,48,0.8,DOST PH
+dost-1247,"Milk, recombined","Gatas, recombined",87,5.2,4.2,5.5,DOST PH
+dost-1248,"Milk, sweetn, cond, filled","Gatas, kondensada, filled",334,8.5,59.3,7,DOST PH
+dost-1249,Yoghurt,N/A,83,5.3,5.4,4.5,DOST PH
+dost-1250,Butter,Mantekilya,772,0.5,0,85.5,DOST PH
+dost-1251,Coconut milk,"Niyog, gata",343,5.5,1.9,34.8,DOST PH
+dost-1252,"Fat, pork","Mantika, baboy",900,0,0,100,DOST PH
+dost-1253,Margarine,Margarina,831,0.3,0.5,91.9,DOST PH
+dost-1254,"Margarine, fortified",N/A,818,0.1,0,90.8,DOST PH
+dost-1255,Mayonnaise,N/A,715,1.2,1.4,78.3,DOST PH
+dost-1256,"Oil, coconut","Langis, niyog",892,0,0,99.1,DOST PH
+dost-1257,"Oil, corn","Langis, mais",896,0,0,99.6,DOST PH
+dost-1258,"Oil, fish","Aseyte/aceite, isda",900,0,0,100,DOST PH
+dost-1259,Sandwich spread,N/A,366,0.7,24.7,29.4,DOST PH
+dost-1260,"Breadfruit, candied","Rimas, candied",341,0.6,83.4,0.5,DOST PH
+dost-1261,"Candy bar, peanut",Matamis na mani,535,20.3,46.1,29.9,DOST PH
+dost-1262,"Candy bar, pili nut",Matamis na pili/Mazapan de pili,537,5.7,60.7,30.1,DOST PH
+dost-1263,"Candy, custard",Yema,381,4.1,87.6,1.6,DOST PH
+dost-1264,"Candy, hard",N/A,401,0.1,96,1.8,DOST PH
+dost-1265,"Candy, milk choc",N/A,518,9.8,60.2,26.4,DOST PH
+dost-1266,"Candy, pili nut",N/A,639,7.5,33.6,52.7,DOST PH
+dost-1267,"Candy, pulled",Tira-tira,386,0.6,95.4,0.2,DOST PH
+dost-1268,"Candy, toffee",N/A,367,2.2,88.8,0.3,DOST PH
+dost-1269,"Carageenan gel, assorted fruit-flvr","Gulaman, may lasang prutas",121,0,27.5,1.2,DOST PH
+dost-1270,Caramelo,N/A,398,0,99.5,0,DOST PH
+dost-1271,Champoy,N/A,390,0.3,95.5,0.8,DOST PH
+dost-1272,"Chocolate, tablea",N/A,481,4.3,75.1,18.2,DOST PH
+dost-1273,Coco jam,Matamis na bao,377,1,89.2,1.8,DOST PH
+dost-1274,Creme custard,Leche flan,228,5.9,41.4,4.3,DOST PH
+dost-1275,"Fudge, durian","Pastilyas, durian",358,13.5,75.5,0.2,DOST PH
+dost-1276,"Fudge, jackfruit","Pastilyas, langka",358,8.9,79.9,0.3,DOST PH
+dost-1277,"Fudge, milk","Pastilyas, gatas",370,9.9,79.5,1.4,DOST PH
+dost-1278,"Fudge, yam","Pastilyas, ube",349,8,75.9,1.5,DOST PH
+dost-1279,Honey,Pulot-pukyutan,258,0.1,64.1,0.1,DOST PH
+dost-1280,Ice candy,N/A,66,0,16.5,0,DOST PH
+dost-1281,Ice drop,N/A,82,0.6,19.5,0.2,DOST PH
+dost-1282,"Jam, jackfruit & pineapple, cnd",N/A,198,0.7,48.6,0.1,DOST PH
+dost-1283,"Jam, mango, cnd",N/A,287,0.9,70.5,0.2,DOST PH
+dost-1284,"Jam, pineapple",N/A,298,0.2,71.7,1.1,DOST PH
+dost-1285,"Jam, yam","Halaya, ubi",296,7.1,66.1,0.4,DOST PH
+dost-1286,"Jelly, guava",N/A,345,0,84.5,0.8,DOST PH
+dost-1287,"Jelly, pineapple",N/A,310,0.1,75.9,0.7,DOST PH
+dost-1288,"Jelly, strawberry",N/A,255,0.1,61.4,1,DOST PH
+dost-1289,Masareal,Mazareal,484,13.9,59.4,21.2,DOST PH
+dost-1290,Marshmallow,N/A,317,3,75.6,0.3,DOST PH
+dost-1291,"Milk choc bar, orange crunch",N/A,535,2.7,66.5,28.7,DOST PH
+dost-1292,"Nata de coco, sweetn",N/A,146,0,36.1,0.2,DOST PH
+dost-1293,"Nata de piña, sweetn",N/A,181,0.1,44.6,0.2,DOST PH
+dost-1294,Peanut brittle,N/A,493,15,53.9,24.2,DOST PH
+dost-1295,Peanut brittle w/ sesame seed,N/A,522,14,54.4,27.6,DOST PH
+dost-1296,"Peanut, milk choc-coated","Mani, binalot sa tsokolate gatas",506,13.8,56,25.2,DOST PH
+dost-1297,Polvoron,N/A,469,6.8,73.6,16.4,DOST PH
+dost-1298,"Popsicle, choc flvr",N/A,83,0.8,18.8,0.5,DOST PH
+dost-1299,"Sugar, brown","Asukal, pula",398,0.1,98.7,0.3,DOST PH
+dost-1300,"Sugar, crude, pakaskas",Pakaskas,346,2.2,83.9,0.2,DOST PH
+dost-1301,"Sugar, crude, panocha",Panocha,376,0.2,92.8,0.4,DOST PH
+dost-1302,"Sugar, pwdr","Asukal, pulbos/Confectioner&#39;s sugar",400,0,100,0,DOST PH
+dost-1303,"Sugar, white, refined","Asukal, puti, refinado",400,0,99.9,0,DOST PH
+dost-1304,Syrup,Arnibal,308,0,76.8,0.1,DOST PH
+dost-1305,"Syrup, molasses, cane",Pulot,260,1.8,62.4,0.4,DOST PH
+dost-1306,"Tamarind, candied","Sampalok, candied",335,0.4,81.7,0.7,DOST PH
+dost-1307,"Wax gourd, candied","Kundol, candied",327,0.2,81.2,0.1,DOST PH
+dost-1308,"Sugar, coconut sap",Coco sugar,385,1.2,94.8,0.1,DOST PH
+dost-1309,"Syrup, coconut sap",Coco syrup,321,1,79.1,0.1,DOST PH
+dost-1310,"Bilimbi, dried","Kamyas, tuyo",401,11.4,68.5,9,DOST PH
+dost-1311,"Bouillon cube, beef",Beef cube,284,10.4,13,21.2,DOST PH
+dost-1312,"Bouillon cube, chicken",Chicken cube,306,15.3,11,22.3,DOST PH
+dost-1313,"Catsup, banana",N/A,221,0.7,54,0.2,DOST PH
+dost-1314,"Catsup, tomato",N/A,131,1.6,29.9,0.6,DOST PH
+dost-1315,"Clam paste, ginamos","Bagoong tulya, ginamos",69,7.5,8.9,0.4,DOST PH
+dost-1316,"Fish paste, anchovy",Bagoong dilis,133,10,17.5,2.5,DOST PH
+dost-1317,"Fish paste, balatohan",Bagoong balatohan,162,8.1,25.1,3.2,DOST PH
+dost-1318,"Fish paste, ginamos","Bagoong isda, ginamos",110,23.4,0,1.8,DOST PH
+dost-1319,"Fish paste, siganid fry",Bagoong padas,54,9.6,0,1.7,DOST PH
+dost-1320,Fish sauce,Patis,49,10.6,0.9,0.3,DOST PH
+dost-1321,Lechon sauce,Litson sarsa,118,1.2,27.6,0.3,DOST PH
+dost-1322,Lemon grass lvs,Tanglad dahon,111,1.4,23.1,1.4,DOST PH
+dost-1323,"Lemon grass lvs, boiled","Tanglad dahon, nilaga",57,0.3,13.2,0.3,DOST PH
+dost-1324,"Banana, flowers, dried","Saging bulaklak, tuyo",329,9.6,69.6,1.3,DOST PH
+dost-1325,Oyster paste,Bagoong talaba/Sise,54,3.7,5.8,1.8,DOST PH
+dost-1326,"Safflower, flowers, dried","Kasubha bulaklak, tuyo",340,16.2,59,4.3,DOST PH
+dost-1327,Shrimp paste,Bagoong hipon,68,12.5,0.1,1.9,DOST PH
+dost-1328,"Shrimp paste, alamang","Bagoong hipon, alamang",61,12.4,0.6,1,DOST PH
+dost-1329,"Shrimp paste, bastos","Bagoong hipon, bastos",57,12,0.4,0.8,DOST PH
+dost-1330,Soy sauce,Toyo,75,3.5,15,0.1,DOST PH
+dost-1331,Tomato paste,N/A,112,4.3,23.4,0.1,DOST PH
+dost-1332,Tomato sauce,N/A,45,0.9,10,0.2,DOST PH
+dost-1333,"Vinegar, coconut","Suka, niyog",7,0,1.4,0.1,DOST PH
+dost-1334,"Vinegar, palm","Suka, sasa",11,0.2,2.6,0,DOST PH
+dost-1335,"Vinegar, pineapple","Suka, pinya",7,0.1,1.3,0.1,DOST PH
+dost-1336,Worcestershire sauce,N/A,31,0.7,6.3,0.3,DOST PH
+dost-1337,"Shrimp paste, sauteed","Bagoong alamang, ginisa",401,10.2,17.7,32.1,DOST PH
+dost-1338,"Beer, lager type",Serbesa,16,0.3,3.6,0,DOST PH
+dost-1339,"Palm sap, fermented",Tuba,35,0.2,7.9,0.3,DOST PH
+dost-1340,Rum,N/A,1,0,0.2,0,DOST PH
+dost-1341,"Sugarcane, fermented",Basi,21,0,5,0.1,DOST PH
+dost-1342,"Wine, Chinese","Alak, Tsina",30,0,7.4,0,DOST PH
+dost-1343,"Ceylon moss/Agar-agar, in light syrup",Gulaman palamig,56,0,8.3,2.5,DOST PH
+dost-1344,"Choc-flvr drink, prep",N/A,80,1.5,17.7,0.3,DOST PH
+dost-1345,"Choc-flvr drink, pwdr",N/A,394,5.7,84.8,3.6,DOST PH
+dost-1346,"Choc-flvr drink, UHT",N/A,78,3,11.8,2.1,DOST PH
+dost-1347,"Choc-flvr energy drnk, granules, fortified",N/A,406,11,75.7,6.6,DOST PH
+dost-1348,"Choc-flvr energy drnk, pwdr, fortified",N/A,432,13.8,68,11.6,DOST PH
+dost-1349,"Choc-flvr food milk, pwdr",N/A,398,21.7,66.7,5,DOST PH
+dost-1350,"Cocoa, pwdr, imported","Kakaw, pulbos, imported",474,20,51,21.1,DOST PH
+dost-1351,"Cocoa, pwdr, local","Kakaw, pulbos, lokal",465,21.7,49.9,19.8,DOST PH
+dost-1352,Coconut water,"Niyog, tubig",22,0,5.1,0.2,DOST PH
+dost-1353,"Coffee, creamer & sugar (3 in 1)",N/A,392,3.6,92.5,0.8,DOST PH
+dost-1354,"Coffee, inst, 100% pure",N/A,329,21.6,60.3,0.1,DOST PH
+dost-1355,"Coffee, roasted",N/A,406,15.2,70.4,7.1,DOST PH
+dost-1356,"Coffee, soybean, w/ seed coat",N/A,442,39,32.9,17.1,DOST PH
+dost-1357,"Coffee, soybean, w/o seed coat",N/A,492,39.5,31.8,23,DOST PH
+dost-1358,"Fruit jce drnk conc, calamansi",N/A,239,0.2,58.3,0.6,DOST PH
+dost-1359,"Fruit jce drnk conc, grape",N/A,257,0.2,63.2,0.4,DOST PH
+dost-1360,"Fruit jce drnk conc, grapefruit",N/A,230,0,54.6,1.3,DOST PH
+dost-1361,"Fruit jce drnk conc, guyabano",N/A,109,0.3,26.3,0.3,DOST PH
+dost-1362,"Fruit jce drnk conc, mango",N/A,75,0.2,18.2,0.2,DOST PH
+dost-1363,"Fruit jce drnk conc, orange",N/A,244,0,59.5,0.7,DOST PH
+dost-1364,"Fruit jce drnk, apple, ttb",N/A,50,0.1,12,0.2,DOST PH
+dost-1365,"Fruit jce drnk, citrus cooler, ttb",N/A,47,0.1,11.2,0.2,DOST PH
+dost-1366,"Fruit jce drnk, grape, ttpk",N/A,45,0.2,10.8,0.1,DOST PH
+dost-1367,"Fruit jce drnk, guava, ttpk",N/A,46,0.1,10.7,0.3,DOST PH
+dost-1368,"Fruit jce drnk, guyabano, btl",N/A,75,0.1,16.3,1,DOST PH
+dost-1369,"Fruit jce drnk, mango, btl",N/A,57,0.2,13.7,0.2,DOST PH
+dost-1370,"Fruit jce drnk, mango, polyfoil",N/A,49,0.1,11.6,0.2,DOST PH
+dost-1371,"Fruit jce drnk, mango, ttb",N/A,49,0.1,11.8,0.2,DOST PH
+dost-1372,"Fruit jce drnk, orange & pineapple, ttb",N/A,47,0.1,11.2,0.2,DOST PH
+dost-1373,"Fruit jce drnk, orange, btl",N/A,43,0.2,10.1,0.2,DOST PH
+dost-1374,"Fruit jce drnk, orange, polyfoil",N/A,49,0.1,11.8,0.2,DOST PH
+dost-1375,"Fruit jce drnk, orange, ttb",N/A,46,0.1,10.9,0.2,DOST PH
+dost-1376,"Fruit jce drnk, pineapple & lychee, ttb",N/A,51,0.2,11.3,0.5,DOST PH
+dost-1377,"Fruit jce drnk, pineapple & orange, cnd",N/A,48,0.1,11.6,0.1,DOST PH
+dost-1378,"Fruit jce drnk, pineapple, ttb",N/A,46,0.2,10.6,0.3,DOST PH
+dost-1379,"Fruit jce drnk, strawberry, polyfoil",N/A,50,0,12,0.2,DOST PH
+dost-1380,"Fruit jce drnk, sugarcane, ttb",N/A,51,0.2,12.2,0.1,DOST PH
+dost-1381,"Fruit-flvr drnk conc, orange",N/A,237,0.2,58,0.5,DOST PH
+dost-1382,"Fruit-flvr drnk conc, strawberry",N/A,272,0.1,66.4,0.7,DOST PH
+dost-1383,"Fruit-flvr drnk, pwdr, orange",N/A,407,0,96.8,2.2,DOST PH
+dost-1384,"Juice, apple, cnd",N/A,65,0.1,15.7,0.2,DOST PH
+dost-1385,"Juice, calamansi (nectar)",N/A,150,0.1,36.4,0.4,DOST PH
+dost-1386,"Juice, mango",N/A,56,0.4,12.1,0.7,DOST PH
+dost-1387,"Juice, orange, unsweetn, cnd",N/A,46,0.7,10.2,0.3,DOST PH
+dost-1388,"Juice, pineapple & grapefruit, cnd",N/A,63,1.2,13.4,0.5,DOST PH
+dost-1389,"Juice, pineapple, cnd",N/A,62,0,15.3,0.1,DOST PH
+dost-1390,"Juice, sugarcane","Katas, tubo",50,0.1,11.9,0.2,DOST PH
+dost-1391,"Juice, tomato, cnd",N/A,25,0.8,4.9,0.2,DOST PH
+dost-1392,"Lemon tea drink, ttb",N/A,51,0,12,0.3,DOST PH
+dost-1393,Sago in light syrup,Sago palamig,73,0,15.5,1.2,DOST PH
+dost-1394,"Softdrink, cola",N/A,41,0,9.9,0.1,DOST PH
+dost-1395,"Softdrink, orange flvr",N/A,46,0,11.6,0,DOST PH
+dost-1396,"Soy drink, pwdr, plain",N/A,449,21.8,59.6,13.7,DOST PH
+dost-1397,"Soy drnk, pwdr, corn flvr",N/A,448,19.4,62,13.6,DOST PH
+dost-1398,"Soy drnk, pwdr, pandan flvr",N/A,414,18.3,70.6,6.5,DOST PH
+dost-1399,"Soybean milk drink, choc-flvr",N/A,76,2.2,16.1,0.3,DOST PH
+dost-1400,Soybean milk drnk,N/A,51,2.6,8.3,0.8,DOST PH
+dost-1401,"Tea lvs, dried","Tsaa dahon, tuyo",357,21.7,65.3,1,DOST PH
+dost-1402,Young coconut (shredded) drnk,Buko palamig,39,0.2,9,0.2,DOST PH
+dost-1403,Cheese pimiento sandwich,N/A,268,9.6,39.3,8,DOST PH
+dost-1404,Cheese sandwich,N/A,302,11.2,50.3,6.2,DOST PH
+dost-1405,Cheeseburger sandwich,N/A,250,11.2,30,9.5,DOST PH
+dost-1406,"Steamed bun, mung bean filling","Siopao, munggo",279,6.7,56.4,2.9,DOST PH
+dost-1407,"Steamed bun, pork filling","Siopao, baboy",294,9.2,39,11.2,DOST PH
+dost-1408,Glutinous rice w/ mung bean & cocomilk,Ginataang munggo,130,1.8,24,3,DOST PH
+dost-1409,Hamburger sandwich w/ coleslaw,N/A,246,12.1,30.5,8.4,DOST PH
+dost-1410,"Hamburger sandwich, reg",N/A,265,14,30.1,9.9,DOST PH
+dost-1411,Meat pie,Empanada,435,11.9,41.1,24.8,DOST PH
+dost-1412,Meat roll,Mechado roll,313,10.4,44.4,10.4,DOST PH
+dost-1413,Rice gruel w/ chicken,Arroz caldo,63,2,12.8,0.4,DOST PH
+dost-1414,Rice gruel w/ choc & milk,"Champorado, may gatas",97,1.7,22,0.2,DOST PH
+dost-1415,Rice gruel w/ tripe,"Lugaw, may goto",53,2,8.3,1.3,DOST PH
+dost-1416,"Spaghetti, meat balls & tomato sce, cnd",N/A,83,4.8,13.8,1,DOST PH
+dost-1417,"Spaghetti, Vienna sausage & tomato sce, cnd",N/A,86,2.9,14.8,1.7,DOST PH
+dost-1418,Buko pie,N/A,266,4.4,45.9,7.2,DOST PH
+dost-1419,Egg pie,N/A,228,9.6,40,3.5,DOST PH
+dost-1420,"Halu-halo, cnd",N/A,242,2.3,57.4,0.3,DOST PH
+dost-1421,"Halu-halo, w/ ice",N/A,82,1,18.7,0.3,DOST PH
+dost-1422,Pineapple pie,N/A,279,1.1,67.9,0.3,DOST PH
+dost-1423,Pizza pie,N/A,271,10.3,44.4,5.8,DOST PH
+dost-1424,"Milk fish, w/ black beans, cnd","Bangus may tawsi, de lata",243,18.6,0,18.7,DOST PH
+dost-1425,"Spring roll, crab, unckd","Lumpia, alimango, hindi luto",207,5.8,40.1,2.6,DOST PH
+dost-1426,"Spring roll, fish, unckd","Lumpia, isda, hindi luto",185,5.9,40,0.2,DOST PH
+dost-1427,"Spring roll, shrimp, unckd","Lumpia, hipon, hindi luto",200,6.3,43.2,0.2,DOST PH
+dost-1428,"Beef & tomato spread, cnd",N/A,193,9.8,12.1,11.7,DOST PH
+dost-1429,"Beef caldereta, cnd",N/A,284,13.3,1.6,24.9,DOST PH
+dost-1430,"Beef callos, cnd",N/A,144,9.6,9.9,7.3,DOST PH
+dost-1431,"Beef curry, cnd",N/A,165,9.5,6.6,11.2,DOST PH
+dost-1432,"Beef hamburger w/ tomato sce, cnd",N/A,145,9.4,16.5,4.6,DOST PH
+dost-1433,"Beef kare-kare, cnd",N/A,64,9,4.4,1.1,DOST PH
+dost-1434,"Beef roll, mechado, cnd",N/A,140,11.6,3.8,8.7,DOST PH
+dost-1435,"Beef roll, morcon, cnd",N/A,187,13.9,14.9,8,DOST PH
+dost-1436,"Beef steak, cnd",N/A,161,9.6,4,11.8,DOST PH
+dost-1437,"Beef stew, cnd",N/A,169,9.5,7.1,11.4,DOST PH
+dost-1438,"Beef w/ gravy, cnd",N/A,101,12.1,0,5.8,DOST PH
+dost-1439,"Beef w/ mushroom sce, cnd",N/A,103,13.3,4,3.7,DOST PH
+dost-1440,"Beef w/chickpeas, cnd",N/A,95,6.3,10.6,3,DOST PH
+dost-1441,"Beef, chili con carne, cnd",N/A,94,7.5,11.9,1.8,DOST PH
+dost-1442,"Chicken stew, cnd",N/A,72,3.6,8.3,2.7,DOST PH
+dost-1443,"Corned beef hash, cnd",N/A,104,8.4,10.7,3.1,DOST PH
+dost-1444,"Duck meat, pato tim, cnd","Pato tim, de lata",134,11,2.8,8.7,DOST PH
+dost-1445,"Meat ball & quail egg, sw & sr sce, cnd",N/A,207,9.8,12.4,13.1,DOST PH
+dost-1446,"Pork & chicken adobo, cnd",N/A,189,14.5,0,14.6,DOST PH
+dost-1447,"Pork adobo, cnd",N/A,277,10.3,3.1,24.8,DOST PH
+dost-1448,"Pork adobo, w/ egg, cnd",N/A,261,13.4,6.3,20.2,DOST PH
+dost-1449,"Pork afritada, cnd","Apritadang baboy, de lata",123,6.3,6.3,8.1,DOST PH
+dost-1450,"Pork blood stew, cnd","Dinuguan baboy, de lata",155,14.8,0,10.6,DOST PH
+dost-1451,"Pork humba, cnd",N/A,127,7.1,14,4.7,DOST PH
+dost-1452,"Pork leg w/ mushroom sce, cnd",N/A,271,7.7,15.7,19.7,DOST PH
+dost-1453,"Pork leg, mushroom & chestnut, cnd",N/A,228,12,0.8,19.6,DOST PH
+dost-1454,"Pork leg, pinaksiw, cnd",N/A,188,13.1,6.6,12.1,DOST PH
+dost-1455,"Pork pastel, cnd",N/A,147,8.8,4.6,10.4,DOST PH
+dost-1456,"Pork w/ black beans, cnd","Baboy may tawsi, de lata",215,11.2,6.1,16.2,DOST PH
+dost-1457,"Pork, roasted, pinaksiw, cnd","Lechon paksiw, de lata",214,12.8,6.4,15.2,DOST PH
+dost-1458,"Roast beef hash, cnd",N/A,201,15,8.2,12,DOST PH
+dost-1459,"Spring roll, beef, unckd","Lumpia, baka, hindi luto",202,7.6,40.3,1.2,DOST PH
+dost-1460,"Spring roll, chicken, unckd","Lumpia, manok, hindi luto",224,5.7,39.6,4.8,DOST PH
+dost-1461,"Spring roll, Shanghai, unckd","Lumpia, Shanghai, hindi luto",266,5.8,38.3,10,DOST PH
+dost-1462,"Chicken noodle broth, inst",N/A,61,1.7,9.5,1.8,DOST PH
+dost-1463,"Soup, beans w/ bacon, cond, cnd",N/A,50,2.6,8.6,0.6,DOST PH
+dost-1464,"Soup, beef & veg, cnd",N/A,60,3.3,5.7,2.7,DOST PH
+dost-1465,"Soup, bird&#39;s nest (nido), cond, cnd",N/A,45,1.3,5.3,2.1,DOST PH
+dost-1466,"Soup, chicken & asparagus, cnd",N/A,20,2.1,1.5,0.6,DOST PH
+dost-1467,"Soup, chicken & veg, cnd",N/A,33,1.2,6.3,0.3,DOST PH
+dost-1468,"Soup, chicken & veg, cond, cnd",N/A,60,2,5.4,3.4,DOST PH
+dost-1469,"Soup, chicken noodle, cnd",N/A,49,2.6,6,1.6,DOST PH
+dost-1470,"Soup, corn potage, cond, cnd",N/A,92,3.5,18.7,0.4,DOST PH
+dost-1471,"Soup, cream of asparagus, cond, cnd",N/A,79,1.8,8.5,4.2,DOST PH
+dost-1472,"Soup, cream of chicken, cond, cnd",N/A,62,2.5,8.4,2,DOST PH
+dost-1473,"Soup, cream of mushroom, cnd",N/A,102,1.7,8.7,6.7,DOST PH
+dost-1474,"Soup, mungbean w/ shrimp, ckd",N/A,50,3.1,8.3,0.5,DOST PH
+dost-1475,"Soup, noodles & beef, cond, cnd",N/A,55,1.9,6.7,2.3,DOST PH
+dost-1476,"Soup, pansit molo, cond, cnd",N/A,54,2.4,5.6,2.4,DOST PH
+dost-1477,"Soup, sotanghon, cond",N/A,27,0.8,2.8,1.4,DOST PH
+dost-1478,"Soup, turkey noodle, cnd",N/A,42,2.4,7.3,0.4,DOST PH
+dost-1479,"Soup, veg alphabet, cnd",N/A,69,2,12,1.4,DOST PH
+dost-1480,"Soup, veg, cond, cnd",N/A,25,1.1,4.2,0.4,DOST PH
+dost-1481,"Soup, vermicelli & chicken, cond, cnd",N/A,38,1.3,5.5,1.2,DOST PH
+dost-1482,"Pork & beans, cnd",N/A,105,4.7,17.6,1.8,DOST PH
+dost-1483,"Hotcake, prep, w/ MLP",N/A,242,5.3,39.3,7.1,DOST PH
+dost-1484,"Polvoron, prep, w/ MLP",N/A,497,9.2,62.3,23.4,DOST PH
+dost-1485,"Gelatin drink, w/ MLP",Jello almond w/ MLP,63,0.9,13,0.8,DOST PH
+dost-1486,"Ice candy, prep, w/ MLP",Frozen refreshment w/ MLP,96,1.4,20.1,1.1,DOST PH
+dost-1487,"Yacon shake, prep",Yacon cooler,77,0.2,18.7,0.2,DOST PH
+dost-1488,"Carbonara, prep, w/ MLP",N/A,148,5.5,17.2,6.4,DOST PH
+dost-1489,"Fruit salad, prep, w/ yacon",Yacon salad twister,62,0.4,14.3,0.3,DOST PH
+dost-1490,"Macaroni salad, prep, w/ yacon",Yacon macaroni salad,191,3.4,10.7,14.9,DOST PH
+dost-1491,"Waldorf salad, prep, w/ yacon","Yacon, waldorf salad",177,1.8,16,11.8,DOST PH
+dost-1492,"Anchovy fry omelet, prep, w/ MLP",Dulong omelet w/ MLP,186,13.1,4.5,12.8,DOST PH
+dost-1493,"Red snapper fritata, prep, w/ MLP",Maya-maya torta w/ MLP,260,15.3,5.7,19.5,DOST PH
+dost-1494,"Chopsuey, prep, w/ yacon",Yacon chopsuey,70,2.7,8.5,2.8,DOST PH
+dost-1495,"Wonton soup, prep, w/ MLP","Pancit molo, w/ MLP",93,5,6.3,5.3,DOST PH
+dost-1496,"Pork wonton, prep, w/ MLP",Siomai w/ MLP,217,13.3,18,10.2,DOST PH
+dost-1497,"Scrambled egg, prep, w/ MLP",N/A,207,10,4.6,16.5,DOST PH
+dost-1498,"Shanghai pork roll, prep, w/ yacon",Yacon lumpiang shanghai,285,10.3,26,15.5,DOST PH
+dost-1499,"Fried rice mix, w/ yacon",Yacon-rice medley,140,3,23.1,4,DOST PH
+dost-1500,"Vegetable stir-fry w/ quail eggs, prep, w/ yacon",Yacon w/ quail eggs,105,4.2,8.6,6,DOST PH
+dost-1501,"Vegetable soup, prep, w/ yacon",Yacon-veggie summer vegetable soup,34,1.6,5.1,0.8,DOST PH
+dost-1502,"Vegetable spring roll, fresh, w/ yacon",Yacon lumpiang sariwa,147,3.8,23.6,4.2,DOST PH
+dost-1503,"Pork ball, wrapped",Pork wonton/Pork siomai,298,10.5,26.4,16.7,DOST PH
+dost-1504,"Beef w/ veg, str",N/A,48,3.8,7.5,0.3,DOST PH
+dost-1505,"Beef, egg noodle, veg, str",N/A,41,2.8,7.3,0.1,DOST PH
+dost-1506,"Carrot, str",N/A,23,0.6,4.8,0.1,DOST PH
+dost-1507,"Cereals, applesce & banana, str",N/A,84,1,18.2,0.8,DOST PH
+dost-1508,"Chicken noodle, str",N/A,50,2.6,8.9,0.4,DOST PH
+dost-1509,"Chicken w/ veg, str",N/A,111,8.8,6.9,5.4,DOST PH
+dost-1510,"Chicken, asparagus, str",N/A,39,7.9,0,0.8,DOST PH
+dost-1511,"Cream chicken soup, str",N/A,48,1.8,9,0.5,DOST PH
+dost-1512,"Custard pudding, choco, str",N/A,87,1.4,18.6,0.8,DOST PH
+dost-1513,"Custard pudding, vanilla, str",N/A,94,1.3,19.7,1.1,DOST PH
+dost-1514,"Fruit w/ tapioca, str",N/A,91,0.2,20.4,1,DOST PH
+dost-1515,"Mango & papaya, str",N/A,91,0.2,21.8,0.3,DOST PH
+dost-1516,"Mango, str",N/A,87,0.2,18.8,1.2,DOST PH
+dost-1517,"Mixed fruits, str",N/A,90,0.2,20.3,0.9,DOST PH
+dost-1518,"Mixed veg, str",N/A,42,1.4,8.7,0.2,DOST PH
+dost-1519,"Peach, str",N/A,112,0.6,26.6,0.3,DOST PH
+dost-1520,"Rice w/ chicken, str",N/A,46,1.6,8.6,0.6,DOST PH
+dost-1521,"Squash, str",N/A,33,0.4,7.5,0.1,DOST PH
+dost-1522,"Veg, liver & bacon, str",N/A,47,2.1,7.6,0.9,DOST PH
+dost-1523,Azolla pinnata,N/A,18,1.4,2.1,0.4,DOST PH
+dost-1524,Baking powder,N/A,166,0.2,40.7,0.3,DOST PH
+dost-1525,Ceylon moss/Agar-agar bar,Gulaman,311,2.6,74.5,0.3,DOST PH
+dost-1526,"Coffee creamer, non-dairy",N/A,390,4.1,91.9,0.7,DOST PH
+dost-1527,Chlorella,N/A,351,53.3,23.4,4.9,DOST PH
+dost-1528,Gelatin powder,N/A,351,85.4,0,1,DOST PH
+dost-1529,Rice washing,Hugas-bigas,6,0.1,1,0.2,DOST PH
+dost-1530,"Yeast, baker&#39;s, active, dry","Lebadura, baker&#39;s, tuyo",363,37.2,50.5,1.3,DOST PH
+dost-1531,"Coconut meat, grated, sweetn",Bukayo,399,2.2,92.8,2.1,DOST PH
+dost-1532,Ginger,Luya,46,1.1,8.5,0.8,DOST PH
+dost-1533,Turmeric,Luyang dilaw,71,2,9.6,2.7,DOST PH
+dost-1534,"Egg mass, sea hare",Lukot,17,2.4,1.3,0.2,DOST PH
+dost-1535,"Tea, prep w/ water, no sugar",N/A,1,0.1,0.2,0,DOST PH
+dost-1536,Locust,Balang,147,13.7,13.4,4.3,DOST PH

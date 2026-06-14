@@ -2,7 +2,8 @@ import { databases, DATABASE_ID, COLLECTIONS, ID, Query, todayDate, nowTime } fr
 
 export async function saveMealLog(
   userId: string, mealName: string, calories: number,
-  mealType: string, note?: string
+  mealType: string, note?: string,
+  protein?: number, carbs?: number, fat?: number
 ) {
   return await databases.createDocument(
     DATABASE_ID, COLLECTIONS.calories, ID.unique(),
@@ -10,6 +11,9 @@ export async function saveMealLog(
       userID:   userId,       // matches your column: userID
       mealName: mealName,     // matches your column: mealName
       calories: calories,     // matches your column: calories
+      protein:  protein || 0,
+      carbs:    carbs || 0,
+      fat:      fat || 0,
       mealType: mealType,     // matches your column: mealType
       note:     note || '',   // matches your column: note
       mealTime: nowTime(),    // matches your column: mealTime
