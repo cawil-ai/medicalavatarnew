@@ -96,7 +96,16 @@ export function CaloriesPage() {
     if (!window.confirm("Are you sure you want to delete this meal?")) return;
     
     try {
-      await databases.deleteDocument(DATABASE_ID, COLLECTIONS.calories, id);
+      if (USE_LOCAL_STORAGE) {
+        const localData = localStorage.getItem('cawil_meals');
+        if (localData) {
+          let allDocs = JSON.parse(localData);
+          allDocs = allDocs.filter((doc: any) => doc.$id !== id);
+          localStorage.setItem('cawil_meals', JSON.stringify(allDocs));
+        }
+      } else {
+        await databases.deleteDocument(DATABASE_ID, COLLECTIONS.calories, id);
+      }
       toast.success("Meal deleted successfully!");
       loadCalorieData();
     } catch (err: any) {
@@ -104,6 +113,26 @@ export function CaloriesPage() {
       toast.error(`Failed to delete meal: ${err.message || 'Unknown error'}`);
     }
   };
+
+
+  // const loadCalorieData = async () => {
+  //   try {
+  //     const user = await account.get();
+  //     const res  = await databases.listDocuments(DATABASE_ID, COLLECTIONS.calories);
+  //     const today = new Date().toISOString().split('T')[0];
+  //     const mine = res.documents.filter(d => d.userID === user.$id && d.date === today);
+
+  //     const mapped: Meal[] = mine.map(d => ({
+  //       category: d.mealType  || 'Snack',
+  //       foodName: d.mealName  || '',
+  //       calories: d.calories  || 0,
+  //       time:     d.mealTime  || '',
+  //     }));
+  //     setMeals(mapped);
+  //   } catch (err) {
+  //     console.error('❌ Load calorie error:', err);
+  //   }
+  // };
   const calculateWeeklyStreak = (docs: any[]) => {
     if (!docs.length) return 0;
 
@@ -150,34 +179,44 @@ export function CaloriesPage() {
   };
 
 
+  const USE_LOCAL_STORAGE = import.meta.env.VITE_LOCAL_MODE === 'true';
+
   const loadCalorieData = async () => {
     try {
       const today = new Date().toLocaleDateString('en-CA');
       let allDocs: any[] = [];
 
-      const user = await account.get();
-      // ✅ GET ALL DATA (for streak)
-      const resAll = await databases.listDocuments(
-        DATABASE_ID,
-        COLLECTIONS.calories,
-        [
-          Query.equal('userID', user.$id),
-          Query.orderDesc('date'),
-          Query.limit(500) // ✅ FIX
-        ]
-      );
-      allDocs = resAll.documents;
+      if (USE_LOCAL_STORAGE) {
+        const localData = localStorage.getItem('cawil_meals');
+        if (localData) {
+          allDocs = JSON.parse(localData);
+        }
+        setGoal(2000); // Default goal
+      } else {
+        const user = await account.get();
+        // ✅ GET ALL DATA (for streak)
+        const resAll = await databases.listDocuments(
+          DATABASE_ID,
+          COLLECTIONS.calories,
+          [
+            Query.equal('userID', user.$id),
+            Query.orderDesc('date'),
+            Query.limit(500) // ✅ FIX
+          ]
+        );
+        allDocs = resAll.documents;
 
-      const profileRes = await databases.listDocuments(
-        DATABASE_ID,
-        COLLECTIONS.users,
-        [Query.equal('userID', user.$id)]
-      );
+        const profileRes = await databases.listDocuments(
+          DATABASE_ID,
+          COLLECTIONS.users,
+          [Query.equal('userID', user.$id)]
+        );
 
-      const profile = profileRes.documents[0];
+        const profile = profileRes.documents[0];
 
-      if (profile && profile.recommendedCalories) {
-        setGoal(profile.recommendedCalories);
+        if (profile && profile.recommendedCalories) {
+          setGoal(profile.recommendedCalories);
+        }
       }
 
       console.log('ALL calorie logs:', allDocs);
@@ -233,44 +272,51 @@ export function CaloriesPage() {
 
       let doc;
 
-      const user = await account.get();
-      if (editingMealId) {
-        doc = await databases.updateDocument(
-          DATABASE_ID,
-          COLLECTIONS.calories,
-          editingMealId,
-          {
-            mealName: newMeal.foodName,
-            calories: newMeal.calories,
-            protein: newMeal.protein || 0,
-            carbs: newMeal.carbs || 0,
-            fat: newMeal.fat || 0,
-            mealType: newMeal.category,
-            note: newMeal.note || ''
+      if (USE_LOCAL_STORAGE) {
+        const localDoc = {
+          $id: editingMealId ? editingMealId : 'local-' + Date.now(),
+          userID: 'local-user',
+          mealName: newMeal.foodName,
+          calories: newMeal.calories,
+          protein: newMeal.protein || 0,
+          carbs: newMeal.carbs || 0,
+          fat: newMeal.fat || 0,
+          mealType: newMeal.category,
+          note: newMeal.note || '',
+          mealTime: time,
+          date: today,
+          loggedAt: now.toISOString(),
+        };
+        const localData = localStorage.getItem('cawil_meals');
+        let allDocs = localData ? JSON.parse(localData) : [];
+        if (editingMealId) {
+          const idx = allDocs.findIndex((d: any) => d.$id === editingMealId);
+          if (idx !== -1) {
+            allDocs[idx] = { ...allDocs[idx], ...localDoc };
           }
-        );
+        } else {
+          allDocs.push(localDoc);
+        }
+        localStorage.setItem('cawil_meals', JSON.stringify(allDocs));
+        doc = localDoc;
       } else {
-        try {
-          doc = await databases.createDocument(
+        const user = await account.get();
+        if (editingMealId) {
+          doc = await databases.updateDocument(
             DATABASE_ID,
             COLLECTIONS.calories,
-            ID.unique(),
+            editingMealId,
             {
-              userID: user.$id,
               mealName: newMeal.foodName,
               calories: newMeal.calories,
               protein: newMeal.protein || 0,
               carbs: newMeal.carbs || 0,
               fat: newMeal.fat || 0,
               mealType: newMeal.category,
-              note: newMeal.note || '',
-              mealTime: time,
-              date: today,
-              loggedAt: now.toISOString(),
+              note: newMeal.note || ''
             }
           );
-        } catch (saveErr: any) {
-          console.warn('Appwrite save failed, possibly due to missing macro attributes. Falling back to macro-less save. Original error:', saveErr);
+        } else {
           try {
             doc = await databases.createDocument(
               DATABASE_ID,
@@ -280,6 +326,9 @@ export function CaloriesPage() {
                 userID: user.$id,
                 mealName: newMeal.foodName,
                 calories: newMeal.calories,
+                protein: newMeal.protein || 0,
+                carbs: newMeal.carbs || 0,
+                fat: newMeal.fat || 0,
                 mealType: newMeal.category,
                 note: newMeal.note || '',
                 mealTime: time,
@@ -287,8 +336,27 @@ export function CaloriesPage() {
                 loggedAt: now.toISOString(),
               }
             );
-          } catch (fallbackErr) {
-            throw fallbackErr;
+          } catch (saveErr: any) {
+            console.warn('Appwrite save failed, possibly due to missing macro attributes. Falling back to macro-less save. Original error:', saveErr);
+            try {
+              doc = await databases.createDocument(
+                DATABASE_ID,
+                COLLECTIONS.calories,
+                ID.unique(),
+                {
+                  userID: user.$id,
+                  mealName: newMeal.foodName,
+                  calories: newMeal.calories,
+                  mealType: newMeal.category,
+                  note: newMeal.note || '',
+                  mealTime: time,
+                  date: today,
+                  loggedAt: now.toISOString(),
+                }
+              );
+            } catch (fallbackErr) {
+              throw fallbackErr;
+            }
           }
         }
       }
@@ -733,7 +801,9 @@ export function CaloriesPage() {
                     {totalPro < (totalCals * 0.15 / 4) && <span style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 700 }}>Low protein intake today</span>}
                     {totalCarbs > (totalCals * 0.60 / 4) && <span style={{ background: 'rgba(59,130,246,0.15)', color: '#3b82f6', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 700 }}>High carb intake today</span>}
                     {totalPro >= (totalCals * 0.25 / 4) && <span style={{ background: 'rgba(34,197,94,0.15)', color: '#22c55e', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 700 }}>Good protein intake</span>}
-                    {totalPro >= (totalCals * 0.15 / 4) && totalPro < (totalCals * 0.25 / 4) && totalCarbs <= (totalCals * 0.60 / 4) && <span style={{ background: 'rgba(168,85,247,0.15)', color: '#a855f7', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 700 }}>Balanced macros today</span>}
+                    {totalPro >= (totalCals * 0.15 / 4) && totalPro < (totalCals * 0.25 / 4) && totalCarbs <= (totalCals * 0.60 / 4) && (
+                      <span style={{ background: 'rgba(20,184,166,0.15)', color: '#14b8a6', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 700 }}>Balanced macros today</span>
+                    )}
                   </div>
                 )}
               </div>
