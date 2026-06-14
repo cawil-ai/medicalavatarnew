@@ -24,6 +24,6 @@ export const router = createBrowserRouter([
   { path: "/journal",   Component: JournalPage },
   { path: "/meditation",Component: MeditationPage },
   { path: "/mood",      Component: MoodTrackerPage },
-   { path: "/female-health", Component: FemaleHealthPage }, 
+  { path: "/female-health", Component: FemaleHealthPage },
   { path: "*",          Component: Login },
-]);
+]);
