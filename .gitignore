@@ -4,7 +4,3 @@ dist/
 .env.local
 .DS_Store
 
-# Ignore temporary scraping scripts
-scrape_*.cjs
-scrape_*.js
-*.dump.json
