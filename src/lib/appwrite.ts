@@ -32,3 +32,22 @@ console.log('=============================');
 
 export const todayDate = () => new Date().toISOString().split('T')[0];
 export const nowTime   = () => new Date().toTimeString().slice(0, 5);
+
+/* ── Local mode ──────────────────────────────────────────────────────
+ * When VITE_LOCAL_MODE=true (set only in the gitignored .env.local), the
+ * app runs without a backend: login is bypassed (see app/routes.ts) and
+ * supported features persist to localStorage instead of Appwrite.
+ * In the pushed repo .env.local is absent, so this is false and the app
+ * behaves normally (real login + Appwrite). */
+export const LOCAL_MODE = import.meta.env.VITE_LOCAL_MODE === 'true';
+
+/**
+ * Resolve the current user id. In local mode this returns a fixed
+ * synthetic id without touching Appwrite; otherwise it reads the live
+ * Appwrite auth session (throwing if not logged in, as before).
+ */
+export async function getCurrentUserId(): Promise<string> {
+  if (LOCAL_MODE) return 'local-user';
+  const user = await account.get();
+  return user.$id;
+}
