@@ -20,6 +20,9 @@ export const COLLECTIONS = {
   mood:       import.meta.env.VITE_COLLECTION_MOOD       as string,
   female_health: import.meta.env.VITE_COLLECTION_FEMALE_HEALTH as string,
   users:      import.meta.env.VITE_COLLECTION_USERS      as string,
+  // Fall Detection (used only in production; local mode persists to localStorage)
+  fallEvents:        import.meta.env.VITE_COLLECTION_FALL_EVENTS        as string,
+  emergencyContacts: import.meta.env.VITE_COLLECTION_EMERGENCY_CONTACTS as string,
 };
 
 // 🔍 DEBUG — remove after fixing

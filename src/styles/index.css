@@ -15,7 +15,6 @@ html, body {
   background: #060e23;
   color: #e0f0ff;
   width: 100%;
-  height: 100%;
 }
 
 #root {
@@ -32,4 +31,11 @@ input, button, select, textarea {
 /* Remove Bootstrap's default font override if present */
 body, h1, h2, h3, h4, h5, h6, p, span, div, a, li {
   font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Prevent iOS auto-zoom on focused form inputs by ensuring font-size is at least 16px on mobile */
+@media (max-width: 767px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
 }

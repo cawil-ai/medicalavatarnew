@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Activity, Heart, Moon, Flame, Droplet, Footprints, LogOut, ChevronLeft, ChevronRight, BookOpen, Brain, Smile, User, Calculator } from 'lucide-react';
+import { Activity, Heart, Moon, Flame, Droplet, Footprints, LogOut, ChevronLeft, ChevronRight, BookOpen, Brain, Smile, User, Calculator, ShieldAlert } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router';
 import { useUserProfile, getBMICategory } from '../../context/UserProfileContext';
 import { UserProfileModal } from './UserProfileModal';
@@ -71,6 +71,10 @@ export function Sidebar() {
     { icon: BookOpen, label: 'Journal',      path: '/journal',    color: '#f59e0b' },
     { icon: Brain,    label: 'Meditation',   path: '/meditation', color: '#8b5cf6' },
     { icon: Smile,    label: 'Mood Tracker', path: '/mood',       color: '#22c55e' },
+  ];
+
+  const safetyItems = [
+    { icon: ShieldAlert, label: 'Fall Detection', path: '/fall-detection', color: '#22c55e' },
   ];
 
   const handleLogout = () => navigate('/');
@@ -264,6 +268,22 @@ export function Sidebar() {
           )}
           <nav style={{ display: 'flex', flexDirection: 'column', gap: '2px', padding: collapsed ? '0 8px' : '0 8px 0 0' }}>
             {wellnessItems.map((item, i) => <NavButton key={item.label} item={item} i={i} delay={navItems.length + 1} />)}
+          </nav>
+
+          {/* Divider */}
+          <div style={{ margin: '12px 16px', height: '1px', background: 'rgba(100,180,255,0.07)' }} />
+
+          {/* Safety */}
+          {!collapsed && (
+            <p style={{
+              margin: '0 16px 6px', fontSize: '10px', fontWeight: 700,
+              color: 'rgba(180,210,255,0.2)', letterSpacing: '0.12em', textTransform: 'uppercase',
+            }}>
+              Safety
+            </p>
+          )}
+          <nav style={{ display: 'flex', flexDirection: 'column', gap: '2px', padding: collapsed ? '0 8px' : '0 8px 0 0' }}>
+            {safetyItems.map((item, i) => <NavButton key={item.label} item={item} i={i} delay={navItems.length + wellnessItems.length + 1} />)}
           </nav>
         </div>
 

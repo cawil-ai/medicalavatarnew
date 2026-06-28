@@ -489,6 +489,7 @@
   /* Dashboard page becomes block so content stacks */
   .dashboard-page {
     display: block !important;
+    background-attachment: scroll !important;
   }
 
   /* Header gets left padding so content isn't hidden behind hamburger */
@@ -516,8 +517,10 @@
   .main-content {
     margin-left: 0 !important;
     width: 100% !important;
+    max-width: 100vw !important;
     padding: 0 !important;
     overflow-x: hidden !important;
+    box-sizing: border-box !important;
   }
 
   .chat-panel {

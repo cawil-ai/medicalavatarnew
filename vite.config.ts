@@ -10,6 +10,13 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+
+  // Allow phone testing through HTTPS tunnels (loca.lt / cloudflare / ngrok).
+  // Leading "." matches the domain and all of its subdomains.
+  server: {
+    host: true,
+    allowedHosts: ['.loca.lt', '.trycloudflare.com', '.ngrok-free.app', '.ngrok-free.dev', '.ngrok.io'],
+  },
   resolve: {
     alias: {
       // Alias @ to the src directory
