@@ -1,6 +1,5 @@
 import { databases, DATABASE_ID, COLLECTIONS, ID, Query, LOCAL_MODE } from '../lib/appwrite';
 import type { FallEvent } from './fallAlgorithm';
-import emailjs from '@emailjs/browser';
 
 /* ── Types ──────────────────────────────────────────────────────── */
 export interface EmergencyContact {
@@ -110,21 +109,19 @@ export function notifyEmergencyContacts(
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   EMAIL ALERTS via EmailJS (free tier — 200 emails/month).
+   EMAIL ALERTS via Novu
    Sends an individual email to every contact that has an address.
 ══════════════════════════════════════════════════════════════════ */
-const EJS_SERVICE  = (import.meta.env.VITE_EMAILJS_SERVICE_ID  || '').trim();
-const EJS_TEMPLATE = (import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '').trim();
-const EJS_KEY      = (import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '').trim();
+const NOVU_API_KEY = (import.meta.env.VITE_NOVU_API_KEY || '').trim();
 
 export async function sendFallAlertEmails(
   contacts: EmergencyContact[],
   location: GeoLocation | null,
   event: FallEvent,
 ): Promise<{ sent: number; failed: number; errors: string[] }> {
-  if (!EJS_SERVICE || !EJS_TEMPLATE || !EJS_KEY) {
-    console.warn('[fall] EmailJS not configured — skipping email alerts.');
-    return { sent: 0, failed: 0, errors: ['EmailJS keys are missing from environment configuration.'] };
+  if (!NOVU_API_KEY) {
+    console.warn('[fall] Novu not configured — skipping email alerts.');
+    return { sent: 0, failed: 0, errors: ['Novu API key missing from environment configuration.'] };
   }
 
   const withEmail = contacts.filter(c => c.email?.trim() && (c.pref === 'email' || c.pref === 'both' || !c.pref));
@@ -140,23 +137,37 @@ export async function sendFallAlertEmails(
 
   for (const contact of withEmail) {
     try {
-      await emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
-        to_email:  contact.email!.trim(),
-        to_name:   contact.name,
-        severity:  event.severity.toUpperCase(),
-        timestamp: new Date(event.ts).toLocaleString(),
-        maps_link: mapsLink,
-        message:   `A ${event.severity} severity fall was detected at ${new Date(event.ts).toLocaleTimeString()}. `
-                 + `Impact: ${event.impactG.toFixed(1)} g. `
-                 + (location ? `Location: ${mapsLink}` : 'GPS location was not available.')
-                 + ` Please check on them immediately.`,
-      }, {
-        publicKey: EJS_KEY,
+      const response = await fetch('https://corsproxy.io/?' + encodeURIComponent('https://api.novu.co/v1/events/trigger'), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `ApiKey ${NOVU_API_KEY}`,
+        },
+        body: JSON.stringify({
+          name: 'fall-alert',
+          to: {
+            subscriberId: contact.email!.trim(),
+            email: contact.email!.trim(),
+          },
+          payload: {
+            to_name: contact.name,
+            severity: event.severity.toUpperCase(),
+            timestamp: new Date(event.ts).toLocaleString(),
+            maps_link: mapsLink,
+            message: `A ${event.severity} severity fall was detected. Impact: ${event.impactG.toFixed(1)} g.`,
+          }
+        }),
       });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+      }
+
       sent++;
     } catch (err: any) {
       console.error(`[fall] email to ${contact.email} failed:`, err);
-      const msg = err?.text || err?.message || (typeof err === 'string' ? err : 'Unknown EmailJS error');
+      const msg = err?.message || (typeof err === 'string' ? err : 'Unknown Novu error');
       errors.push(`${contact.name}: ${msg}`);
       failed++;
     }
