@@ -13,6 +13,12 @@ import { HydrationCard } from '../components/HydrationCard';
 import { ChatPanel } from '../components/ChatPanel';
 import { useNavigate } from 'react-router';
 import { useUserProfile } from '../../context/UserProfileContext';
+import { getTodayStepsTotal, getTodayActiveMins } from '../../services/stepsService';
+import { getTodayCaloriesTotal } from '../../services/caloriesService';
+import { getTodayHydrationTotal } from '../../services/hydrationService';
+import { getLatestBpm } from '../../services/heartService';
+import { getLastSleep } from '../../services/sleepService';
+import { getCurrentUserId } from '../../lib/appwrite';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler);
 
@@ -29,14 +35,7 @@ const foodImg   = '/assets/food.png';
 const clockImg  = '/assets/clock.png';
 const healthImg = '/assets/health.png';
 
-const QUICK_STATS = [
-  { img: heartImg, label: 'Heart Rate', value: '76',    unit: 'bpm',   color: '#ef4444', glow: 'rgba(239,68,68,0.4)',   path: '/heart',     anim: 'heartPulse' },
-  { img: stepsImg, label: 'Steps',      value: '7,400', unit: 'steps', color: '#22c55e', glow: 'rgba(34,197,94,0.4)',   path: '/steps',     anim: 'stepBounce' },
-  { img: waterImg, label: 'Hydration',  value: '1.8',   unit: 'L',     color: '#38bdf8', glow: 'rgba(56,189,248,0.4)',  path: '/hydration', anim: 'waterTilt'  },
-  { img: moonImg,  label: 'Sleep',      value: '7.2',   unit: 'hrs',   color: '#a78bfa', glow: 'rgba(167,139,250,0.4)', path: '/sleep',     anim: 'moonFloat'  },
-  { img: foodImg,  label: 'Calories',   value: '1,850', unit: 'kcal',  color: '#f97316', glow: 'rgba(249,115,22,0.4)',  path: '/calories',  anim: 'foodBob'    },
-  { img: clockImg, label: 'Active',     value: '74',    unit: 'min',   color: '#fbbf24', glow: 'rgba(251,191,36,0.4)',  path: '/steps',     anim: 'clockTick'  },
-];
+
 
 function useWindowWidth() {
   const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
@@ -49,6 +48,42 @@ function useWindowWidth() {
 }
 
 export function Dashboard() {
+  const [dashData, setDashData] = useState({ steps: 0, calories: 0, water: 0, sleep: 0, heartRate: 0, activeMin: 0 });
+  const loadDashboardData = async () => {
+    try {
+      const uid = await getCurrentUserId();
+      const [steps, calories, water, bpm, sleepLog, activeMins] = await Promise.all([
+        getTodayStepsTotal(uid),
+        getTodayCaloriesTotal(uid),
+        getTodayHydrationTotal(uid),
+        getLatestBpm(uid),
+        getLastSleep(uid),
+        getTodayActiveMins(uid)
+      ]);
+      setDashData({
+        steps,
+        calories,
+        water,
+        heartRate: bpm || 0,
+        sleep: sleepLog?.hoursSlept || 0,
+        activeMin: activeMins,
+      });
+    } catch (err) {
+      console.error('Dashboard load failed:', err);
+    }
+  };
+
+  useEffect(() => { loadDashboardData(); }, []);
+
+  const QUICK_STATS = [
+    { img: heartImg, label: 'Heart Rate', value: dashData.heartRate.toString(), unit: 'bpm', color: '#ef4444', glow: 'rgba(239,68,68,0.4)', path: '/heart', anim: 'heartPulse' },
+    { img: stepsImg, label: 'Steps', value: dashData.steps.toLocaleString(), unit: 'steps', color: '#22c55e', glow: 'rgba(34,197,94,0.4)', path: '/steps', anim: 'stepBounce' },
+    { img: waterImg, label: 'Hydration', value: dashData.water.toString(), unit: 'L', color: '#38bdf8', glow: 'rgba(56,189,248,0.4)', path: '/hydration', anim: 'waterTilt' },
+    { img: moonImg, label: 'Sleep', value: dashData.sleep.toString(), unit: 'hrs', color: '#a78bfa', glow: 'rgba(167,139,250,0.4)', path: '/sleep', anim: 'moonFloat' },
+    { img: foodImg, label: 'Calories', value: dashData.calories.toLocaleString(), unit: 'kcal', color: '#f97316', glow: 'rgba(249,115,22,0.4)', path: '/calories', anim: 'foodBob' },
+    { img: clockImg, label: 'Active', value: dashData.activeMin.toString(), unit: 'min', color: '#fbbf24', glow: 'rgba(251,191,36,0.4)', path: '/steps', anim: 'clockTick' },
+  ];
+
   const navigate  = useNavigate();
   const width     = useWindowWidth();
   const isMobile  = width < 768;
@@ -314,7 +349,15 @@ export function Dashboard() {
                     </span>
                   </h1>
                   <p style={{ color:'rgba(180,210,255,0.5)', fontSize:'13px', margin:0 }}>
-                    You're doing great — 74% of daily goals completed.
+                    {(() => {
+                      const goalPct = Math.round(
+                        ((Math.min(dashData.steps / 10000, 1) +
+                          Math.min(dashData.water / 2.5, 1) +
+                          Math.min(dashData.calories / 2200, 1) +
+                          Math.min(dashData.sleep / 8, 1)) / 4) * 100
+                      );
+                      return `You're doing great — ${goalPct}% of daily goals completed.`;
+                    })()}
                   </p>
                 </div>
 
@@ -359,10 +402,10 @@ export function Dashboard() {
 
               {/* Metric Cards */}
               <div style={{ display:'grid', gridTemplateColumns: metricCols, gap:'16px' }}>
-                <HeartRateCard />
-                <StepsCard />
-                <SleepQualityCard />
-                <HydrationCard />
+                <HeartRateCard onUpdate={loadDashboardData} />
+                <StepsCard onUpdate={loadDashboardData} />
+                <SleepQualityCard onUpdate={loadDashboardData} />
+                <HydrationCard onUpdate={loadDashboardData} />
               </div>
 
               {/* Activity Trends Chart */}
@@ -392,10 +435,10 @@ export function Dashboard() {
                 <div style={{ ...card, padding:'22px' }}>
                   <p style={{ color:'rgba(180,210,255,0.45)', fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', margin:'0 0 16px' }}>Daily Goals</p>
                   {[
-                    { label:'Steps',     value:7400, max:10000, color:'#22c55e', img:stepsImg },
-                    { label:'Hydration', value:1.8,  max:2.5,   color:'#38bdf8', img:waterImg },
-                    { label:'Calories',  value:1850, max:2200,  color:'#f97316', img:foodImg  },
-                    { label:'Sleep',     value:7.2,  max:8,     color:'#a78bfa', img:moonImg  },
+                    { label:'Steps',     value:dashData.steps, max:10000, color:'#22c55e', img:stepsImg },
+                    { label:'Hydration', value:dashData.water,  max:2.5,   color:'#38bdf8', img:waterImg },
+                    { label:'Calories',  value:dashData.calories, max:2200,  color:'#f97316', img:foodImg  },
+                    { label:'Sleep',     value:dashData.sleep,  max:8,     color:'#a78bfa', img:moonImg  },
                   ].map(g => {
                     const pct = Math.min((g.value/g.max)*100, 100);
                     return (
@@ -419,10 +462,10 @@ export function Dashboard() {
                   <p style={{ color:'rgba(180,210,255,0.45)', fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', margin:'0 0 16px' }}>Today's Summary</p>
                   <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'10px' }}>
                     {[
-                      { label:'Resting HR',  value:'76',  unit:'bpm', color:'#ef4444', img:heartImg },
-                      { label:'Distance',    value:'5.2', unit:'km',  color:'#22c55e', img:stepsImg },
-                      { label:'Water Left',  value:'0.7', unit:'L',   color:'#38bdf8', img:waterImg },
-                      { label:'Active Time', value:'74',  unit:'min', color:'#fbbf24', img:clockImg },
+                      { label:'Resting HR',  value:dashData.heartRate.toString(),  unit:'bpm', color:'#ef4444', img:heartImg },
+                      { label:'Distance',    value:(dashData.steps * 0.0007).toFixed(1), unit:'km',  color:'#22c55e', img:stepsImg },
+                      { label:'Water Left',  value:Math.max(0, 2.5 - dashData.water).toFixed(1), unit:'L',   color:'#38bdf8', img:waterImg },
+                      { label:'Active Time', value:dashData.activeMin.toString(),  unit:'min', color:'#fbbf24', img:clockImg },
                     ].map(s => (
                       <div key={s.label} style={{ padding:'12px', background:'rgba(255,255,255,0.04)', borderRadius:'14px', border:`1px solid ${s.color}18` }}>
                         <div style={{ display:'flex', alignItems:'center', gap:'6px', marginBottom:'6px' }}>

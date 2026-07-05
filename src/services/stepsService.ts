@@ -22,6 +22,14 @@ export async function getTodayStepsTotal(userId: string): Promise<number> {
   return res.documents.reduce((sum, doc) => sum + (doc.steps || 0), 0);
 }
 
+export async function getTodayActiveMins(userId: string): Promise<number> {
+  const res = await databases.listDocuments(
+    DATABASE_ID, COLLECTIONS.steps,
+    [Query.equal('userID', userId), Query.equal('date', todayDate()), Query.limit(50)]
+  );
+  return res.documents.reduce((sum, doc) => sum + (doc.duration || 0), 0);
+}
+
 export async function getWeeklySteps(userId: string) {
   const res = await databases.listDocuments(
     DATABASE_ID, COLLECTIONS.steps,

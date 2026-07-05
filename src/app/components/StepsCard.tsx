@@ -1,17 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Footprints, Plus } from 'lucide-react';
+import { getTodayStepsTotal, saveStepsLog } from '../../services/stepsService';
+import { getCurrentUserId } from '../../lib/appwrite';
 
-export function StepsCard() {
-  const [steps, setSteps] = useState(7400);
+export function StepsCard({ onUpdate }: { onUpdate?: () => void }) {
+  const [steps, setSteps] = useState(0);
   const [inputVal, setInputVal] = useState('');
   const [showInput, setShowInput] = useState(false);
   const goal = 10000;
   const percentage = Math.min((steps / goal) * 100, 100);
 
-  const handleAdd = () => {
+  useEffect(() => {
+    (async () => {
+      try {
+        const uid = await getCurrentUserId();
+        const total = await getTodayStepsTotal(uid);
+        setSteps(total);
+      } catch (err) {
+        console.error('Failed to load steps:', err);
+      }
+    })();
+  }, []);
+
+  const handleAdd = async () => {
     const val = parseInt(inputVal);
     if (!val || isNaN(val) || val <= 0) return;
-    setSteps(prev => Math.min(prev + val, 99999));
+    
+    try {
+      const uid = await getCurrentUserId();
+      await saveStepsLog(uid, val);
+      setSteps(prev => Math.min(prev + val, 99999));
+      if (onUpdate) onUpdate();
+    } catch (err) {
+      console.error('Failed to save steps:', err);
+    }
+    
     setInputVal('');
     setShowInput(false);
   };

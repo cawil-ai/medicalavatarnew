@@ -1,18 +1,41 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Droplet, Plus } from 'lucide-react';
+import { getTodayHydrationTotal, saveHydrationLog } from '../../services/hydrationService';
+import { getCurrentUserId } from '../../lib/appwrite';
 
-export function HydrationCard() {
-  const [current, setCurrent] = useState(1.8);
+export function HydrationCard({ onUpdate }: { onUpdate?: () => void }) {
+  const [current, setCurrent] = useState(0);
   const [inputVal, setInputVal] = useState('');
   const [showInput, setShowInput] = useState(false);
   const [ripple, setRipple] = useState(false);
   const goal = 2.5;
   const percentage = Math.min((current / goal) * 100, 100);
 
-  const handleAdd = () => {
+  useEffect(() => {
+    (async () => {
+      try {
+        const uid = await getCurrentUserId();
+        const total = await getTodayHydrationTotal(uid);
+        setCurrent(total);
+      } catch (err) {
+        console.error('Failed to load hydration:', err);
+      }
+    })();
+  }, []);
+
+  const handleAdd = async () => {
     const val = parseFloat(inputVal);
     if (!val || isNaN(val) || val <= 0) return;
-    setCurrent(prev => Math.min(+(prev + val).toFixed(1), 10));
+    
+    try {
+      const uid = await getCurrentUserId();
+      await saveHydrationLog(uid, val, 'Water'); // Assuming default type 'Water'
+      setCurrent(prev => Math.min(+(prev + val).toFixed(1), 10));
+      if (onUpdate) onUpdate();
+    } catch (err) {
+      console.error('Failed to save hydration:', err);
+    }
+
     setInputVal('');
     setShowInput(false);
     setRipple(true);

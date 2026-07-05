@@ -33,7 +33,13 @@ console.log('databaseId: ', import.meta.env.VITE_APPWRITE_DATABASE_ID);
 console.log('collections:', COLLECTIONS);
 console.log('=============================');
 
-export const todayDate = () => new Date().toISOString().split('T')[0];
+export const todayDate = () => {
+  const now = new Date();
+  const year  = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day   = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
 export const nowTime   = () => new Date().toTimeString().slice(0, 5);
 
 /* ── Local mode ──────────────────────────────────────────────────────
@@ -42,7 +48,7 @@ export const nowTime   = () => new Date().toTimeString().slice(0, 5);
  * supported features persist to localStorage instead of Appwrite.
  * In the pushed repo .env.local is absent, so this is false and the app
  * behaves normally (real login + Appwrite). */
-export const LOCAL_MODE = import.meta.env.VITE_LOCAL_MODE === 'true';
+export const LOCAL_MODE = false; // Forced to false to ensure syncing
 
 /**
  * Resolve the current user id. In local mode this returns a fixed

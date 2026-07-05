@@ -1,19 +1,52 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Moon, Plus } from 'lucide-react';
+import { getWeeklySleep, saveSleepLog } from '../../services/sleepService';
+import { getCurrentUserId } from '../../lib/appwrite';
 
-export function SleepQualityCard() {
-  const [sleepData, setSleepData] = useState([7.2, 6.5, 8.0, 7.5, 6.8, 8.5, 7.8]);
+export function SleepQualityCard({ onUpdate }: { onUpdate?: () => void }) {
+  const [sleepData, setSleepData] = useState([0, 0, 0, 0, 0, 0, 0]);
   const [inputVal, setInputVal] = useState('');
   const [showInput, setShowInput] = useState(false);
 
-  const avg = (sleepData.reduce((a, b) => a + b, 0) / sleepData.length).toFixed(1);
+  const avg = sleepData.some(v => v > 0)
+    ? (sleepData.filter(v => v > 0).reduce((a, b) => a + b, 0) / sleepData.filter(v => v > 0).length).toFixed(1)
+    : '0';
 
-  const handleAdd = () => {
+  useEffect(() => {
+    (async () => {
+      try {
+        const uid = await getCurrentUserId();
+        const logs = await getWeeklySleep(uid);
+        if (logs.length > 0) {
+          // logs come back newest-first; reverse so chart shows oldest→newest (Mon→Sun)
+          const hours = logs.reverse().map(d => d.hoursSlept || 0);
+          // Pad to 7 if fewer than 7 entries
+          while (hours.length < 7) hours.unshift(0);
+          setSleepData(hours.slice(-7));
+        }
+      } catch (err) {
+        console.error('Failed to load sleep:', err);
+      }
+    })();
+  }, []);
+
+  const handleAdd = async () => {
     const val = parseFloat(inputVal);
     if (!val || isNaN(val) || val < 0 || val > 24) return;
-    const newData = [...sleepData.slice(1), val];
-    setSleepData(newData);
+    
+    try {
+      const uid = await getCurrentUserId();
+      // Dummy bedTime/wakeTime for quick log
+      await saveSleepLog(uid, val, '22:00', '06:00', 'Good');
+      
+      const newData = [...sleepData.slice(1), val];
+      setSleepData(newData);
+      if (onUpdate) onUpdate();
+    } catch (err) {
+      console.error('Failed to save sleep:', err);
+    }
+    
     setInputVal('');
     setShowInput(false);
   };

@@ -98,7 +98,7 @@ export function EmergencyContactsWidget({ contacts, onSave }: Props) {
         )}
       </form>
       <p style={{ color: 'rgba(180,210,255,0.35)', fontSize: '11px', margin: '-6px 0 14px', lineHeight: 1.5 }}>
-        Choose an alert method to set required fields. Email alerts will be sent via EmailJS when a fall is confirmed.
+        Choose an alert method to set required fields. Email alerts will be sent via Novu when a fall is confirmed.
       </p>
 
       {/* List */}
