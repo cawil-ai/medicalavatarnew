@@ -28,9 +28,13 @@ function writeJSON(key: string, val: unknown) {
 
 /* ══════════════════════════════════════════════════════════════════
    FALL EVENTS (append-only history)
-   Prod Appwrite collection `fall_events` attributes:
-     userID, ts, severity, type, action, impactG, stillnessMs, lat, lng
+   Prod Appwrite collection `fall_detection_logs` attributes:
+     userID (text), date (datetime), emergencyContact (text), latitude
+     (double), longitude (double), confidenceScore (double), status (text)
 ══════════════════════════════════════════════════════════════════ */
+const severityFromConfidence = (c?: number): FallEvent['severity'] =>
+  c == null ? 'moderate' : c >= 66 ? 'high' : c >= 33 ? 'moderate' : 'low';
+
 export async function saveFallEvent(userId: string, event: FallEvent) {
   if (LOCAL_MODE) {
     const all = readJSON<FallEvent[]>(EVENTS_KEY, []);
@@ -38,20 +42,30 @@ export async function saveFallEvent(userId: string, event: FallEvent) {
     return event;
   }
   return await databases.createDocument(DATABASE_ID, COLLECTIONS.fallEvents, ID.unique(), {
-    userID: userId, ts: event.ts, severity: event.severity, type: event.type,
-    action: event.action, impactG: Math.round(event.impactG * 100) / 100,
-    stillnessMs: event.stillnessMs, lat: event.lat ?? null, lng: event.lng ?? null,
+    userID:           userId,
+    date:             event.ts,
+    status:           event.action,
+    latitude:         event.lat ?? null,
+    longitude:        event.lng ?? null,
+    confidenceScore:  event.confidence ?? null,
+    emergencyContact: event.emergencyContact ?? null,
   });
 }
 
 export async function getFallEvents(userId: string): Promise<FallEvent[]> {
   if (LOCAL_MODE) return readJSON<FallEvent[]>(EVENTS_KEY, []);
   const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.fallEvents,
-    [Query.equal('userID', userId), Query.orderDesc('ts'), Query.limit(100)]);
-  return res.documents.map((d: any) => ({
-    id: d.$id, ts: d.ts, severity: d.severity, type: d.type, action: d.action,
-    impactG: d.impactG, stillnessMs: d.stillnessMs, lat: d.lat ?? undefined, lng: d.lng ?? undefined,
-  }));
+    [Query.equal('userID', userId), Query.orderDesc('date'), Query.limit(100)]);
+  return res.documents.map((d: any) => {
+    const confidence = d.confidenceScore ?? undefined;
+    return {
+      id: d.$id, ts: d.date, action: d.status ?? 'Detected',
+      severity: severityFromConfidence(confidence), type: 'fall' as const,
+      impactG: 0, stillnessMs: 0, confidence,
+      emergencyContact: d.emergencyContact ?? undefined,
+      lat: d.latitude ?? undefined, lng: d.longitude ?? undefined,
+    };
+  });
 }
 
 export async function deleteFallEvent(userId: string, id: string) {

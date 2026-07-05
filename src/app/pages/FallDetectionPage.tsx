@@ -46,12 +46,13 @@ export function FallDetectionPage() {
   }, []);
 
   /* ── Build a FallEvent from the pending detection ──────────────── */
-  const buildEvent = (action: string): FallEvent | null => {
+  const buildEvent = (action: string, emergencyContact?: string): FallEvent | null => {
     if (!fall.pendingFall) return null;
     const d = fall.pendingFall.detection;
     return {
       id: newId(), ts: new Date().toISOString(), severity: d.severity, type: d.classification.type,
-      action, impactG: d.impactG, stillnessMs: d.stillnessMs,
+      action, impactG: d.impactG, stillnessMs: d.stillnessMs, confidence: d.confidence,
+      emergencyContact,
       lat: fall.location?.lat, lng: fall.location?.lng,
     };
   };
@@ -70,7 +71,8 @@ export function FallDetectionPage() {
   };
 
   const handleNotify = async () => {
-    const ev = buildEvent('Emergency Contacts Notified');
+    const contactNames = contacts.map(c => c.name).filter(Boolean).join(', ') || undefined;
+    const ev = buildEvent('Emergency Contacts Notified', contactNames);
     if (ev) {
       await persistEvent(ev);
       const [, emailRes] = await Promise.all([

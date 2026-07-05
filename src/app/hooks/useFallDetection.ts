@@ -178,7 +178,7 @@ export function useFallDetection(): FallDetectionState {
       if (buf.length > BUFFER) buf.shift();
     }, i * 60));
     setTimeout(() => raiseFall({
-      impactG: 3.7, stillnessMs: STILLNESS_MS, severity: severityFor(3.7),
+      impactG: 3.7, stillnessMs: STILLNESS_MS, severity: severityFor(3.7), confidence: 95,
       classification: { isFall: true, type: 'fall', reason: 'Simulated fall (test) — free-fall → 3.7 g impact → stillness.' },
     }, 'simulated'), seq.length * 60 + 50);
   }, [raiseFall]);
@@ -187,7 +187,7 @@ export function useFallDetection(): FallDetectionState {
   const triggerSos = useCallback(() => {
     ensureAudio();
     raiseFall({
-      impactG: 0, stillnessMs: 0, severity: 'high',
+      impactG: 0, stillnessMs: 0, severity: 'high', confidence: 100,
       classification: { isFall: true, type: 'fall', reason: 'Manual SOS activated by user.' },
     }, 'manual');
   }, [raiseFall]);

@@ -38,6 +38,7 @@ export interface DetectedFall {
   impactG:     number;
   stillnessMs: number;
   severity:    FallSeverity;
+  confidence:  number;       // 0–100 explainable detection confidence
   classification: Classification;
 }
 
@@ -49,6 +50,8 @@ export interface FallEvent {
   action:   string;          // "False Alarm – Dismissed" | "Emergency Contacts Notified" | …
   impactG:  number;
   stillnessMs: number;
+  confidence?: number;       // 0–100 (persisted to fall_detection_logs.confidenceScore)
+  emergencyContact?: string; // names of contacts alerted (persisted to fall_detection_logs.emergencyContact)
   lat?:     number;
   lng?:     number;
 }
@@ -75,6 +78,21 @@ export function severityFor(impactG: number): FallSeverity {
   if (impactG >= 4) return 'high';
   if (impactG >= 3) return 'moderate';
   return 'low';
+}
+
+/**
+ * Explainable 0–100 detection confidence. Transparent weighting:
+ * impact magnitude (50%) + how long the person stayed still (35%) +
+ * whether a free-fall preceded the impact (15%). All clamped.
+ */
+export function computeConfidence(
+  impactG: number, stillnessMs: number, sawFreeFall: boolean, requiredStillMs: number,
+): number {
+  const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
+  const impactComp = clamp01((impactG - IMPACT_G) / (5 - IMPACT_G)); // 2.5g→0, 5g→1
+  const stillComp  = clamp01(stillnessMs / (requiredStillMs * 2));
+  const ffComp     = sawFreeFall ? 1 : 0;
+  return Math.round(Math.max(0, Math.min(100, 50 * impactComp + 35 * stillComp + 15 * ffComp)));
 }
 
 /**
@@ -160,24 +178,26 @@ export function createFallDetector(opts: DetectorOptions = {}) {
       case 'watching':
         if (Math.abs(s.g - 1) >= stillTol) {
           // movement resumed → drop, not a fall
-          const dur = s.t - stillSince;
+          const dur = s.t - stillSince, ff = sawFreeFall, peak = peakImpact;
           const cls = classify(peakImpact, dur, sawFreeFall, recentSpikes, stillnessMs);
           reset();
-          if (cls.isFall) return done(peakImpact, dur, cls);
+          if (cls.isFall) return done(peak, dur, cls, ff);
         } else if (s.t - stillSince >= stillnessMs) {
-          const dur = s.t - stillSince;
+          const dur = s.t - stillSince, ff = sawFreeFall, peak = peakImpact;
           const cls = classify(peakImpact, dur, sawFreeFall, recentSpikes, stillnessMs);
-          const peak = peakImpact;
           reset();
-          if (cls.isFall) return done(peak, dur, cls);
+          if (cls.isFall) return done(peak, dur, cls, ff);
         }
         break;
     }
     return null;
   }
 
-  function done(impact: number, dur: number, cls: Classification): DetectedFall {
-    return { impactG: impact, stillnessMs: dur, severity: severityFor(impact), classification: cls };
+  function done(impact: number, dur: number, cls: Classification, sawFF: boolean): DetectedFall {
+    return {
+      impactG: impact, stillnessMs: dur, severity: severityFor(impact),
+      confidence: computeConfidence(impact, dur, sawFF, stillnessMs), classification: cls,
+    };
   }
 
   return { push, reset, get phase() { return phase; } };
