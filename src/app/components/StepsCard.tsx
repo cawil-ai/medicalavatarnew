@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Footprints, Plus } from 'lucide-react';
 
-export function StepsCard() {
-  const [steps, setSteps] = useState(7400);
+export function StepsCard({ value, goal: goalProp }: { value?: number; goal?: number } = {}) {
+  const [steps, setSteps] = useState(value ?? 7400);
   const [inputVal, setInputVal] = useState('');
   const [showInput, setShowInput] = useState(false);
-  const goal = 10000;
+  const goal = goalProp ?? 10000;
   const percentage = Math.min((steps / goal) * 100, 100);
+
+  useEffect(() => { if (value != null) setSteps(value); }, [value]);
 
   const handleAdd = () => {
     const val = parseInt(inputVal);

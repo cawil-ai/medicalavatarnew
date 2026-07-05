@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Droplet, Plus } from 'lucide-react';
 
-export function HydrationCard() {
-  const [current, setCurrent] = useState(1.8);
+export function HydrationCard({ value, goal: goalProp }: { value?: number; goal?: number } = {}) {
+  const [current, setCurrent] = useState(value ?? 1.8);
   const [inputVal, setInputVal] = useState('');
   const [showInput, setShowInput] = useState(false);
   const [ripple, setRipple] = useState(false);
-  const goal = 2.5;
+  const goal = goalProp ?? 2.5;
   const percentage = Math.min((current / goal) * 100, 100);
+
+  useEffect(() => { if (value != null) setCurrent(value); }, [value]);
 
   const handleAdd = () => {
     const val = parseFloat(inputVal);

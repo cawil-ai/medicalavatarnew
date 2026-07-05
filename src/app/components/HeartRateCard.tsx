@@ -1,13 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Heart, Plus } from 'lucide-react';
 
-export function HeartRateCard() {
-  const [bpm, setBpm] = useState(76);
-  const [history, setHistory] = useState([72, 75, 73, 78, 76, 74, 77, 75, 73, 76]);
+export function HeartRateCard({ value, history: historyProp }: { value?: number; history?: number[] } = {}) {
+  const [bpm, setBpm] = useState(value ?? 76);
+  const [history, setHistory] = useState(historyProp ?? [72, 75, 73, 78, 76, 74, 77, 75, 73, 76]);
   const [inputVal, setInputVal] = useState('');
   const [showInput, setShowInput] = useState(false);
   const [pulse, setPulse] = useState(false);
+
+  // Sync from real data when the Dashboard provides it
+  useEffect(() => { if (value != null) setBpm(value); }, [value]);
+  useEffect(() => { if (historyProp && historyProp.length) setHistory(historyProp); }, [historyProp]);
 
   const handleAdd = () => {
     const val = parseInt(inputVal);

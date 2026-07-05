@@ -13,6 +13,25 @@ import { HydrationCard } from '../components/HydrationCard';
 import { ChatPanel } from '../components/ChatPanel';
 import { useNavigate } from 'react-router';
 import { useUserProfile } from '../../context/UserProfileContext';
+import { getCurrentUserId } from '../../lib/appwrite';
+import { getLatestReading, getRecentHeartLogs } from '../../services/heartService';
+import { getTodayStepsTotal, getWeeklySteps } from '../../services/stepsService';
+import { getLastSleep, getWeeklySleep } from '../../services/sleepService';
+import { getTodayHydrationTotal } from '../../services/hydrationService';
+import { getTodayCaloriesTotal, getWeeklyCalories } from '../../services/caloriesService';
+
+const HYDRATION_GOAL = 2.5, STEPS_GOAL = 10000, CALORIES_GOAL = 2200, SLEEP_GOAL = 8;
+const settled = <T,>(r: PromiseSettledResult<T>, fallback: T): T => (r.status === 'fulfilled' ? r.value : fallback);
+const shortDay = (iso: string) => new Date(iso + 'T00:00:00').toLocaleDateString([], { weekday: 'short' });
+
+/** Bucket dated docs into last-7-day totals (chronological). */
+function bucketByDay(docs: any[], key: string) {
+  const byDay: Record<string, number> = {};
+  docs.forEach(d => { const day = d.date || (d.loggedAt || '').split('T')[0]; if (day) byDay[day] = (byDay[day] || 0) + (Number(d[key]) || 0); });
+  const out: { label: string; value: number }[] = [];
+  for (let i = 6; i >= 0; i--) { const dt = new Date(); dt.setDate(dt.getDate() - i); const k = dt.toISOString().split('T')[0]; out.push({ label: shortDay(k), value: byDay[k] || 0 }); }
+  return out;
+}
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler);
 
@@ -59,6 +78,16 @@ export function Dashboard() {
   const mainRef = useRef<HTMLDivElement>(null);
   const [hour]                    = useState(new Date().getHours());
 
+  /* ── Real logged data (production reads Appwrite; local mode reads
+     localStorage for heart — others degrade to 0 gracefully) ─────── */
+  const [live, setLive] = useState({
+    bpm: 0, heartHistory: [] as number[],
+    stepsToday: 0, weeklySteps: [] as { label: string; value: number }[],
+    sleepHrs: 0, weeklySleep: [] as number[],
+    hydrationL: 0,
+    caloriesToday: 0, weeklyCalories: [] as { label: string; value: number }[],
+  });
+
   // ── Username: sourced exclusively from UserProfileContext,
   //    which loads from Appwrite on mount and stays in sync ──────────
   const { profile } = useUserProfile();
@@ -74,7 +103,53 @@ export function Dashboard() {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    (async () => {
+      let uid: string;
+      try { uid = await getCurrentUserId(); } catch { return; }
+      const [heartR, stepsTR, stepsWR, sleepR, sleepWR, hydrR, calTR, calWR, heartWR] =
+        await Promise.allSettled([
+          getLatestReading(uid), getTodayStepsTotal(uid), getWeeklySteps(uid),
+          getLastSleep(uid), getWeeklySleep(uid), getTodayHydrationTotal(uid),
+          getTodayCaloriesTotal(uid), getWeeklyCalories(uid), getRecentHeartLogs(uid, 12),
+        ]);
+      const reading   = settled(heartR, null as any);
+      const sleepDoc  = settled(sleepR, null as any);
+      const heartDocs = settled(heartWR, [] as any[]);
+      const calWeek   = settled(calWR, [] as { date: string; total: number }[]);
+      setLive({
+        bpm: reading?.bpm || 0,
+        heartHistory: heartDocs.map((d: any) => Number(d.bpmLog) || 0).filter(Boolean).reverse(),
+        stepsToday: settled(stepsTR, 0),
+        weeklySteps: bucketByDay(settled(stepsWR, [] as any[]), 'steps'),
+        sleepHrs: sleepDoc?.hoursSlept || 0,
+        weeklySleep: settled(sleepWR, [] as any[]).map((d: any) => Number(d.hoursSlept) || 0).reverse(),
+        hydrationL: settled(hydrR, 0),
+        caloriesToday: settled(calTR, 0),
+        weeklyCalories: calWeek.map(x => ({ label: shortDay(x.date), value: x.total })),
+      });
+    })();
+  }, []);
+
   const greeting = hour < 12 ? 'Good Morning' : hour < 17 ? 'Good Afternoon' : 'Good Evening';
+
+  /* ── Derived real metrics ──────────────────────────────────────── */
+  const activeMin  = Math.round(live.stepsToday / 120);
+  const distanceKm = (live.stepsToday * 0.0007).toFixed(1);
+  const waterLeft  = Math.max(0, HYDRATION_GOAL - live.hydrationL).toFixed(1);
+  const goalPct = Math.round(100 * (
+    Math.min(live.stepsToday / STEPS_GOAL, 1) + Math.min(live.hydrationL / HYDRATION_GOAL, 1) +
+    Math.min(live.caloriesToday / CALORIES_GOAL, 1) + Math.min(live.sleepHrs / SLEEP_GOAL, 1)
+  ) / 4);
+  const streak = (() => { let s = 0; for (let i = live.weeklySteps.length - 1; i >= 0; i--) { if (live.weeklySteps[i].value > 0) s++; else break; } return s; })();
+  const liveValues: Record<string, string> = {
+    'Heart Rate': live.bpm ? String(live.bpm) : '—',
+    'Steps':      live.stepsToday ? live.stepsToday.toLocaleString() : '0',
+    'Hydration':  live.hydrationL.toFixed(1),
+    'Sleep':      live.sleepHrs ? live.sleepHrs.toFixed(1) : '—',
+    'Calories':   live.caloriesToday ? live.caloriesToday.toLocaleString() : '0',
+    'Active':     String(activeMin),
+  };
 
   const outerGrid  = isMobile || isTablet ? '1fr' : '1fr 320px';
   const chipCols   = isMobile ? 'repeat(3,1fr)' : 'repeat(6,1fr)';
@@ -206,27 +281,19 @@ export function Dashboard() {
     { text: 'You are 2,600 steps from your daily goal. A 20-minute walk will close it!', delay: 20000 },
   ];
 
-  const weeklyData = {
-    labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+  // Activity Trends — built from the user's real logged steps + calories.
+  const chartLabels = (live.weeklySteps.length ? live.weeklySteps : live.weeklyCalories).map(x => x.label);
+  const stepsSeries = live.weeklySteps.map(x => x.value);
+  const calSeries   = live.weeklyCalories.map(x => x.value);
+  const mkChart = (from: number) => ({
+    labels: chartLabels.slice(from),
     datasets: [
-      { label:'Steps',    data:[8200,6500,9100,7400,10200,5800,8900], borderColor:'rgba(34,197,94,1)',   backgroundColor:'rgba(34,197,94,0.08)',   fill:true, tension:0.4, pointBackgroundColor:'rgba(74,222,128,1)',   pointRadius:4 },
-      { label:'Calories', data:[420,380,510,390,550,320,480],          borderColor:'rgba(249,115,22,1)', backgroundColor:'rgba(249,115,22,0.08)', fill:true, tension:0.4, pointBackgroundColor:'rgba(251,146,60,1)',   pointRadius:4 },
+      { label:'Steps',    data: stepsSeries.slice(from), borderColor:'rgba(34,197,94,1)',   backgroundColor:'rgba(34,197,94,0.08)',   fill:true, tension:0.4, pointBackgroundColor:'rgba(74,222,128,1)', pointRadius:4 },
+      { label:'Calories', data: calSeries.slice(from),   borderColor:'rgba(249,115,22,1)', backgroundColor:'rgba(249,115,22,0.08)', fill:true, tension:0.4, pointBackgroundColor:'rgba(251,146,60,1)', pointRadius:4 },
     ],
-  };
-  const dailyData = {
-    labels: ['12am','4am','8am','12pm','4pm','8pm'],
-    datasets: [
-      { label:'Activity', data:[20,15,45,80,95,60], borderColor:'rgba(56,189,248,1)', backgroundColor:'rgba(56,189,248,0.08)', fill:true, tension:0.4, pointBackgroundColor:'rgba(125,211,252,1)', pointRadius:4 },
-    ],
-  };
-  const monthlyData = {
-    labels: ['Week 1','Week 2','Week 3','Week 4'],
-    datasets: [
-      { label:'Avg Steps',    data:[7500,8200,7800,8900], borderColor:'rgba(34,197,94,1)',   backgroundColor:'rgba(34,197,94,0.08)',   fill:true, tension:0.4, pointBackgroundColor:'rgba(74,222,128,1)',   pointRadius:4 },
-      { label:'Avg Calories', data:[420,450,430,480],     borderColor:'rgba(249,115,22,1)', backgroundColor:'rgba(249,115,22,0.08)', fill:true, tension:0.4, pointBackgroundColor:'rgba(251,146,60,1)',   pointRadius:4 },
-    ],
-  };
-  const getChartData = () => timeRange === 'daily' ? dailyData : timeRange === 'monthly' ? monthlyData : weeklyData;
+  });
+  // Weekly/monthly show the full 7-day trend; daily zooms to the last 3 days.
+  const getChartData = () => timeRange === 'daily' ? mkChart(4) : mkChart(0);
 
   const chartOptions = {
     responsive: true, maintainAspectRatio: false,
@@ -314,7 +381,7 @@ export function Dashboard() {
                     </span>
                   </h1>
                   <p style={{ color:'rgba(180,210,255,0.5)', fontSize:'13px', margin:0 }}>
-                    You're doing great — 74% of daily goals completed.
+                    You're doing great — {goalPct}% of daily goals completed.
                   </p>
                 </div>
 
@@ -326,7 +393,7 @@ export function Dashboard() {
                       <div style={{ position:'absolute', bottom:-2, right:-2, width:20, height:20, borderRadius:'50%', background:'linear-gradient(135deg,#fbbf24,#f59e0b)', border:'2px solid rgba(8,20,50,0.9)', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 0 8px rgba(251,191,36,0.7)' }}>
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </div>
-                      <p style={{ color:'#fbbf24', fontSize:'10px', fontWeight:700, textAlign:'center', margin:'4px 0 0' }}>5-day streak</p>
+                      <p style={{ color:'#fbbf24', fontSize:'10px', fontWeight:700, textAlign:'center', margin:'4px 0 0' }}>{streak}-day streak</p>
                     </div>
                     <img src={medalImg} alt="Medal" style={{ width:56, height:56, objectFit:'contain', animation:'medalSway 3.5s ease-in-out infinite', filter:'drop-shadow(0 0 12px rgba(251,191,36,0.5))' }} />
                   </div>
@@ -349,7 +416,7 @@ export function Dashboard() {
                     <img src={s.img} alt={s.label}
                       style={{ width: isMobile ? 36 : 44, height: isMobile ? 36 : 44, objectFit:'contain', animation:`${s.anim} ${s.label==='Heart Rate'?'1.8s':s.label==='Steps'?'2s':'3.5s'} ease-in-out infinite`, filter:`drop-shadow(0 0 8px ${s.glow})` }} />
                     <div style={{ textAlign:'center' }}>
-                      <p style={{ color:'#fff', fontWeight:800, fontSize: isMobile ? '13px' : '16px', margin:0, lineHeight:1 }}>{s.value}</p>
+                      <p style={{ color:'#fff', fontWeight:800, fontSize: isMobile ? '13px' : '16px', margin:0, lineHeight:1 }}>{liveValues[s.label] ?? s.value}</p>
                       <p style={{ color:s.color, fontWeight:600, fontSize:'9px', margin:'2px 0 0' }}>{s.unit}</p>
                       <p style={{ color:'rgba(180,210,255,0.4)', fontSize:'8px', fontWeight:500, margin:'1px 0 0', letterSpacing:'0.03em' }}>{s.label}</p>
                     </div>
@@ -359,10 +426,10 @@ export function Dashboard() {
 
               {/* Metric Cards */}
               <div style={{ display:'grid', gridTemplateColumns: metricCols, gap:'16px' }}>
-                <HeartRateCard />
-                <StepsCard />
-                <SleepQualityCard />
-                <HydrationCard />
+                <HeartRateCard value={live.bpm || undefined} history={live.heartHistory.length ? live.heartHistory : undefined} />
+                <StepsCard value={live.stepsToday} goal={STEPS_GOAL} />
+                <SleepQualityCard weekly={live.weeklySleep.length ? live.weeklySleep : undefined} />
+                <HydrationCard value={live.hydrationL} goal={HYDRATION_GOAL} />
               </div>
 
               {/* Activity Trends Chart */}
@@ -392,10 +459,10 @@ export function Dashboard() {
                 <div style={{ ...card, padding:'22px' }}>
                   <p style={{ color:'rgba(180,210,255,0.45)', fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', margin:'0 0 16px' }}>Daily Goals</p>
                   {[
-                    { label:'Steps',     value:7400, max:10000, color:'#22c55e', img:stepsImg },
-                    { label:'Hydration', value:1.8,  max:2.5,   color:'#38bdf8', img:waterImg },
-                    { label:'Calories',  value:1850, max:2200,  color:'#f97316', img:foodImg  },
-                    { label:'Sleep',     value:7.2,  max:8,     color:'#a78bfa', img:moonImg  },
+                    { label:'Steps',     value:live.stepsToday,    max:STEPS_GOAL,     color:'#22c55e', img:stepsImg },
+                    { label:'Hydration', value:live.hydrationL,    max:HYDRATION_GOAL, color:'#38bdf8', img:waterImg },
+                    { label:'Calories',  value:live.caloriesToday, max:CALORIES_GOAL,  color:'#f97316', img:foodImg  },
+                    { label:'Sleep',     value:live.sleepHrs,      max:SLEEP_GOAL,     color:'#a78bfa', img:moonImg  },
                   ].map(g => {
                     const pct = Math.min((g.value/g.max)*100, 100);
                     return (
@@ -419,10 +486,10 @@ export function Dashboard() {
                   <p style={{ color:'rgba(180,210,255,0.45)', fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', margin:'0 0 16px' }}>Today's Summary</p>
                   <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'10px' }}>
                     {[
-                      { label:'Resting HR',  value:'76',  unit:'bpm', color:'#ef4444', img:heartImg },
-                      { label:'Distance',    value:'5.2', unit:'km',  color:'#22c55e', img:stepsImg },
-                      { label:'Water Left',  value:'0.7', unit:'L',   color:'#38bdf8', img:waterImg },
-                      { label:'Active Time', value:'74',  unit:'min', color:'#fbbf24', img:clockImg },
+                      { label:'Resting HR',  value: live.bpm ? String(live.bpm) : '—', unit:'bpm', color:'#ef4444', img:heartImg },
+                      { label:'Distance',    value: distanceKm,        unit:'km',  color:'#22c55e', img:stepsImg },
+                      { label:'Water Left',  value: waterLeft,         unit:'L',   color:'#38bdf8', img:waterImg },
+                      { label:'Active Time', value: String(activeMin), unit:'min', color:'#fbbf24', img:clockImg },
                     ].map(s => (
                       <div key={s.label} style={{ padding:'12px', background:'rgba(255,255,255,0.04)', borderRadius:'14px', border:`1px solid ${s.color}18` }}>
                         <div style={{ display:'flex', alignItems:'center', gap:'6px', marginBottom:'6px' }}>

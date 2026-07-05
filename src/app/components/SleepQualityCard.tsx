@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Moon, Plus } from 'lucide-react';
 
-export function SleepQualityCard() {
-  const [sleepData, setSleepData] = useState([7.2, 6.5, 8.0, 7.5, 6.8, 8.5, 7.8]);
+export function SleepQualityCard({ weekly }: { weekly?: number[] } = {}) {
+  const [sleepData, setSleepData] = useState(weekly ?? [7.2, 6.5, 8.0, 7.5, 6.8, 8.5, 7.8]);
   const [inputVal, setInputVal] = useState('');
   const [showInput, setShowInput] = useState(false);
+
+  useEffect(() => { if (weekly && weekly.length) setSleepData(weekly); }, [weekly]);
 
   const avg = (sleepData.reduce((a, b) => a + b, 0) / sleepData.length).toFixed(1);
 
