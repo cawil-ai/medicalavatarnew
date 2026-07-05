@@ -1,29 +1,58 @@
 import { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Heart, Plus } from 'lucide-react';
+import { getLatestBpm, getRecentHeartLogs, saveHeartLog } from '../../services/heartService';
+import { getCurrentUserId } from '../../lib/appwrite';
 
-export function HeartRateCard({ value, history: historyProp }: { value?: number; history?: number[] } = {}) {
-  const [bpm, setBpm] = useState(value ?? 76);
-  const [history, setHistory] = useState(historyProp ?? [72, 75, 73, 78, 76, 74, 77, 75, 73, 76]);
+export function HeartRateCard({ onUpdate }: { onUpdate?: () => void }) {
+  const [bpm, setBpm] = useState(0);
+  const [history, setHistory] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const [inputVal, setInputVal] = useState('');
   const [showInput, setShowInput] = useState(false);
   const [pulse, setPulse] = useState(false);
 
-  // Sync from real data when the Dashboard provides it
-  useEffect(() => { if (value != null) setBpm(value); }, [value]);
-  useEffect(() => { if (historyProp && historyProp.length) setHistory(historyProp); }, [historyProp]);
-
-  const handleAdd = () => {
+  const handleAdd = async () => {
     const val = parseInt(inputVal);
     if (!val || isNaN(val) || val < 30 || val > 220) return;
-    const newHistory = [...history.slice(1), val];
-    setHistory(newHistory);
-    setBpm(val);
+    
+    try {
+      const uid = await getCurrentUserId();
+      await saveHeartLog(uid, { bpm: val });
+      
+      const newHistory = [...history.slice(1), val];
+      setHistory(newHistory);
+      setBpm(val);
+      if (onUpdate) onUpdate();
+    } catch (err) {
+      console.error('Failed to save heart rate:', err);
+    }
+    
     setInputVal('');
     setShowInput(false);
     setPulse(true);
     setTimeout(() => setPulse(false), 600);
   };
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const uid = await getCurrentUserId();
+        const latest = await getLatestBpm(uid);
+        if (latest > 0) setBpm(latest);
+        
+        const logs = await getRecentHeartLogs(uid, 10);
+        if (logs.length > 0) {
+          // Re-reverse the logs to chart oldest to newest if they come back newest-first
+          const bpmValues = logs.reverse().map(l => l.bpmLog || 0);
+          // pad if less than 10
+          while (bpmValues.length < 10) bpmValues.unshift(0);
+          setHistory(bpmValues.slice(-10));
+        }
+      } catch (err) {
+        console.error('Failed to load heart rate:', err);
+      }
+    })();
+  }, []);
 
   const status = bpm < 60 ? 'Low' : bpm <= 100 ? 'Normal' : 'High';
   const statusColor = bpm < 60 ? '#3b82f6' : bpm <= 100 ? '#22c55e' : '#ef4444';
