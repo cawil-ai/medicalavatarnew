@@ -4,11 +4,6 @@ node_modules/
 # Build output
 dist/
 
-# Environment & secrets (set these in your hosting provider, never commit)
-.env
-.env.*
-!.env.example
-
 # Editor / IDE
 .vscode/
 .idea/
