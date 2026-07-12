@@ -1,0 +1,212 @@
+<svg viewBox="0 0 1500 860" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas background -->
+  <rect x="0" y="0" width="1500" height="860" fill="#ffffff"/>
+
+  <!-- Title block -->
+  <text x="28" y="46" font-size="24" font-weight="700" fill="#0f172a">Fall Detection</text>
+  <text x="28" y="74" font-size="24" font-weight="700" fill="#0f172a">&amp; Novu Alerts</text>
+  <text x="28" y="100" font-size="15" fill="#475569">System Architecture</text>
+  <text x="28" y="122" font-size="11" fill="#94a3b8">Cawil / Medical Avatar</text>
+  <text x="28" y="137" font-size="11" fill="#94a3b8">route: /fall-detection</text>
+
+  <!-- ═══════════ TOP LANE: External services ═══════════ -->
+  <rect x="270" y="20" width="1210" height="130" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="285" y="44" font-size="13" font-weight="700" fill="#475569" letter-spacing="1">EXTERNAL SERVICES (BROWSER APIs &amp; CLOUD)</text>
+
+  <g font-size="12" fill="#0f172a" text-anchor="middle">
+    <rect x="290" y="56" width="170" height="76" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="375" y="88" font-weight="700">DeviceMotion API</text>
+    <text x="375" y="106" fill="#64748b" font-size="11">phone accelerometer (x, y, z)</text>
+
+    <rect x="480" y="56" width="150" height="76" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="555" y="88" font-weight="700">Geolocation API</text>
+    <text x="555" y="106" fill="#64748b" font-size="11">GPS lat / lng</text>
+
+    <rect x="650" y="56" width="160" height="76" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="730" y="88" font-weight="700">Web Notifications</text>
+    <text x="730" y="106" fill="#64748b" font-size="11">on-device banner</text>
+
+    <rect x="870" y="56" width="150" height="76" rx="10" fill="#fff7ed" stroke="#fb923c"/>
+    <text x="945" y="88" font-weight="700">corsproxy.io</text>
+    <text x="945" y="106" fill="#9a3412" font-size="11">public CORS proxy ⚠</text>
+
+    <rect x="1060" y="56" width="190" height="76" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="1155" y="82" font-weight="700">Novu Cloud</text>
+    <text x="1155" y="99" fill="#4338ca" font-size="11">api.novu.co/v1/events/trigger</text>
+    <text x="1155" y="115" fill="#4338ca" font-size="11">workflow: fall-alert</text>
+
+    <rect x="1290" y="56" width="175" height="76" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1377" y="88" font-weight="700">Contact inboxes</text>
+    <text x="1377" y="106" fill="#64748b" font-size="11">emergency contact email</text>
+  </g>
+
+  <!-- ═══════════ MIDDLE: numbered runtime pipeline ═══════════ -->
+  <rect x="28" y="300" width="1444" height="230" rx="20" fill="#1e3a8a"/>
+  <rect x="28" y="300" width="180" height="34" rx="10" fill="#172554"/>
+  <text x="48" y="323" font-size="14" font-weight="700" fill="#ffffff">Fall Runtime</text>
+  <text x="230" y="323" font-size="12" fill="#bfdbfe">React app — detection to alert fan-out</text>
+
+  <!-- Pipeline stages -->
+  <g font-size="12.5" text-anchor="middle">
+    <!-- Stage template: x step = 204 -->
+    <!-- 1 -->
+    <rect x="52" y="350" width="176" height="130" rx="14" fill="#eaf2fd" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="70" cy="366" r="13" fill="#1d4ed8"/><text x="70" y="371" fill="#ffffff" font-weight="700">1</text>
+    <text x="140" y="392" font-weight="700" fill="#1e3a8a">Sensor stream</text>
+    <text x="140" y="412" fill="#334155" font-size="11">DeviceMotion or</text>
+    <text x="140" y="427" fill="#334155" font-size="11">20 Hz simulator</text>
+    <text x="140" y="450" fill="#64748b" font-size="10.5" font-style="italic">useFallDetection.ts</text>
+
+    <!-- 2 -->
+    <rect x="256" y="350" width="176" height="130" rx="14" fill="#eaf2fd" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="274" cy="366" r="13" fill="#1d4ed8"/><text x="274" y="371" fill="#ffffff" font-weight="700">2</text>
+    <text x="344" y="392" font-weight="700" fill="#1e3a8a">Detection FSM</text>
+    <text x="344" y="412" fill="#334155" font-size="11">idle → freefall →</text>
+    <text x="344" y="427" fill="#334155" font-size="11">impact → watching</text>
+    <text x="344" y="450" fill="#64748b" font-size="10.5" font-style="italic">fallAlgorithm.ts</text>
+
+    <!-- 3 -->
+    <rect x="460" y="350" width="176" height="130" rx="14" fill="#eaf2fd" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="478" cy="366" r="13" fill="#1d4ed8"/><text x="478" y="371" fill="#ffffff" font-weight="700">3</text>
+    <text x="548" y="392" font-weight="700" fill="#1e3a8a">Classify &amp; score</text>
+    <text x="548" y="412" fill="#334155" font-size="11">classify() · severityFor()</text>
+    <text x="548" y="427" fill="#334155" font-size="11">computeConfidence()</text>
+    <text x="548" y="450" fill="#64748b" font-size="10.5" font-style="italic">fallAlgorithm.ts</text>
+
+    <!-- 4 -->
+    <rect x="664" y="350" width="176" height="130" rx="14" fill="#eaf2fd" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="682" cy="366" r="13" fill="#1d4ed8"/><text x="682" y="371" fill="#ffffff" font-weight="700">4</text>
+    <text x="734" y="392" font-weight="700" fill="#1e3a8a">Countdown</text>
+    <text x="754" y="412" fill="#334155" font-size="11">30 s · beeps ·</text>
+    <text x="754" y="427" fill="#334155" font-size="11">“I’m Okay” cancel</text>
+    <text x="754" y="450" fill="#64748b" font-size="10.5" font-style="italic">FallCountdownModal.tsx</text>
+
+    <!-- 5 -->
+    <rect x="868" y="350" width="176" height="130" rx="14" fill="#eaf2fd" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="886" cy="366" r="13" fill="#1d4ed8"/><text x="886" y="371" fill="#ffffff" font-weight="700">5</text>
+    <text x="956" y="392" font-weight="700" fill="#1e3a8a">Escalation</text>
+    <text x="956" y="412" fill="#334155" font-size="11">SOS siren + vibration</text>
+    <text x="956" y="427" fill="#334155" font-size="11">handleNotify()</text>
+    <text x="956" y="450" fill="#64748b" font-size="10.5" font-style="italic">FallDetectionPage.tsx</text>
+
+    <!-- 6 -->
+    <rect x="1072" y="350" width="176" height="130" rx="14" fill="#eaf2fd" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="1090" cy="366" r="13" fill="#1d4ed8"/><text x="1090" y="371" fill="#ffffff" font-weight="700">6</text>
+    <text x="1160" y="392" font-weight="700" fill="#1e3a8a">Persistence</text>
+    <text x="1160" y="412" fill="#334155" font-size="11">saveFallEvent()</text>
+    <text x="1160" y="427" fill="#334155" font-size="11">Appwrite / localStorage</text>
+    <text x="1160" y="450" fill="#64748b" font-size="10.5" font-style="italic">fallService.ts</text>
+
+    <!-- 7 -->
+    <rect x="1276" y="350" width="176" height="130" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="1294" cy="366" r="13" fill="#1d4ed8"/><text x="1294" y="371" fill="#ffffff" font-weight="700">7</text>
+    <text x="1364" y="392" font-weight="700" fill="#1e3a8a">Alert fan-out</text>
+    <text x="1364" y="412" fill="#334155" font-size="11">browserNotify() +</text>
+    <text x="1364" y="427" fill="#334155" font-size="11">sendFallAlertEmails()</text>
+    <text x="1364" y="450" fill="#64748b" font-size="10.5" font-style="italic">fallService.ts</text>
+  </g>
+
+  <!-- Pipeline arrows -->
+  <g stroke="#93c5fd" stroke-width="3" marker-end="url(#arrow)">
+    <line x1="228" y1="415" x2="252" y2="415"/>
+    <line x1="432" y1="415" x2="456" y2="415"/>
+    <line x1="636" y1="415" x2="660" y2="415"/>
+    <line x1="840" y1="415" x2="864" y2="415"/>
+    <line x1="1044" y1="415" x2="1068" y2="415"/>
+    <line x1="1248" y1="415" x2="1272" y2="415"/>
+  </g>
+
+  <!-- IO annotations above pipeline -->
+  <g font-size="10.5" fill="#475569">
+    <text x="290" y="285">IN: SensorSample{t,x,y,z,g} · OUT: DetectedFall</text>
+    <text x="700" y="285">“I’m Okay” → False Alarm – Dismissed</text>
+    <text x="1090" y="285">Timeout → Emergency Contacts Notified</text>
+  </g>
+
+  <!-- ═══════════ Arrows: top lane ↔ pipeline ═══════════ -->
+  <!-- DeviceMotion → stage 1 -->
+  <line x1="375" y1="132" x2="145" y2="346" stroke="#64748b" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <text x="200" y="215" font-size="11" fill="#475569">x, y, z accel @ ~20 Hz (÷ 9.81 → g)</text>
+
+  <!-- Geolocation → stage 4 -->
+  <line x1="555" y1="132" x2="720" y2="346" stroke="#64748b" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <text x="580" y="240" font-size="11" fill="#475569">lat / lng captured on detection</text>
+
+  <!-- stage 7 → Web Notifications -->
+  <line x1="1330" y1="350" x2="800" y2="135" stroke="#64748b" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <text x="880" y="180" font-size="11" fill="#475569">Notification API (secondary channel)</text>
+
+  <!-- stage 7 → corsproxy → Novu → inboxes -->
+  <line x1="1385" y1="350" x2="960" y2="135" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#arrowRed)"/>
+  <text x="1042" y="222" font-size="11" font-weight="700" fill="#dc2626">POST /v1/events/trigger</text>
+  <text x="1042" y="237" font-size="11" fill="#dc2626">Authorization: ApiKey (VITE_NOVU_API_KEY)</text>
+  <line x1="1020" y1="94" x2="1056" y2="94" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#arrowRed)"/>
+  <line x1="1250" y1="94" x2="1286" y2="94" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="1252" y="82" font-size="10" fill="#4338ca">email step</text>
+
+  <!-- ═══════════ BOTTOM LANE: internal data stores ═══════════ -->
+  <rect x="28" y="600" width="1444" height="180" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="48" y="628" font-size="13" font-weight="700" fill="#475569" letter-spacing="1">INTERNAL DATA STORES</text>
+
+  <g font-size="12" fill="#0f172a" text-anchor="middle">
+    <rect x="80" y="646" width="250" height="110" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="205" y="676" font-weight="700">In-memory ring buffer</text>
+    <text x="205" y="696" fill="#64748b" font-size="11">recent SensorSample window</text>
+    <text x="205" y="719" fill="#94a3b8" font-size="10.5">feeds live chart + classifier · not persisted</text>
+
+    <rect x="370" y="646" width="290" height="110" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="515" y="676" font-weight="700">localStorage (LOCAL_MODE)</text>
+    <text x="515" y="696" fill="#64748b" font-size="11">cawil_local_fall_events (cap 200)</text>
+    <text x="515" y="711" fill="#64748b" font-size="11">cawil_local_emergency_contacts</text>
+    <text x="515" y="734" fill="#94a3b8" font-size="10.5">offline / demo fallback</text>
+
+    <rect x="700" y="646" width="280" height="110" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="840" y="676" font-weight="700">Appwrite · emergency_contacts</text>
+    <text x="840" y="696" fill="#64748b" font-size="11">userID · data (JSON contact array)</text>
+    <text x="840" y="719" fill="#94a3b8" font-size="10.5">one upserted doc per user</text>
+
+    <rect x="1020" y="646" width="280" height="110" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1160" y="676" font-weight="700">Appwrite · fall_detection_logs</text>
+    <text x="1160" y="696" fill="#64748b" font-size="11">userID · date · status · latitude · longitude ·</text>
+    <text x="1160" y="711" fill="#64748b" font-size="11">confidenceScore · emergencyContact</text>
+    <text x="1160" y="734" fill="#94a3b8" font-size="10.5">append-only fall history (limit 100 read)</text>
+  </g>
+
+  <!-- Arrows: pipeline → stores -->
+  <g stroke="#64748b" stroke-width="2" marker-end="url(#arrowGray)">
+    <line x1="330" y1="480" x2="220" y2="642"/>
+    <line x1="1120" y1="480" x2="600" y2="642"/>
+    <line x1="1160" y1="480" x2="1160" y2="642"/>
+    <line x1="855" y1="644" x2="945" y2="486"/>
+  </g>
+  <text x="150" y="560" font-size="11" fill="#475569">push(sample)</text>
+  <text x="1180" y="560" font-size="11" fill="#475569">createDocument / listDocuments</text>
+  <text x="1180" y="575" font-size="11" fill="#475569">(Query userID, orderDesc date, limit 100)</text>
+  <text x="760" y="560" font-size="11" fill="#475569">LOCAL_MODE read/write JSON</text>
+  <text x="880" y="600" font-size="11" fill="#475569">contacts loaded for alert fan-out</text>
+
+  <!-- Legend -->
+  <g font-size="11" fill="#475569">
+    <rect x="28" y="800" width="1444" height="40" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="48" y="812" width="16" height="16" rx="4" fill="#eaf2fd" stroke="#2563eb" stroke-width="2"/>
+    <text x="72" y="825">Runtime pipeline stage</text>
+    <line x1="230" y1="820" x2="270" y2="820" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#arrowRed)"/>
+    <text x="280" y="825">Novu email alert path (API key in browser — see security note)</text>
+    <line x1="700" y1="820" x2="740" y2="820" stroke="#64748b" stroke-width="2" marker-end="url(#arrowGray)"/>
+    <text x="750" y="825">Data flow</text>
+    <rect x="850" y="812" width="16" height="16" rx="4" fill="#fff7ed" stroke="#fb923c"/>
+    <text x="874" y="825">Third-party proxy (sees key + payload)</text>
+  </g>
+</svg>

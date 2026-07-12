@@ -25,14 +25,6 @@ export const COLLECTIONS = {
   emergencyContacts: import.meta.env.VITE_COLLECTION_EMERGENCY_CONTACTS as string,
 };
 
-// 🔍 DEBUG — remove after fixing
-console.log('=== APPWRITE CONFIG CHECK ===');
-console.log('endpoint:   ', import.meta.env.VITE_APPWRITE_ENDPOINT);
-console.log('projectId:  ', import.meta.env.VITE_APPWRITE_PROJECT_ID);
-console.log('databaseId: ', import.meta.env.VITE_APPWRITE_DATABASE_ID);
-console.log('collections:', COLLECTIONS);
-console.log('=============================');
-
 export const todayDate = () => {
   const now = new Date();
   const year  = now.getFullYear();

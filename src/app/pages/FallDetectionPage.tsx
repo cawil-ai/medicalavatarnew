@@ -37,11 +37,16 @@ export function FallDetectionPage() {
 
   useEffect(() => {
     (async () => {
-      try {
-        const uid = await getCurrentUserId();
-        const [ev, ct] = await Promise.all([getFallEvents(uid), getContacts(uid)]);
-        setEvents(ev); setContacts(ct);
-      } catch (err) { console.error('❌ Fall data load:', err); }
+      let uid: string;
+      try { uid = await getCurrentUserId(); }
+      catch (err) { console.error('❌ Fall data load (auth):', err); return; }
+      // Load events and contacts independently so a failure in one
+      // (e.g. a misconfigured contacts collection) never blanks the other.
+      const [evRes, ctRes] = await Promise.allSettled([getFallEvents(uid), getContacts(uid)]);
+      if (evRes.status === 'fulfilled') setEvents(evRes.value);
+      else console.error('❌ Fall events load:', evRes.reason);
+      if (ctRes.status === 'fulfilled') setContacts(ctRes.value);
+      else console.error('❌ Emergency contacts load:', ctRes.reason);
     })();
   }, []);
 
