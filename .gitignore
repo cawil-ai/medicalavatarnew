@@ -4,6 +4,9 @@ node_modules/
 # Build output
 dist/
 
+# Environment & secrets (set these in your hosting provider, never commit)
+.env.local
+
 # Editor / IDE
 .vscode/
 .idea/
