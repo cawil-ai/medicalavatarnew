@@ -127,6 +127,38 @@ export function notifyEmergencyContacts(
    Sends an individual email to every contact that has an address.
 ══════════════════════════════════════════════════════════════════ */
 const NOVU_API_KEY = (import.meta.env.VITE_NOVU_API_KEY || '').trim();
+const NOVU_TRIGGER_URL = 'https://api.novu.co/v1/events/trigger';
+const NOVU_USE_PROXY = import.meta.env.VITE_NOVU_USE_PROXY !== 'false';
+
+const NOVU_PROXY_BUILDERS = [
+  { name: 'corsproxy.io', build: (target: string) => `https://corsproxy.io/?${encodeURIComponent(target)}` },
+  { name: 'thingproxy.freeboard.io', build: (target: string) => `https://thingproxy.freeboard.io/fetch/${target}` },
+  { name: 'yacdn.org', build: (target: string) => `https://yacdn.org/proxy/${target}` },
+  { name: 'api.codetabs.com', build: (target: string) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(target)}` },
+];
+
+async function triggerNovuEndpoint(requestInit: RequestInit) {
+  const candidates = NOVU_USE_PROXY
+    ? NOVU_PROXY_BUILDERS
+    : [{ name: 'direct', build: (target: string) => target }];
+
+  let lastError: Error | null = null;
+  for (const candidate of candidates) {
+    const url = candidate.build(NOVU_TRIGGER_URL);
+    try {
+      const response = await fetch(url, requestInit);
+      if (response.ok) return response;
+
+      const body = await response.text().catch(() => 'Unable to read response body');
+      throw new Error(`${candidate.name} returned ${response.status}: ${body}`);
+    } catch (err: any) {
+      lastError = err instanceof Error ? err : new Error(String(err));
+      console.warn(`[fall] Novu trigger via ${candidate.name} failed:`, lastError);
+    }
+  }
+
+  throw lastError ?? new Error('Novu trigger failed without an error object');
+}
 
 export async function sendFallAlertEmails(
   contacts: EmergencyContact[],
@@ -151,7 +183,7 @@ export async function sendFallAlertEmails(
 
   for (const contact of withEmail) {
     try {
-      const response = await fetch('https://corsproxy.io/?' + encodeURIComponent('https://api.novu.co/v1/events/trigger'), {
+      const response = await triggerNovuEndpoint({
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
