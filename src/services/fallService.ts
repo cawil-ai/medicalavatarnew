@@ -129,6 +129,7 @@ export function notifyEmergencyContacts(
 const NOVU_API_KEY = (import.meta.env.VITE_NOVU_API_KEY || '').trim();
 const NOVU_TRIGGER_URL = 'https://api.novu.co/v1/events/trigger';
 const NOVU_USE_PROXY = import.meta.env.VITE_NOVU_USE_PROXY !== 'false';
+const NOVU_SERVER_TRIGGER = (import.meta.env.VITE_NOVU_TRIGGER_URL || '').trim();
 
 const NOVU_PROXY_BUILDERS = [
   { name: 'corsproxy.io', build: (target: string) => `https://corsproxy.io/?${encodeURIComponent(target)}` },
@@ -138,9 +139,16 @@ const NOVU_PROXY_BUILDERS = [
 ];
 
 async function triggerNovuEndpoint(requestInit: RequestInit) {
-  const candidates = NOVU_USE_PROXY
-    ? NOVU_PROXY_BUILDERS
-    : [{ name: 'direct', build: (target: string) => target }];
+  const candidates: { name: string; build: (target: string) => string }[] = [];
+
+  // Prefer a server-side trigger URL if provided (deployed to Railway or similar)
+  if (NOVU_SERVER_TRIGGER) candidates.push({ name: 'server', build: () => NOVU_SERVER_TRIGGER });
+
+  // Optionally try public proxies (least preferred)
+  if (NOVU_USE_PROXY) candidates.push(...NOVU_PROXY_BUILDERS);
+
+  // Last resort: try direct Novu endpoint (will fail from browsers due to CORS)
+  candidates.push({ name: 'direct', build: (t: string) => t });
 
   let lastError: Error | null = null;
   for (const candidate of candidates) {

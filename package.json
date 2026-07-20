@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "npx vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "start:server": "node server/index.js",
+    "start:frontend": "vite",
+    "start": "concurrently \"npm: start:server\" \"npm: start:frontend\""
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -79,7 +82,8 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.7.0",
     "tailwindcss": "4.1.12",
-    "vite": "^6.4.2"
+    "vite": "^6.4.2",
+    "concurrently": "^8.2.0"
   },
   "peerDependencies": {
     "react": "^18.3.1",
