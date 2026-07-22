@@ -4,6 +4,9 @@ node_modules/
 # Build output
 dist/
 
+# Large media — demo/promo recordings, not source (17 MB+)
+docs/videos/
+
 # Environment & secrets (set these in your hosting provider, never commit)
 .env.local
 
