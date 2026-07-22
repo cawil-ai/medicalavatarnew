@@ -1,10 +1,14 @@
 services:
+  # Node web service, not a static site: the fall-alert emails need a server
+  # to hold NOVU_API_KEY (Novu's REST API cannot be called from the browser).
+  # server/index.mjs serves ./dist and handles the SPA rewrite itself.
   - type: web
     name: medical-avatar
-    runtime: static
-    buildCommand: npm run build
-    staticPublishPath: ./dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      # Runtime-only — never prefix with VITE_, that compiles the secret into
+      # the browser bundle. Set the value in the Render dashboard.
+      - key: NOVU_API_KEY
+        sync: false

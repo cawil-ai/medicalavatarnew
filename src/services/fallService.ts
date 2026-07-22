@@ -124,102 +124,43 @@ export function notifyEmergencyContacts(
 
 /* ══════════════════════════════════════════════════════════════════
    EMAIL ALERTS via Novu
-   Sends an individual email to every contact that has an address.
+   The trigger runs on our own server (`server/index.mjs`), which holds
+   NOVU_API_KEY. Novu's REST API is server-side only — calling it from the
+   browser fails CORS and would ship the secret key in the bundle.
 ══════════════════════════════════════════════════════════════════ */
-const NOVU_API_KEY = (import.meta.env.VITE_NOVU_API_KEY || '').trim();
-const NOVU_TRIGGER_URL = 'https://api.novu.co/v1/events/trigger';
-const NOVU_USE_PROXY = import.meta.env.VITE_NOVU_USE_PROXY !== 'false';
-
-const NOVU_PROXY_BUILDERS = [
-  { name: 'corsproxy.io', build: (target: string) => `https://corsproxy.io/?${encodeURIComponent(target)}` },
-  { name: 'thingproxy.freeboard.io', build: (target: string) => `https://thingproxy.freeboard.io/fetch/${target}` },
-  { name: 'yacdn.org', build: (target: string) => `https://yacdn.org/proxy/${target}` },
-  { name: 'api.codetabs.com', build: (target: string) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(target)}` },
-];
-
-async function triggerNovuEndpoint(requestInit: RequestInit) {
-  const candidates = NOVU_USE_PROXY
-    ? NOVU_PROXY_BUILDERS
-    : [{ name: 'direct', build: (target: string) => target }];
-
-  let lastError: Error | null = null;
-  for (const candidate of candidates) {
-    const url = candidate.build(NOVU_TRIGGER_URL);
-    try {
-      const response = await fetch(url, requestInit);
-      if (response.ok) return response;
-
-      const body = await response.text().catch(() => 'Unable to read response body');
-      throw new Error(`${candidate.name} returned ${response.status}: ${body}`);
-    } catch (err: any) {
-      lastError = err instanceof Error ? err : new Error(String(err));
-      console.warn(`[fall] Novu trigger via ${candidate.name} failed:`, lastError);
-    }
-  }
-
-  throw lastError ?? new Error('Novu trigger failed without an error object');
-}
-
 export async function sendFallAlertEmails(
   contacts: EmergencyContact[],
   location: GeoLocation | null,
   event: FallEvent,
 ): Promise<{ sent: number; failed: number; errors: string[] }> {
-  if (!NOVU_API_KEY) {
-    console.warn('[fall] Novu not configured — skipping email alerts.');
-    return { sent: 0, failed: 0, errors: ['Novu API key missing from environment configuration.'] };
-  }
-
+  // Contacts marked phone-only are skipped (no SMS channel exists).
   const withEmail = contacts.filter(c => c.email?.trim() && (c.pref === 'email' || c.pref === 'both' || !c.pref));
   if (withEmail.length === 0) return { sent: 0, failed: 0, errors: [] };
 
-  const mapsLink = location
-    ? `https://maps.google.com/?q=${location.lat},${location.lng}`
-    : 'Location unavailable';
+  try {
+    const response = await fetch('/api/fall-alert', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contacts: withEmail.map(c => ({ name: c.name, email: c.email!.trim() })),
+        location,
+        event: { severity: event.severity, ts: event.ts, impactG: event.impactG },
+      }),
+    });
 
-  let sent = 0;
-  let failed = 0;
-  const errors: string[] = [];
+    const data = await response.json().catch(() => null);
 
-  for (const contact of withEmail) {
-    try {
-      const response = await triggerNovuEndpoint({
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `ApiKey ${NOVU_API_KEY}`,
-        },
-        body: JSON.stringify({
-          name: 'fall-alert',
-          to: {
-            subscriberId: contact.email!.trim(),
-            email: contact.email!.trim(),
-          },
-          payload: {
-            to_name: contact.name,
-            severity: event.severity.toUpperCase(),
-            timestamp: new Date(event.ts).toLocaleString(),
-            maps_link: mapsLink,
-            message: `A ${event.severity} severity fall was detected. Impact: ${event.impactG.toFixed(1)} g.`,
-          }
-        }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
-      }
-
-      sent++;
-    } catch (err: any) {
-      console.error(`[fall] email to ${contact.email} failed:`, err);
-      const msg = err?.message || (typeof err === 'string' ? err : 'Unknown Novu error');
-      errors.push(`${contact.name}: ${msg}`);
-      failed++;
+    if (!data || typeof data.sent !== 'number') {
+      throw new Error(`Alert server returned an unexpected response (HTTP ${response.status}).`);
     }
-  }
+    if (data.errors?.length) console.error('[fall] alert errors:', data.errors);
 
-  return { sent, failed, errors };
+    return { sent: data.sent, failed: data.failed ?? 0, errors: data.errors ?? [] };
+  } catch (err: any) {
+    console.error('[fall] alert request failed:', err);
+    const msg = err?.message || 'Could not reach the alert server.';
+    return { sent: 0, failed: withEmail.length, errors: [msg] };
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════════

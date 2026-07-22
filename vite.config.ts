@@ -16,6 +16,11 @@ export default defineConfig({
   server: {
     host: true,
     allowedHosts: ['.loca.lt', '.trycloudflare.com', '.ngrok-free.app', '.ngrok-free.dev', '.ngrok.io'],
+    // Fall-alert emails are triggered by server/index.mjs (`npm start`), which
+    // holds NOVU_API_KEY. Proxy /api so `npm run dev` hits it too.
+    proxy: {
+      '/api': { target: 'http://localhost:3000', changeOrigin: true },
+    },
   },
   resolve: {
     alias: {
