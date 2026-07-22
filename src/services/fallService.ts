@@ -151,6 +151,15 @@ export async function sendFallAlertEmails(
     const data = await response.json().catch(() => null);
 
     if (!data || typeof data.sent !== 'number') {
+      // A non-JSON 5xx normally means the alert server isn't up: in dev, Vite
+      // proxies /api to it and turns ECONNREFUSED into an opaque HTML 500.
+      if (response.status >= 500) {
+        console.error(
+          '[fall] No JSON from /api/fall-alert — is the alert server running? ' +
+          'Start it with `npm run start:local`, or use `npm run dev` which runs both.',
+        );
+        throw new Error('Alert server is unreachable — emails were not sent.');
+      }
       throw new Error(`Alert server returned an unexpected response (HTTP ${response.status}).`);
     }
     if (data.errors?.length) console.error('[fall] alert errors:', data.errors);
