@@ -36,7 +36,10 @@ app.use(express.json({ limit: '32kb' }));
  * accelerometer permission DeviceMotion silently stops firing and fall
  * detection breaks on real phones. */
 app.use((_req, res, next) => {
-  res.setHeader('Permissions-Policy', 'accelerometer=*, gyroscope=*, magnetometer=*');
+  // geolocation=(self) is already the browser default, but state it explicitly:
+  // this header is hand-maintained, and a future edit that drops it silently
+  // kills the GPS link in fall alerts with no error anywhere.
+  res.setHeader('Permissions-Policy', 'accelerometer=*, gyroscope=*, magnetometer=*, geolocation=(self)');
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
   next();
 });

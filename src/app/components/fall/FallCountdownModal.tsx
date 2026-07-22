@@ -23,6 +23,14 @@ export function FallCountdownModal({ pending, location, seconds = 30, onImOkay, 
   const timerRef = useRef<number | null>(null);
   const notifiedRef = useRef(false);
 
+  // The countdown interval below closes over the render that started it, where
+  // GPS has not resolved yet (getCurrentPosition is async). Calling that stale
+  // onNotify 30 s later would report "Location unavailable" even though the fix
+  // arrived seconds in. Keep a ref to the current callback and escalate through
+  // that instead.
+  const notifyRef = useRef(onNotify);
+  useEffect(() => { notifyRef.current = onNotify; });
+
   // Countdown
   useEffect(() => {
     if (phase !== 'countdown') return;
@@ -46,7 +54,7 @@ export function FallCountdownModal({ pending, location, seconds = 30, onImOkay, 
     if (timerRef.current) clearInterval(timerRef.current);
     setPhase('alarm');
     startSosAlarm();
-    if (!notifiedRef.current) { notifiedRef.current = true; onNotify(); }
+    if (!notifiedRef.current) { notifiedRef.current = true; notifyRef.current(); }
   };
 
   const handleImOkay = () => {
