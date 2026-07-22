@@ -9,6 +9,9 @@
     <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
     </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
   </defs>
 
   <!-- Canvas background -->
@@ -23,7 +26,7 @@
 
   <!-- ═══════════ TOP LANE: External services ═══════════ -->
   <rect x="270" y="20" width="1210" height="130" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
-  <text x="285" y="44" font-size="13" font-weight="700" fill="#475569" letter-spacing="1">EXTERNAL SERVICES (BROWSER APIs &amp; CLOUD)</text>
+  <text x="285" y="44" font-size="13" font-weight="700" fill="#475569" letter-spacing="1">SERVICES (BROWSER APIs, OUR SERVER &amp; CLOUD)</text>
 
   <g font-size="12" fill="#0f172a" text-anchor="middle">
     <rect x="290" y="56" width="170" height="76" rx="10" fill="#ffffff" stroke="#94a3b8"/>
@@ -38,9 +41,10 @@
     <text x="730" y="88" font-weight="700">Web Notifications</text>
     <text x="730" y="106" fill="#64748b" font-size="11">on-device banner</text>
 
-    <rect x="870" y="56" width="150" height="76" rx="10" fill="#fff7ed" stroke="#fb923c"/>
-    <text x="945" y="88" font-weight="700">corsproxy.io</text>
-    <text x="945" y="106" fill="#9a3412" font-size="11">public CORS proxy ⚠</text>
+    <rect x="870" y="56" width="150" height="76" rx="10" fill="#ecfdf5" stroke="#10b981"/>
+    <text x="945" y="82" font-weight="700">Our Express server</text>
+    <text x="945" y="99" fill="#047857" font-size="11">POST /api/fall-alert</text>
+    <text x="945" y="115" fill="#047857" font-size="11">holds NOVU_API_KEY</text>
 
     <rect x="1060" y="56" width="190" height="76" rx="10" fill="#eef2ff" stroke="#6366f1"/>
     <text x="1155" y="82" font-weight="700">Novu Cloud</text>
@@ -148,11 +152,12 @@
   <line x1="1330" y1="350" x2="800" y2="135" stroke="#64748b" stroke-width="2" marker-end="url(#arrowGray)"/>
   <text x="880" y="180" font-size="11" fill="#475569">Notification API (secondary channel)</text>
 
-  <!-- stage 7 → corsproxy → Novu → inboxes -->
-  <line x1="1385" y1="350" x2="960" y2="135" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#arrowRed)"/>
-  <text x="1042" y="222" font-size="11" font-weight="700" fill="#dc2626">POST /v1/events/trigger</text>
-  <text x="1042" y="237" font-size="11" fill="#dc2626">Authorization: ApiKey (VITE_NOVU_API_KEY)</text>
-  <line x1="1020" y1="94" x2="1056" y2="94" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#arrowRed)"/>
+  <!-- stage 7 → our server → Novu → inboxes -->
+  <line x1="1385" y1="350" x2="960" y2="135" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="1042" y="222" font-size="11" font-weight="700" fill="#047857">POST /api/fall-alert</text>
+  <text x="1042" y="237" font-size="11" fill="#047857">same origin — no key in the browser</text>
+  <line x1="1020" y1="94" x2="1056" y2="94" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="1010" y="82" font-size="10" fill="#047857">ApiKey</text>
   <line x1="1250" y1="94" x2="1286" y2="94" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
   <text x="1252" y="82" font-size="10" fill="#4338ca">email step</text>
 
@@ -202,11 +207,11 @@
     <rect x="28" y="800" width="1444" height="40" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
     <rect x="48" y="812" width="16" height="16" rx="4" fill="#eaf2fd" stroke="#2563eb" stroke-width="2"/>
     <text x="72" y="825">Runtime pipeline stage</text>
-    <line x1="230" y1="820" x2="270" y2="820" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#arrowRed)"/>
-    <text x="280" y="825">Novu email alert path (API key in browser — see security note)</text>
-    <line x1="700" y1="820" x2="740" y2="820" stroke="#64748b" stroke-width="2" marker-end="url(#arrowGray)"/>
-    <text x="750" y="825">Data flow</text>
-    <rect x="850" y="812" width="16" height="16" rx="4" fill="#fff7ed" stroke="#fb923c"/>
-    <text x="874" y="825">Third-party proxy (sees key + payload)</text>
+    <line x1="230" y1="820" x2="270" y2="820" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+    <text x="280" y="825">Novu email alert path (secret key stays server-side)</text>
+    <line x1="640" y1="820" x2="680" y2="820" stroke="#64748b" stroke-width="2" marker-end="url(#arrowGray)"/>
+    <text x="690" y="825">Data flow</text>
+    <rect x="790" y="812" width="16" height="16" rx="4" fill="#ecfdf5" stroke="#10b981"/>
+    <text x="814" y="825">Our Express server (server/index.mjs)</text>
   </g>
 </svg>
